@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes – Pharmacy & Public Health</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 10mm 10mm 11mm 10mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes</h1>
+<p class="subtitle">Public Health · Epidemiology · Pharmacognosy · Pharmaceutics · Anatomy &amp; Physiology</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Public Health System &amp; Administration</li>
+    <li>Epidemiology &amp; Biostatistics</li>
+    <li>Sterilization, Disinfection &amp; Vector Control</li>
+    <li>Pharmacognosy – Gums, Resins, Balsams, Oils</li>
+    <li>Anatomy &amp; Physiology Essentials</li>
+    <li>Pharmaceutics – Weighing, Extraction, Mixing, Drying</li>
+  </ol>
+</div>
+
+<!-- ================ PART 1 ================ -->
+<h2>1. Public Health System &amp; Administration</h2>
+
+<h3>1.1 Rural Health Infrastructure – Population Norms</h3>
+<table>
+  <thead><tr><th style="width:22%">Facility</th><th style="width:22%">Plain</th><th style="width:26%">Hilly/Tribal/Difficult</th><th>In-charge</th></tr></thead>
+  <tbody>
+    <tr><td>Sub-Centre (SC)</td><td>1 per 5,000</td><td>1 per 3,000</td><td>ANM / MPW</td></tr>
+    <tr><td>Primary Health Centre (PHC)</td><td>1 per 30,000</td><td>1 per 20,000</td><td>Medical Officer</td></tr>
+    <tr><td>Community Health Centre (CHC)</td><td>1 per 1,20,000</td><td>1 per 80,000</td><td>Block-level specialists</td></tr>
+    <tr><td>Block PHC</td><td colspan="2">One per block (intermediate unit)</td><td>Block Medical Officer (BMO)</td></tr>
+  </tbody>
+</table>
+
+<div class="key"><strong>Worked example (Q8):</strong> Block pop 1,20,000 (plain) → PHCs = 120000÷30000 = <strong>4</strong>; SCs = 120000÷5000 = <strong>24</strong>.</div>
+<div class="mnem"><strong>SC=5k / PHC=30k / CHC=1.2 L</strong> — "5-30-120 rule" for plain areas.</div>
+
+<h3>1.2 Sub-Centre – Functions &amp; Funding</h3>
+<ul>
+  <li>MCH, family planning, immunization, basic preventive/promotive care.</li>
+  <li><strong>NO major surgery</strong> (requires CHC/district). <strong>Funding: 100% Central Govt.</strong></li>
+</ul>
+
+<h3>1.3 Health Administration – Levels &amp; Heads</h3>
+<table>
+  <thead><tr><th>Level</th><th>Administrative Head</th><th>Technical Head</th></tr></thead>
+  <tbody>
+    <tr><td>Centre (Union)</td><td>Union Health Secretary</td><td>DGHS</td></tr>
+    <tr><td>State</td><td>Health Secretary</td><td><strong>Director of Health Services</strong></td></tr>
+    <tr><td>District (principal unit)</td><td colspan="2">CMO / CMHO – coordinates curative &amp; preventive; district hospital is apex referral for CHCs</td></tr>
+    <tr><td>Block</td><td colspan="2">Block Medical Officer (BMO) heads Block PHC</td></tr>
+  </tbody>
+</table>
+
+<h3>1.4 Panchayati Raj (3-tier) &amp; Key Programmes</h3>
+<div class="two-col">
+<table>
+  <thead><tr><th>Institution</th><th>Level</th></tr></thead>
+  <tbody>
+    <tr><td>Zila Parishad</td><td>District</td></tr>
+    <tr><td>Panchayat Samiti</td><td>Block</td></tr>
+    <tr><td>Gram Panchayat</td><td>Village</td></tr>
+    <tr><td>Gram Sabha</td><td>All registered voters of village</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">Village Health Guide Scheme</span><span class="a">1977</span><span class="why">Community volunteers as link. 1952=family planning; 1983=1st NHP.</span></div>
+<div class="fact"><span class="q">HMIS</span><span class="a">Routine recording &amp; reporting</span><span class="why">Web-based; supports planning/decision-making.</span></div>
+<div class="fact"><span class="q">"Target couple" (FP)</span><span class="a">Couples with 2+ living children</span></div>
+<div class="fact"><span class="q">Block</span><span class="a">Intermediate unit below district</span><span class="why">CHC is at block level. Tehsil = revenue subdivision (not health unit).</span></div>
+</div>
+
+<h3>1.5 ICDS – 6 Integrated Services</h3>
+<div class="key"><strong>Package:</strong> (1) Supplementary nutrition, (2) Immunization, (3) Health check-up, (4) Referral services, (5) Nutrition &amp; health education, (6) Pre-school non-formal education.</div>
+<div class="mnem">SIRHNE — Supplementary nutrition, Immunization, Referral, Health check-up, Nutrition edu, Education (pre-school).</div>
+
+<!-- ================ PART 2 ================ -->
+<h2>2. Epidemiology &amp; Biostatistics</h2>
+
+<h3>2.1 Disease Distribution Terms</h3>
+<table>
+  <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Endemic</strong></td><td>Constant/usual presence in a defined area</td></tr>
+    <tr><td>Epidemic</td><td>Occurrence clearly in excess of expectancy</td></tr>
+    <tr><td>Pandemic</td><td>Epidemic across several countries/continents</td></tr>
+    <tr><td>Sporadic</td><td>Scattered, irregular cases; no clear pattern</td></tr>
+    <tr><td><strong>Holoendemic</strong></td><td>High infection from early life; most children affected; adults tolerant (classic: malaria)</td></tr>
+    <tr><td>Hyperendemic</td><td>Intense transmission affecting all age groups</td></tr>
+    <tr><td>Meso-/Hypo-endemic</td><td>Moderate / low transmission</td></tr>
+  </tbody>
+</table>
+
+<h3>2.2 Epidemic Curves &amp; Outbreak Investigation</h3>
+<ul>
+  <li><strong>Point-source</strong>: single sharp peak. <strong>Continuous common-source</strong>: prolonged plateau. <strong>Propagated (person-to-person)</strong>: successive peaks ~1 incubation period apart.</li>
+</ul>
+<div class="two-col">
+<div class="fact"><span class="q">Index case</span><span class="a">First case brought to investigator</span><span class="why">≠ primary case (first infecter, may be undetected).</span></div>
+<div class="fact"><span class="q">Line listing</span><span class="a">Row/case + age, sex, onset, features</span><span class="why">Basis for describing outbreak by time/place/person. Random allocation is for trials, not line lists.</span></div>
+<div class="fact"><span class="q">Spot map (shoe-leather)</span><span class="a">Geographical clustering of cases</span><span class="why">John Snow / Broad Street pump.</span></div>
+<div class="fact"><span class="q">Implicated food</span><span class="a">High attack rate in eaters + wide gap vs non-eaters</span><span class="why">e.g., 80% vs 25% chicken.</span></div>
+</div>
+
+<h3>2.3 Carriers, Reservoirs &amp; Transmission</h3>
+<table>
+  <thead><tr><th>Carrier</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>Incubatory</td><td>Sheds BEFORE symptoms</td></tr>
+    <tr><td>Convalescent</td><td>Sheds DURING recovery (typhoid, diphtheria)</td></tr>
+    <tr><td>Healthy</td><td>Never develops disease but harbours agent</td></tr>
+    <tr><td>Chronic</td><td>Sheds for months/years (Typhoid Mary, HBV)</td></tr>
+    <tr><td>Intermittent</td><td>Discharges at irregular intervals</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Reservoir vs Source:</strong> Reservoir = natural habitat where agent lives/multiplies. Source = person/animal/object from which agent passes to host. <em>Tetanus:</em> reservoir=soil; source=contaminated wound/instrument.</div>
+<ul>
+  <li><strong>Zoonoses</strong> — animal reservoir → human: rabies, plague, brucellosis. <strong>Anthroponoses</strong> — human-only: typhoid, measles. <strong>Sapronoses</strong> — environmental (soil): tetanus. Animal reservoir makes eradication <strong>harder</strong>.</li>
+</ul>
+<div class="two-col">
+<div class="fact"><span class="q">Fomite</span><span class="a">Inanimate object (doorknob, towel)</span><span class="why">Vehicle=inanimate medium (food, water). Vector=living arthropod.</span></div>
+<div class="fact"><span class="q">Serial interval</span><span class="a">Symptom onset (primary) → symptom onset (secondary)</span><span class="why">Generation time=infection→infection; Incubation=infection→symptom; Latent=infection→infectiousness.</span></div>
+</div>
+
+<h3>2.4 Immunity &amp; Screening</h3>
+<ul>
+  <li><strong>Active</strong>: host's own response (infection/vaccination), slow, durable/lifelong. <strong>Passive</strong>: ready-made antibodies, immediate, short-lived.</li>
+</ul>
+<table>
+  <thead><tr><th>Screening</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>Mass</td><td>Whole population (unselected)</td></tr>
+    <tr><td>Selective</td><td>Only high-risk groups</td></tr>
+    <tr><td>Multiphasic</td><td>Several tests on ONE occasion</td></tr>
+    <tr><td>Opportunistic</td><td>During unrelated consultation</td></tr>
+  </tbody>
+</table>
+<div class="formula">Sensitivity = TP/(TP+FN) &nbsp;|&nbsp; Specificity = TN/(TN+FP) &nbsp;|&nbsp; PPV = TP/(TP+FP) &nbsp;|&nbsp; NPV = TN/(TN+FN)</div>
+<div class="key"><strong>Worked example (Q66):</strong> 80 TP, 20 FN, 855 TN, 45 FP → Sens=80/100=<strong>80%</strong>; Spec=855/900=95%; PPV=80/125=64%.</div>
+<div class="mnem"><strong>SnNout / SpPin</strong>: high SEN + Negative test = rule OUT; high SPEC + Positive = rule IN.</div>
+<ul>
+  <li><strong>Length bias</strong>: slow-progressing cases have longer detectable phase → over-represented → falsely improved outcomes.</li>
+  <li><strong>Lead-time bias</strong>: earlier diagnosis appears to prolong survival without postponing death.</li>
+  <li><strong>Reliability</strong> = repeatability/precision. <strong>Validity</strong> = measures what it should.</li>
+</ul>
+
+<h3>2.5 Mortality Measures</h3>
+<table>
+  <thead><tr><th>Rate</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td>Crude death rate</td><td>Total deaths / 1000 mid-year population</td></tr>
+    <tr><td>Age-specific death rate</td><td>Deaths in age group / population of that age group</td></tr>
+    <tr><td>Standardized (adjusted)</td><td>Removes confounding by age (valid comparison)</td></tr>
+    <tr><td>Proportional mortality</td><td>Deaths from cause / total deaths × 100</td></tr>
+    <tr><td>Cause-specific death rate</td><td>Deaths from cause / total population</td></tr>
+    <tr><td>Case fatality rate</td><td>Deaths from disease / cases of disease</td></tr>
+    <tr><td><strong>SMR</strong></td><td>(Observed / Expected) × 100</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q30:</strong> Observed 120 / Expected 100 → SMR = <strong>120</strong> (20% higher). <strong>Direct standardization</strong>: study rates → standard pop. <strong>Indirect</strong>: standard rates → study pop → gives SMR.</div>
+<div class="fact"><span class="q">Relative survival</span><span class="a">Observed / Expected survival in general pop</span><span class="why">Adjusts for other-cause deaths without cause-of-death data.</span></div>
+
+<h3>2.6 Study Types &amp; Statistics</h3>
+<table>
+  <thead><tr><th>Study</th><th>Feature</th></tr></thead>
+  <tbody>
+    <tr><td>Clinical trial</td><td>Intervention in people who ALREADY have disease</td></tr>
+    <tr><td>Field trial</td><td>Healthy people, PREVENTS disease (vaccine trial)</td></tr>
+    <tr><td>Community trial</td><td>Whole COMMUNITY as unit of allocation</td></tr>
+    <tr><td>RCT</td><td>Random allocation to treatment/control</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>p&lt;0.05</strong> → statistically significant (unlikely by chance). Does NOT prove causation.</li>
+  <li><strong>95% CI for RR/OR</strong>: value 1 = no association. If CI crosses 1 → NOT significant. Q43: RR=1.8, CI 0.7–3.2 → not significant.</li>
+</ul>
+<div class="fact"><span class="q">Smallpox eradicated (WHO)</span><span class="a">1980</span><span class="why">Last natural case Somalia 1977. 1988 = Global Polio Eradication Initiative launched.</span></div>
+
+<!-- ================ PART 3 ================ -->
+<h2>3. Sterilization, Disinfection &amp; Vector Control</h2>
+
+<h3>3.1 Physical Sterilization</h3>
+<div class="two-col">
+<table>
+  <thead><tr><th>Hot Air Oven</th><th>Time</th></tr></thead>
+  <tbody>
+    <tr><td>160°C</td><td>1 hr</td></tr>
+    <tr><td>170°C</td><td>30 min</td></tr>
+    <tr><td>150°C</td><td>150 min</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Autoclave:</strong> 121°C / 15 min / 15 psi. <strong>Bowie-Dick test</strong>: daily air-removal &amp; steam-penetration test in vacuum autoclave (not a sterility test).</div>
+</div>
+<ul>
+  <li><strong>Gamma/X-rays</strong> = ionizing, penetrating → disposable syringes, sutures, plastics. <strong>Cobalt-60</strong> = standard commercial gamma source.</li>
+  <li><strong>UV light</strong> = non-ionizing, POOR penetration → air/surface disinfection only.</li>
+</ul>
+
+<h3>3.2 Chemical Sterilization &amp; Disinfection</h3>
+<table>
+  <thead><tr><th>Agent</th><th>Principal Use</th></tr></thead>
+  <tbody>
+    <tr><td>Glutaraldehyde 2%</td><td>Cold sterilization of endoscopes</td></tr>
+    <tr><td>Ethylene oxide (EtO)</td><td>Heat-labile plastics, catheters, endoscopes (alkylates proteins/DNA at low temp)</td></tr>
+    <tr><td>Formaldehyde vapour</td><td>Fumigation of operation theatres</td></tr>
+    <tr><td>Povidone-iodine</td><td>Skin antiseptic</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>Coal-tar phenolics:</strong> Cresol (stronger than phenol); Lysol = soapy emulsion of cresol; work in presence of organic matter; <strong>NOT safe on open wounds</strong> (tissue-irritant).</li>
+  <li><strong>Concurrent disinfection</strong>: during illness on infected discharges. <strong>Terminal</strong>: after patient removal/recovery. Pre-onset = prophylactic (not terminal).</li>
+  <li><strong>Syringes:</strong> disposable plastic → gamma; reusable glass → hot air/autoclave; metal needles → autoclave. Red heat destroys plastic.</li>
+</ul>
+
+<h3>3.3 Insecticides – Chemical Classes</h3>
+<table>
+  <thead><tr><th>Insecticide</th><th>Class</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>DDT, BHC (HCH), Dieldrin</td><td>Organochlorine</td><td>Sodium-channel action</td></tr>
+    <tr><td>Malathion, Temephos</td><td>Organophosphate</td><td>AChE inhibition</td></tr>
+    <tr><td>Propoxur</td><td>Carbamate</td><td>AChE inhibition</td></tr>
+    <tr><td>Permethrin</td><td>Pyrethroid</td><td>Sodium-channel action</td></tr>
+  </tbody>
+</table>
+
+<h3>3.4 Vector Control</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Indoor Residual Spraying (IRS)</span><span class="a">Kills mosquitoes resting after blood meal</span><span class="why">Residual insecticide on walls. Malaria control.</span></div>
+<div class="fact"><span class="q">Space spraying (fogging/ULV)</span><span class="a">Rapid knockdown of flying adults, NO residue</span></div>
+<div class="fact"><span class="q">DEET (diethyltoluamide)</span><span class="a">Topical insect repellent on skin</span><span class="why">Not larvicide/fumigant/rodenticide.</span></div>
+<div class="fact"><span class="q">Paris green</span><span class="a">Copper aceto-arsenite – stomach-poison larvicide</span><span class="why">Selectively eaten by surface-feeding anopheline larvae.</span></div>
+</div>
+<ul>
+  <li><strong>Larvicides:</strong> Temephos (OP), Paris green (stomach poison), mineral/larvicidal oils (suffocation). DEET is NOT a larvicide.</li>
+  <li><strong>Rodenticides:</strong> Warfarin (anticoagulant), Zinc phosphide, Barium carbonate. Temephos is a larvicide, not a rodenticide.</li>
+  <li><strong>Crude rate</strong>: whole population. <strong>Specific rate</strong>: defined subgroup (age/sex/cause).</li>
+</ul>
+
+<!-- ================ PART 4 ================ -->
+<h2>4. Pharmacognosy – Gums, Resins, Balsams &amp; Oils</h2>
+
+<h3>4.1 Gums vs Resins</h3>
+<table>
+  <thead><tr><th>Property</th><th>Gums</th><th>Resins</th></tr></thead>
+  <tbody>
+    <tr><td>Water</td><td>Soluble (mucilage)</td><td>Insoluble</td></tr>
+    <tr><td>Alcohol/organic solvents</td><td>Insoluble</td><td>Soluble</td></tr>
+    <tr><td>Physical form</td><td>Not hard/brittle</td><td>Hard, brittle, translucent, amorphous</td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Gum Sources &amp; Chemistry</h3>
+<table>
+  <thead><tr><th>Gum</th><th>Botanical Source</th></tr></thead>
+  <tbody>
+    <tr><td>Gum acacia (arabic)</td><td><em>Acacia senegal</em></td></tr>
+    <tr><td>Gum tragacanth</td><td><em>Astragalus gummifer</em></td></tr>
+    <tr><td>Guar gum</td><td><em>Cyamopsis tetragonoloba</em></td></tr>
+    <tr><td>Karaya gum</td><td><em>Sterculia urens</em></td></tr>
+    <tr><td>Carrageenan</td><td>Irish moss – <em>Chondrus crispus</em></td></tr>
+    <tr><td>Agar</td><td><em>Gelidium</em> spp.</td></tr>
+    <tr><td>Sodium alginate</td><td><em>Laminaria</em> (brown algae)</td></tr>
+    <tr><td>Pectin</td><td>Citrus peel / apple pomace</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Gum acacia:</strong> heteropolysaccharide of arabinose, galactose, rhamnose, glucuronic acid. Its ~2% <strong>arabinogalactan-protein</strong> makes it a great o/w emulsifier (adsorbs at oil-water interface).</div>
+<div class="key"><strong>Tragacanth</strong> = tragacanthin (~30%, water-soluble) + <strong>bassorin (~70%, swells but insoluble)</strong>. High bassorin → high viscosity → superior suspending agent for heavy insoluble powders.</div>
+<div class="fact"><span class="q">Gum slimy in cold water but only clear mucilage on heating</span><span class="a">Agar (sets on cooling)</span><span class="why">Acacia/guar dissolve cold; karaya only swells.</span></div>
+
+<h3>4.3 Gum-Resins, Resins &amp; Constituents</h3>
+<ul>
+  <li><strong>Gum-resins</strong> = gum + resin (+volatile oil). Examples: Myrrh (<em>Commiphora myrrha</em>), asafoetida, galbanum.</li>
+</ul>
+<table>
+  <thead><tr><th>Resin</th><th>Characteristic Constituent</th></tr></thead>
+  <tbody>
+    <tr><td>Colophony (rosin)</td><td>Abietic acid (residue after turpentine distillation)</td></tr>
+    <tr><td>Podophyllum resin</td><td>Podophyllotoxin, peltatin</td></tr>
+    <tr><td>Jalap resin</td><td>Jalapin (glycosidic cathartic)</td></tr>
+    <tr><td>Benzoin (Siam)</td><td>Coniferyl benzoate + free benzoic acid</td></tr>
+    <tr><td>Benzoin (Sumatra)</td><td>~12–18% free benzoic acid – used in Friar's Balsam (preservative/antiseptic)</td></tr>
+  </tbody>
+</table>
+
+<h3>4.4 Balsams – True vs Oleoresins</h3>
+<div class="key"><strong>True balsam</strong> = resin + esters of benzoic/cinnamic acid. <strong>Oleoresin</strong> = resin + volatile oil (no benzoic/cinnamic esters).</div>
+<table>
+  <thead><tr><th>Product</th><th>Classification &amp; Key Facts</th></tr></thead>
+  <tbody>
+    <tr><td>Balsam of Peru</td><td>True balsam; ~60–70% benzyl benzoate + benzyl cinnamate; topical antiseptic + scabicide (<em>Myroxylon pereirae</em>)</td></tr>
+    <tr><td>Tolu balsam</td><td>True balsam; <em>Myroxylon balsamum</em>; benzyl benzoate + cinnamic esters</td></tr>
+    <tr><td>Storax (styrax)</td><td><em>Liquidambar orientalis</em>/<em>styraciflua</em>; <strong>styracin (cinnamyl cinnamate)</strong> + free cinnamic acid</td></tr>
+    <tr><td>Turpentine, Copaiba, Canada balsam, Capsicum oleoresin</td><td>Oleoresins (NOT true balsams)</td></tr>
+  </tbody>
+</table>
+
+<h3>4.5 Fixed vs Volatile Oils</h3>
+<table>
+  <thead><tr><th>Feature</th><th>Fixed (Fatty) Oils</th><th>Volatile Oils</th></tr></thead>
+  <tbody>
+    <tr><td>Chemistry</td><td>Glyceryl esters of long-chain fatty acids</td><td>Terpenes/aromatics; not glycerides</td></tr>
+    <tr><td>Saponified by alkali</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Stain on paper</td><td>Permanent grease spot</td><td>No permanent stain (evaporates)</td></tr>
+    <tr><td>State at RT</td><td>Liquid or semi-solid (coconut, cocoa butter)</td><td>Usually liquid</td></tr>
+    <tr><td>Examples</td><td>Olive, castor, coconut oil</td><td>Clove, peppermint, turpentine</td></tr>
+  </tbody>
+</table>
+<div class="two-col">
+<div class="fact"><span class="q">Oleic acid (main FA in olive oil)</span><span class="a">C18:1 (Δ9)</span><span class="why">Palmitoleic=C16:1; lauric=C12:0; arachidonic=C20:4.</span></div>
+<div class="fact"><span class="q">Clove oil use</span><span class="a">Topical dental analgesic</span><span class="why">70–90% eugenol.</span></div>
+</div>
+
+<h3>4.6 Vegetable Drugs, Galenicals &amp; Drug Properties</h3>
+<ul>
+  <li>Vegetable drugs come from roots, bark, leaves, seeds, fruits, flowers, entire plants (not only leaves/bark). Fixed oils = glycerol esters; volatile oils evaporate; alkaloids = N-containing plant bases.</li>
+  <li><strong>Galenicals</strong> = extracts of natural drugs (tinctures, fluid extracts, infusions). E.g., tincture of opium (laudanum). Aspirin/adrenaline/paracetamol syrup = pure single-entity.</li>
+  <li><strong>TI</strong> ↑ = wider safety margin. <strong>Potency</strong> = amount needed (lower dose = more potent). <strong>Efficacy</strong> = max achievable effect. Zero oral bioavailability (aminoglycosides, heparin) doesn't prevent parenteral use.</li>
+</ul>
+
+<!-- ================ PART 5 ================ -->
+<h2>5. Anatomy &amp; Physiology Essentials</h2>
+
+<h3>5.1 Eye Layers &amp; Nerve Conduction</h3>
+<ul>
+  <li><strong>Sclera</strong> — outer, tough, white, fibrous. Choroid — middle, vascular, pigmented. Retina — innermost, light-sensitive. Conjunctiva — thin covering front of sclera.</li>
+  <li>Conduction speed ↑ with: myelin sheath, larger axon diameter, higher temperature. ↓ with: more synapses (each adds delay).</li>
+  <li><strong>Repolarization: K⁺ efflux</strong> (Na⁺ channels inactivate, voltage-gated K⁺ open). Depolarization = Na⁺ influx.</li>
+</ul>
+
+<h3>5.2 Blood Groups (AB × O)</h3>
+<div class="key">AB parent → I<sup>A</sup> or I<sup>B</sup>; O parent (ii) → i only. Children: I<sup>A</sup>i (A) or I<sup>B</sup>i (B) — <strong>never AB or O</strong>. Classic exception to "direct transmission" of parental groups.</div>
+
+<h3>5.3 Cardiovascular Physiology</h3>
+<table>
+  <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td>Preload</td><td>Ventricular stretch from end-diastolic filling</td></tr>
+    <tr><td>Afterload</td><td>Resistance ventricle must overcome to eject blood</td></tr>
+    <tr><td>Compliance</td><td>Volume change per unit pressure change</td></tr>
+    <tr><td>TPR</td><td>Overall resistance of systemic vessels</td></tr>
+    <tr><td>Pulse pressure</td><td>Systolic − Diastolic (e.g., 120−80=40)</td></tr>
+    <tr><td>JVP</td><td>Reflects right atrial / central venous pressure</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Velocity slowest in capillaries</strong> — enormous combined cross-sectional area; velocity ∝ 1/area. Allows time for exchange.</div>
+<div class="formula">SV = EDV − ESV &nbsp;|&nbsp; EF = SV / EDV</div>
+<div class="key"><strong>Q101:</strong> EDV 120 mL, ESV 50 mL → SV=70 mL, EF=70/120 ≈ <strong>58%</strong> (normal).</div>
+
+<h3>5.4 IgM &amp; PEM</h3>
+<ul>
+  <li><strong>IgM:</strong> first antibody in primary response; pentamer (10 binding sites) → powerful agglutinator + complement activator. <strong>Does NOT cross placenta</strong> (too large). IgG crosses placenta.</li>
+</ul>
+<table>
+  <thead><tr><th>Feature</th><th>Kwashiorkor</th><th>Marasmus</th></tr></thead>
+  <tbody>
+    <tr><td>Diet</td><td>Protein-poor, starch-rich</td><td>Deficient in ALL nutrients</td></tr>
+    <tr><td>Oedema</td><td>Present (legs, ascites)</td><td>Absent</td></tr>
+    <tr><td>Weight</td><td>Deceptively preserved</td><td>Severe wasting</td></tr>
+    <tr><td>Hair</td><td>Sparse, discoloured</td><td>Usually normal</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li>Rickets = vitamin D deficiency (bones). Scurvy = vitamin C deficiency.</li>
+  <li><strong>5-YP outlay insight:</strong> Rupee outlay rose (65 → 226 cr) but SHARE fell (3.3% → 2.6%) — spending grew, relative priority declined.</li>
+</ul>
+
+<!-- ================ PART 6 ================ -->
+<h2>6. Pharmaceutics – Weighing, Extraction, Mixing &amp; Drying</h2>
+
+<h3>6.1 Balance &amp; Weighing</h3>
+<ul>
+  <li><strong>Sensitivity</strong> = min weight causing one-division pointer deflection. Dispensing (Class B) ≈ 6 mg; Analytical (Class A) ≈ 0.1 mg.</li>
+</ul>
+<div class="formula">Minimum Weighable Quantity (MWQ) = (Sensitivity Requirement × 100) / Acceptable % error</div>
+<div class="two-col">
+<div class="key"><strong>Q128:</strong> SR=6 mg, error=5% → MWQ=(6×100)/5 = <strong>120 mg</strong>. Weighing 300 mg → error=(6/300)×100 = 2% (safe).</div>
+<div class="key"><strong>Q107:</strong> 120 mg atropine, Class A (SR=0.1 mg) → %error=(0.1/120)×100 ≈ <strong>0.083%</strong>.</div>
+</div>
+<ul>
+  <li><strong>Volumetric (transfer) pipette</strong> — most accurate for single fixed volume. Read <strong>bottom of meniscus at eye level</strong> for transparent liquids; TOP for opaque (mercury, convex).</li>
+</ul>
+
+<h3>6.2 Size Reduction (Comminution)</h3>
+<table>
+  <thead><tr><th>Technique</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Trituration</td><td>Mortar &amp; pestle, rotary grinding</td></tr>
+    <tr><td>Levigation</td><td>Grind with small quantity of INSOLUBLE liquid (mineral oil, glycerin) → paste</td></tr>
+    <tr><td>Pulverization by intervention</td><td>Gummy/resinous drug dissolved in volatile solvent → evaporate → fine particles</td></tr>
+    <tr><td>Cutting</td><td>Sharp blades for fibrous/tough materials (roots, barks)</td></tr>
+  </tbody>
+</table>
+
+<h3>6.3 IP Sieve Numbers</h3>
+<div class="two-col">
+<table>
+  <thead><tr><th>Sieve</th><th>Aperture</th></tr></thead>
+  <tbody>
+    <tr><td>10</td><td>2000 μm</td></tr>
+    <tr><td>22</td><td>710 μm</td></tr>
+    <tr><td>44</td><td>355 μm</td></tr>
+    <tr><td>85</td><td>180 μm</td></tr>
+    <tr><td>120</td><td>125 μm</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Moderately fine powder (Q109):</strong> fully passes sieve 44 (355 μm); ≤40% passes sieve 85 (180 μm). Higher IP sieve no. = smaller aperture.</div>
+</div>
+
+<h3>6.4 Mixing &amp; Blending</h3>
+<ul>
+  <li><strong>Geometric dilution</strong> — uniform distribution of potent drug in large diluent (progressively double). Tumbling mixers (V-blender, double cone) by rotation. Trituration mixes + reduces size. Spatulation — small qty only.</li>
+</ul>
+
+<h3>6.5 Emulsification Methods</h3>
+<div class="key"><strong>Continental (Dry Gum), Oil:Water:Gum ratio:</strong> Fixed oil = <strong>4:2:1</strong>; Volatile oil = 2:2:1; Mineral oil = 3:2:1. Gum triturated with oil first, then water added ALL AT ONCE.</div>
+<div class="key"><strong>Q113:</strong> 200 mL fixed oil → Gum = 200/4 = <strong>50 g</strong>; Water = 200/2 = <strong>100 mL</strong>.</div>
+<ul>
+  <li><strong>English (Wet Gum):</strong> gum dissolved in water first → mucilage; oil added IN SMALL PORTIONS with continuous trituration.</li>
+  <li><strong>Bottle (Forbes):</strong> for volatile &amp; mineral oils (low viscosity); oil + acacia shaken dry, then water in portions.</li>
+</ul>
+<div class="mnem"><strong>Continental=Dry</strong> gum + water all at once. <strong>English=Wet</strong> gum + oil in portions.</div>
+
+<h3>6.6 Extraction &amp; Clarification</h3>
+<table>
+  <thead><tr><th>Method</th><th>Key Feature</th></tr></thead>
+  <tbody>
+    <tr><td>Maceration</td><td>Soak in menstruum at RT, closed vessel, occasional shaking, ~7 days</td></tr>
+    <tr><td>Digestion</td><td>Maceration with gentle heat (40–60°C)</td></tr>
+    <tr><td>Percolation</td><td>Fresh solvent passes through drug packed in percolator (tinctures, fluid extracts)</td></tr>
+    <tr><td>Decoction</td><td>Boil drug with water ~15 min (hard/woody drugs)</td></tr>
+    <tr><td>Infusion</td><td>Pour BOILING water on drug, stand ~15 min, strain</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>Decantation</strong> (pour off supernatant), <strong>Filtration</strong> (porous medium), <strong>Centrifugation</strong> (centrifugal force, not gravity), <strong>Expression</strong> (pressure), <strong>Sublimation</strong> (solid→vapour: camphor, benzoic acid, salicylic acid, iodine).</li>
+</ul>
+<div class="two-col">
+<table>
+  <thead><tr><th>Sintered Glass Grade</th><th>Pore / Use</th></tr></thead>
+  <tbody>
+    <tr><td>G1, G2</td><td>Coarser materials</td></tr>
+    <tr><td>G4</td><td>5–15 μm — fine crystalline &amp; colloids</td></tr>
+    <tr><td>G5</td><td>1–1.5 μm — bacterial filtration</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Buchner funnel:</strong> flat filter paper on perforated plate + vacuum flask via side-arm = vacuum filtration.</div>
+</div>
+
+<h3>6.7 Distillation, Drying, Crystallization &amp; Fusion</h3>
+<table>
+  <thead><tr><th>Distillation</th><th>When to Use</th></tr></thead>
+  <tbody>
+    <tr><td>Simple</td><td>Boiling point difference &gt; 25°C</td></tr>
+    <tr><td>Fractional</td><td>Closely boiling mixtures (fractionating column)</td></tr>
+    <tr><td>Steam</td><td>Heat-sensitive, water-immiscible substances (below normal BP)</td></tr>
+    <tr><td>Vacuum</td><td>Thermolabile liquids (reduced pressure LOWERS BP)</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Dryer</th><th>Application</th></tr></thead>
+  <tbody>
+    <tr><td>Tray dryer</td><td>Bulk crude drugs &amp; chemicals (hot air on trays)</td></tr>
+    <tr><td>Spray dryer</td><td>Liquid feeds → dry powder rapidly</td></tr>
+    <tr><td>Freeze dryer (lyophilization)</td><td>Heat-sensitive biologicals/vaccines/proteins — sublimation under reduced pressure</td></tr>
+    <tr><td>Fluidized bed dryer</td><td>Granules suspended in upward hot air — fast, uniform (tablet granulation)</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>Crystallization:</strong> dissolve in hot solvent → supersaturate on cooling. Seeding = nucleation sites. Rapid cooling → small crystals; slow cooling → few, larger, purer crystals.</li>
+  <li><strong>Fusion:</strong> melting solids together by heat (ointments, suppositories). Add ingredients in <strong>descending order of MP</strong>.</li>
+</ul>
+
+<!-- ================ LAST-MINUTE FACT DUMP ================ -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">Village Health Guide Scheme</span><span class="a">1977</span></div>
+  <div class="fact"><span class="q">Smallpox eradicated (WHO)</span><span class="a">1980</span></div>
+  <div class="fact"><span class="q">Sub-Centre funding</span><span class="a">100% Central Govt</span></div>
+  <div class="fact"><span class="q">PHC (plain / hilly)</span><span class="a">30,000 / 20,000</span></div>
+  <div class="fact"><span class="q">Sub-Centre (plain / hilly)</span><span class="a">5,000 / 3,000</span></div>
+  <div class="fact"><span class="q">Autoclave standard</span><span class="a">121°C / 15 min / 15 psi</span></div>
+  <div class="fact"><span class="q">Hot air oven</span><span class="a">160°C × 1 hr</span></div>
+  <div class="fact"><span class="q">Commercial gamma source</span><span class="a">Cobalt-60</span></div>
+  <div class="fact"><span class="q">Balsam of Peru esters</span><span class="a">60–70% benzyl benzoate</span></div>
+  <div class="fact"><span class="q">Oleic acid</span><span class="a">C18:1</span></div>
+  <div class="fact"><span class="q">Continental (fixed oil)</span><span class="a">4:2:1 (O:W:G)</span></div>
+  <div class="fact"><span class="q">Dispensing balance SR</span><span class="a">6 mg</span></div>
+  <div class="fact"><span class="q">MWQ formula</span><span class="a">(SR × 100) / % error</span></div>
+  <div class="fact"><span class="q">Sensitivity</span><span class="a">TP / (TP + FN)</span></div>
+  <div class="fact"><span class="q">Specificity</span><span class="a">TN / (TN + FP)</span></div>
+  <div class="fact"><span class="q">PPV</span><span class="a">TP / (TP + FP)</span></div>
+  <div class="fact"><span class="q">SMR</span><span class="a">(Obs / Exp) × 100</span></div>
+  <div class="fact"><span class="q">Pulse pressure</span><span class="a">Systolic − Diastolic</span></div>
+  <div class="fact"><span class="q">Repolarization ion</span><span class="a">K⁺ efflux</span></div>
+  <div class="fact"><span class="q">IgM crosses placenta?</span><span class="a">NO (IgG does)</span></div>
+  <div class="fact"><span class="q">Slowest blood flow</span><span class="a">Capillaries</span></div>
+  <div class="fact"><span class="q">Kwashiorkor hallmark</span><span class="a">Oedema + preserved weight</span></div>
+  <div class="fact"><span class="q">Levigation liquid</span><span class="a">Small qty INSOLUBLE liquid</span></div>
+  <div class="fact"><span class="q">Sublimation examples</span><span class="a">Camphor, benzoic acid, iodine</span></div>
+  <div class="fact"><span class="q">Vacuum distillation</span><span class="a">LOWERS boiling point</span></div>
+  <div class="fact"><span class="q">IP Sieve 85</span><span class="a">180 μm</span></div>
+  <div class="fact"><span class="q">CI crosses 1 (RR/OR)</span><span class="a">NOT significant</span></div>
+  <div class="fact"><span class="q">Propagated epidemic</span><span class="a">Peaks ~1 incubation apart</span></div>
+  <div class="fact"><span class="q">Index vs Primary</span><span class="a">First detected vs first infecter</span></div>
+  <div class="fact"><span class="q">EF (normal ≈)</span><span class="a">SV / EDV</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>

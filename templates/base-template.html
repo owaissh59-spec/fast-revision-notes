@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  FAST REVISION NOTES — BASE TEMPLATE
+  ================================================================
+  This is the skeleton HTML with all CSS baked in.
+  Do NOT modify the CSS unless the user explicitly asks for a
+  size/spacing change. When generating notes:
+
+    1. Copy this entire file.
+    2. Replace <!-- CONTENT: … --> placeholders with your material.
+    3. Update the <title> and <h1>/subtitle if appropriate.
+    4. Populate the Table of Contents.
+    5. Add H2 sections with topic content (tables, .fact, .key, .mnem, .formula).
+    6. Finish with a "Last-Minute Fact Dump" section in .three-col.
+
+  See ../AGENTS.md for rules and ../docs/INSTRUCTIONS.md for a walkthrough.
+  ================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 10mm 10mm 11mm 10mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TITLE ============ -->
+<h1>Fast Revision Notes</h1>
+<p class="subtitle"><!-- CONTENT: subject / topics summary, e.g. "Public Health · Epidemiology · Pharmacognosy" --></p>
+
+<!-- ============ TABLE OF CONTENTS ============ -->
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <!-- CONTENT: one <li> per H2 section. Keep titles short. -->
+    <li>Section 1 title</li>
+    <li>Section 2 title</li>
+    <li>Section 3 title</li>
+  </ol>
+</div>
+
+<!-- ============ SECTION TEMPLATE (repeat per topic) ============ -->
+<h2>1. Section Title</h2>
+
+<h3>1.1 Sub-topic</h3>
+
+<!-- Use tables for comparisons -->
+<table>
+  <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+  <tbody>
+    <tr><td>Row 1a</td><td>Row 1b</td></tr>
+    <tr><td>Row 2a</td><td>Row 2b</td></tr>
+  </tbody>
+</table>
+
+<!-- Use .key for rules, definitions, worked examples -->
+<div class="key"><strong>Worked example (Qn):</strong> …</div>
+
+<!-- Use .mnem for memory hooks -->
+<div class="mnem"><strong>Hook</strong> — explanation.</div>
+
+<!-- Use .formula for equations, combine with | -->
+<div class="formula">a = b + c &nbsp;|&nbsp; x = y × z</div>
+
+<!-- Use .fact for atomic Q→A recall -->
+<div class="fact">
+  <span class="q">Concept name</span>
+  <span class="a">The answer</span>
+  <span class="why">Optional distractor note.</span>
+</div>
+
+<!-- Multi-column layouts for compact fact groups -->
+<div class="two-col">
+  <div class="fact"><span class="q">Fact A</span><span class="a">Answer A</span></div>
+  <div class="fact"><span class="q">Fact B</span><span class="a">Answer B</span></div>
+</div>
+
+<!-- ============ LAST-MINUTE FACT DUMP (always include) ============ -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <!-- CONTENT: 25–35 one-line facts covering all sections proportionally. -->
+  <div class="fact"><span class="q">Question stem</span><span class="a">One-line answer</span></div>
+  <div class="fact"><span class="q">Question stem</span><span class="a">One-line answer</span></div>
+  <div class="fact"><span class="q">Question stem</span><span class="a">One-line answer</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>

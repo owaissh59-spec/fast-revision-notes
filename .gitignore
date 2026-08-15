@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Generated output (users produce this locally)
+revision-notes.html
+!examples/example-output.html
