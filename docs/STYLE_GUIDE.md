@@ -78,9 +78,9 @@ Every design choice in the template exists for a reason. If a user challenges a 
 
 ## Layout Decisions
 
-### 10mm page margins
-- A4 is 210mm × 297mm. 10mm margins give 190mm × 277mm usable area.
-- Most laser printers can handle 6mm margins reliably; 10mm is a safety buffer that also looks intentional.
+### 12mm page margins
+- A4 is 210mm × 297mm. 12mm margins give 186mm × 273mm usable area.
+- Most laser printers can handle 6mm margins reliably; 12mm is a safety buffer that also looks intentional and works on printers with slightly larger non-printable edges.
 
 ### No forced page breaks
 - **Why:** `page-break-before: always` on every H2 wastes ~1/3 of every page.
@@ -113,7 +113,7 @@ Every design choice in the template exists for a reason. If a user challenges a 
 
 ### `@page` rules
 - `size: A4` — fixes the target medium.
-- `margin: 10mm` — as above.
+- `margin: 12mm` — as above.
 
 ### `page-break-inside: avoid` on:
 - Tables (so a table doesn't split mid-row).

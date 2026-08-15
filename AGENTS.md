@@ -33,7 +33,7 @@ The user's goal is to print these notes and refresh concepts quickly. **Do NOT p
 1. **Preserve every distinct concept** from the input. No factual content may be dropped.
 2. **No color-dependent information.** All meaning must survive black-and-white printing. Use borders, underlines, bold, grayscale shading only.
 3. **Single self-contained HTML file.** All CSS inline in a `<style>` tag. No external fonts, no external CSS, no JavaScript, no images.
-4. **A4 print target.** Use `@page { size: A4; margin: 10mm; }`.
+4. **A4 print target.** Use `@page { size: A4; margin: 12mm; }`.
 5. **Base font size 8.5pt** for the body. Do not go above this by default. The user prefers dense notes.
 6. **Never insert forced page breaks** (`page-break-before: always`) between top-level sections. Let content flow naturally to save paper.
 7. **Do not add tests, quiz mode, or interactive features.** This is a print artifact.
@@ -119,7 +119,7 @@ Before finishing, mentally walk through every question in the input and confirm 
   - H3: 9pt, black-on-light-gray with left black border.
   - H4: 8.5pt, underlined.
 - **Table font:** 8pt; cell padding 2×4px; every-other-row light gray (`#f2f2f2`).
-- **@page margin:** 10mm all sides.
+- **@page margin:** 12mm all sides.
 - **Never use forced page breaks** between H2 sections. Let flow decide.
 - Apply `page-break-inside: avoid` to boxes, tables, fact cards, formulas, and highlights so they don't split across pages.
 

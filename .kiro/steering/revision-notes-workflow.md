@@ -36,7 +36,7 @@ Repeated here for emphasis (full details in `AGENTS.md`):
 
 1. **Single self-contained HTML file** named `revision-notes.html` (or user-specified).
 2. **Monochrome-safe** — all meaning must survive B&W printing.
-3. **Body font 8.5pt** by default, line-height 1.22, A4 with 10mm margins.
+3. **Body font 8.5pt** by default, line-height 1.22, A4 with 12mm margins.
 4. **NO forced page breaks** between H2 sections.
 5. **Organize by concept**, not by question number.
 6. **Preserve every distinct concept** — nothing dropped.
