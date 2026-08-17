@@ -185,13 +185,30 @@ def add_field(p, instr, placeholder="", bold=False, size=None, font=None):
 
 
 def bookmark(p, name):
-    """Wrap a paragraph in a bookmark so REF / TOC can target it."""
+    """
+    Wrap a paragraph in a bookmark so PAGEREF / REF fields can target it.
+
+    The bookmarkStart must go AFTER any w:pPr: the schema requires w:pPr to
+    be the first child of w:p, and Word may drop a malformed bookmark --
+    which silently turns every page number that points at it into
+    "Error! Bookmark not defined".
+
+    Names are sanitised and truncated to Word's 40-character limit.
+    """
     _bookmark_id[0] += 1
     bid = _bookmark_id[0]
     safe = "".join(ch if (ch.isalnum() or ch == "_") else "_" for ch in name)
+    if not safe or not safe[0].isalpha():
+        safe = "bm_" + safe
+    safe = safe[:40]
     start = _el("w:bookmarkStart", **{"w:id": bid, "w:name": safe})
     end = _el("w:bookmarkEnd", **{"w:id": bid})
-    p._p.insert(0, start)
+
+    pPr = p._p.find(qn("w:pPr"))
+    if pPr is not None:
+        pPr.addnext(start)          # immediately after the properties
+    else:
+        p._p.insert(0, start)
     p._p.append(end)
     return safe
 

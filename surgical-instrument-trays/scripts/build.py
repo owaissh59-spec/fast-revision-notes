@@ -340,9 +340,12 @@ def build(parts, out_path, title="SURGICAL INSTRUMENT TRAYS",
                  f"tray_{t['no'].replace('.', '_')}"))
     contents_table(
         doc, entries,
-        note="Page numbers are live fields. To fill them in: press "
-             "Ctrl+A then F9 (Windows) or Cmd+A then Fn+F9 (Mac). "
-             "Word will also offer to update them when the file opens.")
+        note="The page numbers are live fields, shown as “—” until they are "
+             "filled in.  **To update them: press Ctrl+A then F9** "
+             "(on a Mac, Cmd+A then Fn+F9) — or right-click any number and "
+             "choose “Update Field”. Word normally offers to do this when "
+             "the file opens. Once updated, each number is also a link: "
+             "Ctrl+click it to jump to that tray.")
 
     page_break(doc)
     how_to_read(
