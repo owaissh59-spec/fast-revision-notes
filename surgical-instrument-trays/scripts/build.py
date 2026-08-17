@@ -41,6 +41,10 @@ FULL_W = 13.4         # cm -- default width for a full-width figure
 TARGET_DPI = 200      # ample for pure line art on a laser printer
 GREY_LEVELS = 8       # line art needs very few; halves the file size
 
+# The long-answer "Likely examination questions" sections are excluded by
+# default -- the target exam is MCQ based. Pass --with-qa to include them.
+INCLUDE_QA = False
+
 
 HOW_TO_READ_ROWS = [
     ("Lead paragraph",
@@ -68,13 +72,12 @@ HOW_TO_READ_ROWS = [
      "Where two trays or two instruments are easily confused, they are set "
      "side by side."),
     ("Examination pointers",
-     "The specific facts most often awarded marks — learn these last, as "
-     "revision."),
+     "The single most useful section for an MCQ paper: the specific, "
+     "testable facts — named instruments, numbers, temperatures, sizes and "
+     "the distinctions between similar items. Revise from these."),
     ("Common mistakes",
-     "Errors that lose marks, marked with ✗."),
-    ("Likely examination questions",
-     "Questions with model answers written at the length an examiner "
-     "expects."),
+     "Errors that lose marks, marked with ✗ — most of them are the "
+     "distractors an MCQ will offer you."),
     ("A note on quantities",
      "Instrument **names, functions and groupings** are standard. The "
      "**numbers** (\"6 Allis clamps\") vary between institutions — please "
@@ -277,7 +280,10 @@ def render_tray(doc, tray, part_no, first_in_part=False):
             marker="✗")
 
     # ---- Q&A -------------------------------------------------------------
-    if tray.get("qa"):
+    # Omitted by default: the target exam (JKSSB Junior Pharmacist) is MCQ
+    # based, so long-answer model answers are not useful. The content is
+    # kept in the modules and can be restored with --with-qa.
+    if INCLUDE_QA and tray.get("qa"):
         sub_head(doc, "Likely examination questions", level=4)
         for i, (q, ans) in enumerate(tray["qa"], 1):
             p = para(doc, "")
@@ -402,8 +408,10 @@ def _report(path, parts):
 
 
 def main():
+    global INCLUDE_QA
     argv = sys.argv[1:]
     split = "--split" in argv
+    INCLUDE_QA = "--with-qa" in argv
     argv = [a for a in argv if not a.startswith("--")]
     out = argv[0] if argv else os.path.join(
         ROOT, "Surgical_Instrument_Trays_Notes.docx")

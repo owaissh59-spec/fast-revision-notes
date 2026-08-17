@@ -72,9 +72,14 @@ Worth keeping to hand: "Preparation of Instruments Tray" as a syllabus
 heading usually expects the principles as well as the lists.
 
 Every tray chapter follows the same structure: lead paragraph → indications
-→ side figure → grouped instrument table with quantities and rationale →
+→ side figure → grouped instrument table with quantities and key features →
 comparison table where useful → memory hook → examination pointers →
-common mistakes → likely examination questions with model answers.
+common mistakes.
+
+The notes are built for an **MCQ paper** (JKSSB Junior Pharmacist), so the
+long-answer "likely examination questions" sections are excluded. That
+material is still in the content modules — rebuild with `--with-qa` to
+include it.
 
 ## About the figures
 
@@ -95,11 +100,13 @@ footplate) rather than to be photorealistic.
 pip install python-docx Pillow
 python3 scripts/build.py Surgical_Instrument_Trays_Notes.docx   # single file
 python3 scripts/build.py --split                                # 11 per-part files
+python3 scripts/build.py out.docx --with-qa                     # include long-answer Q&A
 ```
 
 ### Checks
 ```bash
-python3 scripts/verify_docx.py Surgical_Instrument_Trays_Notes.docx  # page setup, TOC, bookmarks, monochrome
+python3 scripts/verify_docx.py Surgical_Instrument_Trays_Notes.docx  # page setup, layout, monochrome, no blank cells
+python3 scripts/verify_fields.py Surgical_Instrument_Trays_Notes.docx # contents page numbers will resolve
 python3 scripts/validate_keys.py                                     # every figure reference resolves
 python3 scripts/check_coverage.py                                    # all 49 syllabus trays present
 ```

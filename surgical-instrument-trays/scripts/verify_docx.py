@@ -158,6 +158,13 @@ def check(path):
         "Every instrument row has a key feature",
         f"{total_rows} rows, {blank_rows} blank")
 
+    # ---- long-answer Q&A excluded (target exam is MCQ based)
+    say("Likely examination questions" not in doc,
+        "No long-answer Q&A sections (MCQ-focused build)")
+    say(doc.count("Examination pointers") > 0,
+        "Examination pointers retained -- the MCQ-relevant section",
+        f"{doc.count('Examination pointers')} boxes")
+
     # ---- monochrome check: no saturated colours
     colors = set(re.findall(r'w:(?:color|fill)="([0-9A-Fa-f]{6})"', doc))
     bad = []
