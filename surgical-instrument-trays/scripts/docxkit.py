@@ -439,6 +439,21 @@ def numbered(doc, n, text, level=0):
     return p
 
 
+def chapter_rule(doc, sz=18, color="000000", before=15, after=3):
+    """
+    Separator between consecutive chapters on the same page. Chapters no
+    longer start on a fresh page, so they need a strong visual break.
+    `keepNext` ties the rule to the heading that follows it, so the pair
+    never strands at the foot of a page.
+    """
+    p = doc.add_paragraph()
+    spacing(p, before=before, after=after)
+    p.paragraph_format.line_spacing = 1
+    keep_together(p, with_next=True)
+    set_borders(p, {"bottom": {"sz": sz, "color": color, "space": 1}})
+    return p
+
+
 def rule(doc, sz=8, color="000000", before=2, after=6):
     p = doc.add_paragraph()
     spacing(p, before=before, after=after)

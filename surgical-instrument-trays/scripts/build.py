@@ -18,11 +18,14 @@ from docxkit import (new_document, set_header_footer, cover_page, toc,
                      part_banner, chapter_head, sub_head, mini_head, box,
                      two_col, cell_para, cell_mini_head, cell_bullet,
                      cell_box, figure, instrument_table, simple_table,
-                     para, bullet, numbered, rule, page_break,
+                     para, bullet, numbered, rule, chapter_rule, page_break,
                      update_fields_on_open, spacing, indent, keep_together,
                      BODY_W, G_BOX, G_BOX2, FONT_HEAD, _rich)
 from registry import plate as make_plate, detail_plate as make_detail
 from diagrams import DIAGRAMS
+from features import feature_for
+
+_missing_features = []
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 IMG = os.path.join(ROOT, "images")
@@ -124,13 +127,34 @@ def render_plate(spec, key, cm_w):
 
 
 # ------------------------------------------------------------------- renderers
+def fill_features(tray):
+    """
+    Return the tray's instrument groups with every blank note filled in
+    from features.py. A blank third column reads as an omission in a
+    printed table, so no row is allowed to ship empty.
+    """
+    out = []
+    for g in tray.get("groups", []):
+        items = []
+        for it in g["items"]:
+            qty, name, note = (list(it) + ["", "", ""])[:3]
+            if not str(note).strip():
+                note = feature_for(name, tray["no"])
+                if not note:
+                    _missing_features.append((tray["no"], name))
+                    note = ""
+            items.append((qty, name, note))
+        out.append({"group": g.get("group"), "items": items})
+    return out
+
+
 def render_tray(doc, tray, part_no, first_in_part=False):
     """Render one tray/chapter."""
-    # A page break starts every chapter EXCEPT the first of a part -- that
-    # one continues straight after the part banner, which otherwise leaves
-    # the banner sitting almost alone on its own page.
-    if tray.get("newpage") and not first_in_part:
-        page_break(doc)
+    # Page breaks occur ONLY between Parts. Chapters run on continuously to
+    # keep the page count (and the print bill) down, separated instead by a
+    # heavy rule and generous space above the chapter heading.
+    if not first_in_part:
+        chapter_rule(doc)
 
     chapter_head(doc, tray["no"], tray["title"], aka=tray.get("aka"),
                  bm=f"tray_{tray['no'].replace('.', '_')}")
@@ -207,8 +231,8 @@ def render_tray(doc, tray, part_no, first_in_part=False):
             "Detailed notes" if is_foundation else "Contents of the tray")
         sub_head(doc, gt)
         head = (("", "Item", "Explanation") if is_foundation
-                else ("Qty", "Instrument", "Notes / rationale"))
-        instrument_table(doc, tray["groups"], head=head,
+                else ("Qty", "Instrument", "Key feature / rationale"))
+        instrument_table(doc, fill_features(tray), head=head,
                          name_w=Cm(8.0) if is_foundation else None,
                          qty_w=Cm(0.9) if is_foundation else Cm(1.5))
 
@@ -403,6 +427,13 @@ def main():
     path = build(parts, out)
     print(f"\nWrote:")
     _report(path, parts)
+    if _missing_features:
+        print(f"\n  !! {len(_missing_features)} rows still have a blank "
+              f"key feature:")
+        for no, name in _missing_features[:40]:
+            print(f"     {no}  {name}")
+    else:
+        print("  every instrument row has a key feature")
     return path
 
 

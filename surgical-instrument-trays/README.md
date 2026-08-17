@@ -22,7 +22,8 @@ whole topic rests on.
 | Page numbers | `PAGEREF` field per row (59), refreshed with Ctrl+A then F9 |
 | Bookmarks | 61 — one on every Part and every chapter heading |
 | Field refresh | `updateFields=true`, so Word offers to update on open |
-| Page breaks | 51 total — one per chapter, one per Part, nothing wasted |
+| Page breaks | 12 total — **only between Parts**; chapters run on continuously |
+| Instrument tables | No blank cells: every one of 1,748 rows has a key feature |
 | Colour | Fully monochrome — greys, rules, borders and weight only |
 | Figures | 63, embedded; tray plates sit in a **side column** beside the text |
 | Figure resolution | ~200 dpi at printed size (600–1040 px wide), 8 grey levels |
@@ -113,6 +114,7 @@ python3 scripts/check_coverage.py                                    # all 49 sy
 | `scripts/diagrams.py` | 10 conceptual figures — classification chart, back table, count sequence, etc. |
 | `scripts/docxkit.py` | Word building blocks — page setup, styles, TOC, bookmarks, tables, side-column layout |
 | `scripts/schema.py` | Content constructors |
+| `scripts/features.py` | Key-feature text for rows that would otherwise have a blank notes cell, with tray-specific overrides where the rationale differs by site |
 | `scripts/content_*.py` | The notes themselves, one module per Part |
 | `scripts/build.py` | Renders content modules into the final `.docx` |
 

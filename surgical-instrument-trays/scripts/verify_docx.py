@@ -99,12 +99,13 @@ def check(path):
     say("contents_table" not in doc, "Contents rendered as a real table",
         f"{doc.count('<w:tbl>')} tables present")
 
-    # ---- page-break economy: one per chapter, one per part, few up front
+    # ---- page-break economy: breaks ONLY between Parts, plus front matter.
+    #      Chapters run on continuously to keep the page count down.
     n_breaks = doc.count('w:type="page"')
-    budget = (n_h2 - n_h1) + n_h1 + 4      # chapter + part + front matter
+    budget = n_h1 + 3                      # one per part + cover/contents/how-to
     say(n_breaks <= budget,
-        "Page breaks limited to chapter/part boundaries",
-        f"{n_breaks} breaks, budget {budget}")
+        "Page breaks only between Parts",
+        f"{n_breaks} breaks for {n_h1} parts, budget {budget}")
 
     # ---- no intro/foundation chapters in the main flow
     say("Reprocessing cycle" not in doc and "Instrument reprocessing" not in doc,
@@ -135,6 +136,27 @@ def check(path):
     if cellw:
         say(max(cellw) >= 18.9, "Full-width blocks span the text column",
             f"widest cell = {max(cellw):.2f} cm of 19.05 cm")
+
+    # ---- no blank cells in the instrument tables
+    blank_rows = 0
+    total_rows = 0
+    for tbl in root.iter(f"{W}tbl"):
+        rows = list(tbl.iter(f"{W}tr"))
+        for tr in rows:
+            tcs = list(tr.iter(f"{W}tc"))
+            if len(tcs) != 3:
+                continue
+            texts = ["".join(t.text or "" for t in tc.iter(f"{W}t")).strip()
+                     for tc in tcs]
+            # an instrument row has a name in column 2
+            if not texts[1]:
+                continue
+            total_rows += 1
+            if not texts[2]:
+                blank_rows += 1
+    say(blank_rows == 0,
+        "Every instrument row has a key feature",
+        f"{total_rows} rows, {blank_rows} blank")
 
     # ---- monochrome check: no saturated colours
     colors = set(re.findall(r'w:(?:color|fill)="([0-9A-Fa-f]{6})"', doc))
