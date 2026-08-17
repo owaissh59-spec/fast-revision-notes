@@ -14,6 +14,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Cm, Pt, RGBColor
 
 from docxkit import (new_document, set_header_footer, cover_page, toc,
+                     contents_table, how_to_read,
                      part_banner, chapter_head, sub_head, mini_head, box,
                      two_col, cell_para, cell_mini_head, cell_bullet,
                      cell_box, figure, instrument_table, simple_table,
@@ -36,6 +37,50 @@ FULL_W = 13.4         # cm -- default width for a full-width figure
 # width so every figure lands at roughly TARGET_DPI.
 TARGET_DPI = 200      # ample for pure line art on a laser printer
 GREY_LEVELS = 8       # line art needs very few; halves the file size
+
+
+HOW_TO_READ_ROWS = [
+    ("Lead paragraph",
+     "What the tray is for and the single idea that shapes it. If you "
+     "remember nothing else from a chapter, remember this."),
+    ("Used for / includes",
+     "The procedures the tray serves — useful for 'name three indications' "
+     "questions."),
+    ("Figure",
+     "An original line diagram of the tray's **signature instruments** — "
+     "the items that identify it. Diagrams are schematic: they show the "
+     "identifying feature (jaw pattern, bevel direction, footplate, "
+     "curve) rather than a photographic likeness."),
+    ("Callout box",
+     "The one concept, distinction or safety rule that examiners return to "
+     "for that tray."),
+    ("Contents of the tray",
+     "The full instrument list, grouped by **function** — cutting, "
+     "grasping, clamping, retracting, suturing, suctioning — with "
+     "quantities and the reason each item is present. Answer 'enumerate "
+     "the contents' questions using these groups as headings."),
+    ("Additional supplies",
+     "Position, draping, structures at risk and procedure-specific notes."),
+    ("Comparison table",
+     "Where two trays or two instruments are easily confused, they are set "
+     "side by side."),
+    ("Examination pointers",
+     "The specific facts most often awarded marks — learn these last, as "
+     "revision."),
+    ("Common mistakes",
+     "Errors that lose marks, marked with ✗."),
+    ("Likely examination questions",
+     "Questions with model answers written at the length an examiner "
+     "expects."),
+    ("A note on quantities",
+     "Instrument **names, functions and groupings** are standard. The "
+     "**numbers** (\"6 Allis clamps\") vary between institutions — please "
+     "cross-check them against your prescribed textbook."),
+    ("Printing",
+     "Legal paper (8.5 × 14 in), 1.27 cm margins, monochrome throughout. "
+     "No information depends on colour, so a black-and-white printer loses "
+     "nothing."),
+]
 
 
 def scale_for(logical_w, cm_w):
@@ -79,9 +124,12 @@ def render_plate(spec, key, cm_w):
 
 
 # ------------------------------------------------------------------- renderers
-def render_tray(doc, tray, part_no):
+def render_tray(doc, tray, part_no, first_in_part=False):
     """Render one tray/chapter."""
-    if tray.get("newpage"):
+    # A page break starts every chapter EXCEPT the first of a part -- that
+    # one continues straight after the part banner, which otherwise leaves
+    # the banner sitting almost alone on its own page.
+    if tray.get("newpage") and not first_in_part:
         page_break(doc)
 
     chapter_head(doc, tray["no"], tray["title"], aka=tray.get("aka"),
@@ -89,9 +137,12 @@ def render_tray(doc, tray, part_no):
 
     # ---- lead paragraph + side figure ------------------------------------
     plate_spec = tray.get("plate")
+    # The conceptual callout is rendered FULL WIDTH below the two-column
+    # block. Putting it in the narrow side column used to leave a large
+    # blank area to its left whenever the left-hand text ran short.
     side_box = tray.get("side_box")
     side_figs = [f for f in tray.get("figs", []) if f.get("side")]
-    has_side = bool(plate_spec or side_box or side_figs)
+    has_side = bool(plate_spec or side_figs)
 
     if has_side:
         left, right = two_col(doc, right_w=Cm(SIDE_W))
@@ -144,8 +195,10 @@ def render_tray(doc, tray, part_no):
                              f"sfig_{tray['no'].replace('.', '_')}_{i}", w)
             figure(right, p, w, caption=f.get("cap"))
             n += 1
-        if side_box:
-            cell_box(right, side_box.get("title"), side_box["lines"])
+
+    # ---- conceptual callout, full width ----------------------------------
+    if side_box:
+        box(doc, side_box.get("title"), side_box["lines"], fill=G_BOX2)
 
     # ---- instrument table ------------------------------------------------
     if tray.get("groups"):
@@ -229,8 +282,8 @@ def render_part(doc, part):
     if part.get("intro"):
         p = para(doc, part["intro"], style="TrayLead")
         spacing(p, before=2, after=8)
-    for tray in part["trays"]:
-        render_tray(doc, tray, part["number"])
+    for i, tray in enumerate(part["trays"]):
+        render_tray(doc, tray, part["number"], first_in_part=(i == 0))
 
 
 # ------------------------------------------------------------------ front page
@@ -251,13 +304,29 @@ def build(parts, out_path, title="SURGICAL INSTRUMENT TRAYS",
          "black and white"])
 
     page_break(doc)
-    # Levels 1–2 only: the eleven Parts and the fifty-eight chapters.
-    # Deeper headings ("Contents of the tray", "Likely examination
-    # questions") repeat in every chapter and would only clutter the list.
-    toc(doc, levels="1-2",
-        note="To fill in the page numbers: click anywhere in the list "
-             "below, press Ctrl+A then F9, and choose "
-             "“Update entire table”.")
+    # An explicit two-column contents TABLE. Each page number is a live
+    # PAGEREF field aimed at that chapter's bookmark, so Ctrl+A then F9
+    # fills every one of them in.
+    entries = []
+    for p in parts:
+        entries.append((1, p["title"], f"part_{p['number']}"))
+        for t in p["trays"]:
+            entries.append(
+                (2, f"{t['no']}   {t['title']}",
+                 f"tray_{t['no'].replace('.', '_')}"))
+    contents_table(
+        doc, entries,
+        note="Page numbers are live fields. To fill them in: press "
+             "Ctrl+A then F9 (Windows) or Cmd+A then Fn+F9 (Mac). "
+             "Word will also offer to update them when the file opens.")
+
+    page_break(doc)
+    how_to_read(
+        doc, HOW_TO_READ_ROWS,
+        note="Every tray chapter is built to the same pattern, so you can "
+             "find the same kind of information in the same place each "
+             "time. Read the //lead paragraph// and the //figure// first to "
+             "fix the idea, then work through the contents table.")
 
     for part in parts:
         render_part(doc, part)
@@ -267,10 +336,17 @@ def build(parts, out_path, title="SURGICAL INSTRUMENT TRAYS",
     return out_path
 
 
-def load_parts():
+def load_parts(include_foundations=False):
+    """
+    The main document starts directly at the trays. The Foundations part
+    (classification, tray-preparation principles, reprocessing, counting,
+    instrument care) is still built as a standalone file by --split, so
+    nothing is lost.
+    """
     parts = []
-    from content_foundations import FOUNDATIONS
-    parts.append(FOUNDATIONS)
+    if include_foundations:
+        from content_foundations import FOUNDATIONS
+        parts.append(FOUNDATIONS)
 
     for modname, attr in [
         ("content_general", "GENERAL"),
@@ -305,7 +381,7 @@ def main():
     out = argv[0] if argv else os.path.join(
         ROOT, "Surgical_Instrument_Trays_Notes.docx")
 
-    parts = load_parts()
+    parts = load_parts(include_foundations=split)
 
     if split:
         # One file per Part, for when a single large file is awkward to

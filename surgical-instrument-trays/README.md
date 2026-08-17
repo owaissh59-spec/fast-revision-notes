@@ -1,7 +1,7 @@
 # Surgical Instrument Trays — Examination Notes
 
-**Deliverable:** `Surgical_Instrument_Trays_Notes.docx` (930 KB, everything in
-one file)
+**Deliverable:** `Surgical_Instrument_Trays_Notes.docx` (700 KB) — cover,
+contents, "how to read", then straight into the 49 trays.
 
 **If that file will not download**, an identical split set is in
 `notes_by_part/` — eleven smaller files of 72–276 KB, one per Part, each
@@ -18,9 +18,11 @@ whole topic rests on.
 |---|---|
 | Page size | US Legal — 8.5 × 14 in (21.59 × 35.56 cm) |
 | Margins | 1.27 cm on all four sides |
-| Table of contents | Real Word `TOC` field, levels 1–2, hyperlinked |
-| Bookmarks | 70 — one on every Part and every chapter heading |
-| Field refresh | `updateFields=true`, so Word offers to build the TOC on open |
+| Table of contents | Two-column **table** — tray name + live page number |
+| Page numbers | `PAGEREF` field per row (59), refreshed with Ctrl+A then F9 |
+| Bookmarks | 61 — one on every Part and every chapter heading |
+| Field refresh | `updateFields=true`, so Word offers to update on open |
+| Page breaks | 51 total — one per chapter, one per Part, nothing wasted |
 | Colour | Fully monochrome — greys, rules, borders and weight only |
 | Figures | 63, embedded; tray plates sit in a **side column** beside the text |
 | Figure resolution | ~200 dpi at printed size (600–1040 px wide), 8 grey levels |
@@ -33,10 +35,9 @@ choose *Update entire table*. Page numbers fill in from the bookmarks.
 
 ## Contents
 
-- **Part 0 — Foundations** (9 chapters): terminology, the six functional
-  groups, instrument anatomy and grips, principles of tray preparation,
-  reprocessing and sterilisation, back table and Mayo stand set-up, the
-  surgical count, care and handling, and how the trays relate to each other.
+The main document opens with the cover, the contents table and a one-page
+"How to read these notes", then goes directly into the trays.
+
 - **Part I — General Surgery** (10): major, basic/minor, limited, thyroid,
   long instruments, biliary, choledochoscopy, sigmoidoscopy,
   gastrointestinal, rectal.
@@ -55,6 +56,19 @@ choose *Update entire table*. Page numbers fill in from the bookmarks.
   muscle, dacryocystorhinostomy, cornea, cataract and lens, glaucoma,
   microscope, retina.
 - **Part X — Paediatric** (3): major, minor, gastrointestinal.
+
+### Foundations (kept separate)
+
+The groundwork chapters — classification into the six functional groups,
+instrument anatomy and grips, principles of tray preparation, reprocessing
+and sterilisation, back-table and Mayo-stand set-up, the surgical count, and
+care of instruments — are **not** in the main document, which starts at the
+trays. They are kept as a standalone file:
+
+`notes_by_part/00_Foundations_of_Instrument_Tray_Preparation.docx`
+
+Worth keeping to hand: "Preparation of Instruments Tray" as a syllabus
+heading usually expects the principles as well as the lists.
 
 Every tray chapter follows the same structure: lead paragraph → indications
 → side figure → grouped instrument table with quantities and rationale →

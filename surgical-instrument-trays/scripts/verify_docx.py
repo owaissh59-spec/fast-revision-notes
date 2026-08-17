@@ -46,9 +46,12 @@ def check(path):
         "Margins 1.27 cm on all four sides",
         ", ".join(f"{k}={v:.2f}" for k, v in margins.items()))
 
-    # ---- TOC
-    n_toc = len(re.findall(r'TOC \\\\o', doc)) + len(re.findall(r'TOC \\o', doc))
-    say(n_toc >= 1, "TOC field present", f"{n_toc} found")
+    # ---- contents: either a TOC field or an explicit PAGEREF table
+    n_toc = len(re.findall(r"TOC \\+o", doc))
+    n_pref = len(re.findall(r"PAGEREF", doc))
+    say(n_toc >= 1 or n_pref >= 1,
+        "Contents with live page numbers",
+        f"{n_toc} TOC field(s), {n_pref} PAGEREF field(s)")
     settings = z.read("word/settings.xml").decode("utf8")
     say("updateFields" in settings and 'w:val="true"' in settings,
         "updateFields=true (TOC auto-refreshes on open)")
@@ -85,6 +88,53 @@ def check(path):
     say(any("footer" in n for n in names), "Running footer part")
     say("PAGE" in z.read([n for n in names if "footer" in n][0]).decode("utf8"),
         "PAGE number field in footer")
+
+    # ---- contents table with live page numbers
+    n_pageref = len(re.findall(r"PAGEREF", doc))
+    n_h1 = doc.count('"Heading1"')
+    n_h2 = doc.count('"Heading2"')
+    say(n_pageref >= n_h1 + n_h2,
+        "Contents table has a live PAGEREF per part and chapter",
+        f"{n_pageref} PAGEREF vs {n_h1} parts + {n_h2} chapters")
+    say("contents_table" not in doc, "Contents rendered as a real table",
+        f"{doc.count('<w:tbl>')} tables present")
+
+    # ---- page-break economy: one per chapter, one per part, few up front
+    n_breaks = doc.count('w:type="page"')
+    budget = (n_h2 - n_h1) + n_h1 + 4      # chapter + part + front matter
+    say(n_breaks <= budget,
+        "Page breaks limited to chapter/part boundaries",
+        f"{n_breaks} breaks, budget {budget}")
+
+    # ---- no intro/foundation chapters in the main flow
+    say("Reprocessing cycle" not in doc and "Instrument reprocessing" not in doc,
+        "Front matter only -- content starts at the trays")
+    say("How to Read These Notes" in doc, "'How to read these notes' page")
+
+    # ---- callout boxes must span the full text column, not sit in the
+    #      narrow side column (which left a blank area to their left)
+    from lxml import etree
+    W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    root = etree.fromstring(z.read("word/document.xml"))
+    nested = 0
+    for tbl in root.iter(f"{W}tbl"):
+        anc = tbl.getparent()
+        while anc is not None:
+            if anc.tag == f"{W}tbl":
+                nested += 1
+                break
+            anc = anc.getparent()
+    say(nested == 0,
+        "No callout boxes nested in the narrow side column",
+        f"{nested} nested tables")
+
+    # widest cell in any layout table, as a proxy for full-width blocks
+    cellw = [int(c.get(f"{W}w")) / TWIP_CM
+             for c in root.iter(f"{W}tcW")
+             if c.get(f"{W}type") == "dxa" and c.get(f"{W}w")]
+    if cellw:
+        say(max(cellw) >= 18.9, "Full-width blocks span the text column",
+            f"widest cell = {max(cellw):.2f} cm of 19.05 cm")
 
     # ---- monochrome check: no saturated colours
     colors = set(re.findall(r'w:(?:color|fill)="([0-9A-Fa-f]{6})"', doc))

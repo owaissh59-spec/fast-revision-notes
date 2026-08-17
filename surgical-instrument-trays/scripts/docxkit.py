@@ -981,3 +981,172 @@ def toc(doc, title="Table of Contents", levels="1-3",
                           "or press Ctrl+A then F9, to build the "
                           "Table of Contents with page numbers.")
     return tp
+
+
+
+# ==========================================================================
+#  Contents table with live page numbers
+# ==========================================================================
+def pageref(p, bookmark_name, size=9.6, bold=False):
+    """
+    Insert a PAGEREF field -- a live page number pointing at a bookmark.
+
+    Unlike a TOC field this can live inside an ordinary table cell, so the
+    contents can be laid out as a real two-column table. Pressing F9 (or
+    Ctrl+A then F9) refreshes every number.
+    """
+    safe = "".join(ch if (ch.isalnum() or ch == "_") else "_"
+                   for ch in bookmark_name)
+    return add_field(p, f" PAGEREF {safe} \\h ", placeholder="—",
+                     bold=bold, size=size, font=FONT_HEAD)
+
+
+def contents_table(doc, entries, title="Table of Contents", note=None,
+                   page_w=Cm(2.0), width=None,
+                   head=("Tray / Chapter", "Page")):
+    """
+    An explicit contents table: one row per entry, the tray name in the
+    first column and a live PAGEREF page number in the second.
+
+    entries: list of (level, text, bookmark_name)
+             level 1 -> part heading row (shaded, bold)
+             level 2 -> chapter row
+    """
+    width = width or BODY_W
+    name_w = width - page_w
+
+    p = doc.add_paragraph(style="TOCHead")
+    spacing(p, before=4, after=2)
+    p.add_run(title)
+    bookmark(p, "toc")
+
+    r = doc.add_paragraph()
+    r.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    spacing(r, before=0, after=4)
+    r.paragraph_format.line_spacing = 1
+    set_borders(r, {"bottom": {"sz": 18, "color": "000000", "space": 1}})
+
+    if note:
+        n = doc.add_paragraph()
+        n.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        spacing(n, before=0, after=9)
+        nr = n.add_run(note)
+        nr.font.name = FONT_HEAD
+        nr.font.size = Pt(8.6)
+        nr.font.italic = True
+        nr.font.color.rgb = RGBColor.from_string("444444")
+
+    t = doc.add_table(rows=1, cols=2)
+    t.alignment = WD_TABLE_ALIGNMENT.CENTER
+    t.autofit = False
+    _sub(t._tbl.tblPr, "w:tblLayout", **{"w:type": "fixed"})
+    set_borders(t, {
+        "top": {"sz": 12, "color": "000000"},
+        "bottom": {"sz": 12, "color": "000000"},
+        "left": {"sz": 6, "color": "000000"},
+        "right": {"sz": 6, "color": "000000"},
+        "insideH": {"sz": 4, "color": "BBBBBB"},
+        "insideV": {"sz": 6, "color": "000000"},
+    })
+
+    hdr = t.rows[0]
+    _repeat_header(hdr)
+    for cell, txt, w, al in zip(hdr.cells, head, (name_w, page_w),
+                                (WD_ALIGN_PARAGRAPH.LEFT,
+                                 WD_ALIGN_PARAGRAPH.CENTER)):
+        cell.width = w
+        shade(cell, G_TABHEAD)
+        cell_margins(cell, top=60, bottom=60, start=90, end=90)
+        hp = cell.paragraphs[0]
+        hp.style = doc.styles["TabHead"]
+        hp.alignment = al
+        hp.add_run(txt)
+        set_borders(cell, {"bottom": {"sz": 12, "color": "000000"}})
+
+    for level, text, bm in entries:
+        row = t.add_row()
+        trPr = row._tr.get_or_add_trPr()
+        _sub(trPr, "w:cantSplit")
+        name_c, page_c = row.cells
+        name_c.width, page_c.width = name_w, page_w
+        for c in (name_c, page_c):
+            c.vertical_alignment = WD_ALIGN_VERTICAL.TOP
+            cell_margins(c, top=42, bottom=42, start=90, end=90)
+            if level == 1:
+                shade(c, G_BOX2)
+
+        np_ = name_c.paragraphs[0]
+        np_.style = doc.styles["TabCell"]
+        if level == 1:
+            rr = np_.add_run(text.upper())
+            rr.font.name = FONT_HEAD
+            rr.font.size = Pt(9.4)
+            rr.bold = True
+            rPr = rr._r.get_or_add_rPr()
+            rPr.append(_el("w:spacing", **{"w:val": 12}))
+        else:
+            indent(np_, left=0.42)
+            _rich(np_, text)
+            for rr in np_.runs:
+                rr.font.size = Pt(9.6)
+
+        pp = page_c.paragraphs[0]
+        pp.style = doc.styles["TabCell"]
+        pp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        pageref(pp, bm, size=9.6, bold=(level == 1))
+
+    tail = doc.add_paragraph()
+    spacing(tail, before=0, after=6)
+    tail.paragraph_format.line_spacing = 1
+    return t
+
+
+def how_to_read(doc, rows, title="How to Read These Notes", note=None):
+    """A short orientation page: chapter anatomy and conventions."""
+    p = doc.add_paragraph(style="TOCHead")
+    spacing(p, before=4, after=2)
+    p.add_run(title)
+    bookmark(p, "how_to_read")
+
+    r = doc.add_paragraph()
+    r.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    spacing(r, before=0, after=8)
+    r.paragraph_format.line_spacing = 1
+    set_borders(r, {"bottom": {"sz": 18, "color": "000000", "space": 1}})
+
+    if note:
+        n = doc.add_paragraph(style="TrayLead")
+        spacing(n, before=0, after=8)
+        _rich(n, note)
+
+    t = doc.add_table(rows=0, cols=2)
+    t.alignment = WD_TABLE_ALIGNMENT.CENTER
+    t.autofit = False
+    _sub(t._tbl.tblPr, "w:tblLayout", **{"w:type": "fixed"})
+    label_w, body_w = Cm(5.0), BODY_W - Cm(5.0)
+    set_borders(t, {
+        "top": {"sz": 12, "color": "000000"},
+        "bottom": {"sz": 12, "color": "000000"},
+        "insideH": {"sz": 4, "color": "BBBBBB"},
+    })
+    for label, body in rows:
+        row = t.add_row()
+        lc, bc = row.cells
+        lc.width, bc.width = label_w, body_w
+        for c in (lc, bc):
+            c.vertical_alignment = WD_ALIGN_VERTICAL.TOP
+            cell_margins(c, top=70, bottom=70, start=0, end=110)
+        lp = lc.paragraphs[0]
+        lp.style = doc.styles["TabHead"]
+        rr = lp.add_run(label)
+        rr.font.size = Pt(9.6)
+        bp = bc.paragraphs[0]
+        bp.style = doc.styles["TabCell"]
+        _rich(bp, body)
+        for rr in bp.runs:
+            rr.font.size = Pt(9.8)
+
+    tail = doc.add_paragraph()
+    spacing(tail, before=0, after=6)
+    tail.paragraph_format.line_spacing = 1
+    return t
