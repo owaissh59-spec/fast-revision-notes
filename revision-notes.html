@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes – Pharmacognosy, Pharmaceutics & Dispensing</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes</h1>
+<p class="subtitle">Pharmacognosy · Pharmaceutics · Dispensing Pharmacy · Incompatibilities · Pharmacology</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Pharmacognosy – Gums, Resins &amp; Balsams</li>
+    <li>Fixed &amp; Volatile Oils</li>
+    <li>Drugs of Animal &amp; Mineral Origin; Alkaloids</li>
+    <li>Pharmaceutics – Extraction, Distillation &amp; Drying</li>
+    <li>Pharmaceutics – Weighing, Size Reduction &amp; Emulsification</li>
+    <li>Dispensing Pharmacy – Prescriptions &amp; Calculations</li>
+    <li>Incompatibilities – Physical, Chemical &amp; Therapeutic</li>
+    <li>Pharmacology – Dose, Potency &amp; ADRs</li>
+  </ol>
+</div>
+
+<!-- ================ SECTION 1 ================ -->
+<h2>1. Pharmacognosy – Gums, Resins &amp; Balsams</h2>
+
+<h3>1.1 Gums vs Resins vs Gum-Resins</h3>
+<table>
+  <thead><tr><th>Property</th><th>Gums</th><th>Resins</th><th>Gum-Resins</th></tr></thead>
+  <tbody>
+    <tr><td>Water solubility</td><td>Soluble (form mucilage/colloids)</td><td><strong>Insoluble</strong></td><td>Partially — gum fraction dissolves</td></tr>
+    <tr><td>Organic solvent (alcohol)</td><td>Insoluble</td><td><strong>Soluble</strong> (alcohol, ether, CHCl₃)</td><td>Resin fraction dissolves</td></tr>
+    <tr><td>Physical form</td><td>Amorphous, not hard</td><td>Hard, brittle, amorphous, translucent</td><td>Mixed</td></tr>
+    <tr><td>Formation</td><td>Metabolic product</td><td>Oxidation &amp; polymerization of terpenes</td><td>Natural mixture</td></tr>
+    <tr><td>Example</td><td>Acacia, Tragacanth</td><td>Colophony, Podophyllum</td><td>Asafoetida, Myrrh</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q1:</strong> Gum-resins like Asafoetida contain both water-soluble gum (polysaccharide) and alcohol-soluble resin. Asafoetida ≈ 25% gum, 40–60% resin, 10–17% volatile oil.</div>
+<div class="fact"><span class="q">Resins NOT soluble in water (Q6)</span><span class="a">Insoluble — distinguishes from gums</span><span class="why">Soften on heating; formed by oxidation/polymerization of terpenes.</span></div>
+
+<h3>1.2 Important Gums – Source &amp; Properties</h3>
+<table>
+  <thead><tr><th>Gum</th><th>Source</th><th>Key Property / Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Acacia</strong> (gum arabic)</td><td><em>Acacia senegal</em></td><td>Anionic polysaccharide; o/w emulsifier (forms protective hydrated film at oil-water interface)</td></tr>
+    <tr><td><strong>Tragacanth</strong></td><td><em>Astragalus gummifer</em></td><td>Swells in water → viscous gel; suspending &amp; emulsifying agent</td></tr>
+    <tr><td><strong>Guar gum</strong></td><td><em>Cyamopsis tetragonoloba</em> (seeds)</td><td>Galactomannan (mannose:galactose = 2:1); highly viscous at low conc.; binder/viscosity enhancer</td></tr>
+    <tr><td><strong>Agar</strong></td><td><em>Gelidium</em> spp. (red algae)</td><td>Gels at 0.5–1% w/v; bulk laxative (absorbs water, swells)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Acacia (Q3):</strong> Arabinogalactan with glucuronic acid residues → anionic → adsorbs at oil-water interface forming protective hydrated film → preferred natural o/w emulsifier.</div>
+<div class="key"><strong>Tragacanth (Q31):</strong> Bassorin (60–70%) = water-<strong>insoluble</strong> fraction that <em>swells</em>; Tragacanthin (~30%) = water-soluble portion. Statement "bassorin is water-soluble" is WRONG.</div>
+<div class="key"><strong>Guar gum (Q13):</strong> Used as binder &amp; viscosity enhancer — <strong>NOT a disintegrant</strong>. Disintegrants = starch, croscarmellose Na, crospovidone.</div>
+<div class="key"><strong>Agar (Q18):</strong> From red algae (Rhodophyceae); gels at ≤1% w/v; used as bulk laxative (swells in intestine). All three properties are correct.</div>
+
+<h3>1.3 Resins – Classification &amp; Constituents</h3>
+<table>
+  <thead><tr><th>Type</th><th>Definition</th><th>Examples</th></tr></thead>
+  <tbody>
+    <tr><td>True resin</td><td>Only resin (no volatile oil, no benzoic/cinnamic acid)</td><td>Colophony (abietic acid), Podophyllum resin</td></tr>
+    <tr><td>Balsamic resin</td><td>Resin + benzoic/cinnamic acid but NO essential oil</td><td><strong>Benzoin</strong></td></tr>
+    <tr><td>Oleoresin</td><td>Resin + volatile oil</td><td>Ginger, Capsicum, Turpentine</td></tr>
+    <tr><td>True balsam</td><td>Resin + benzoic/cinnamic acid esters + essential oil</td><td>Balsam of Peru, Tolu, Storax</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Benzoin (Q22):</strong> Classified as <em>balsamic resin</em> (not true balsam) because it lacks oil of balsam. But it DOES contain benzoic acid (Sumatra type) and cinnamic acid (Siam type). True balsams need both acid esters AND essential oil.</div>
+
+<h3>1.4 Balsams – Sources &amp; Uses</h3>
+<table>
+  <thead><tr><th>Balsam</th><th>Source</th><th>Key Constituents</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td>Balsam of Peru</td><td><em>Myroxylon pereirae</em></td><td>Benzyl benzoate, benzyl cinnamate</td><td>Topical: scabies, wounds, parasiticide</td></tr>
+    <tr><td>Balsam of Tolu</td><td><em>Myroxylon balsamum</em></td><td>Benzyl benzoate, cinnamic esters</td><td>Expectorant in cough preparations</td></tr>
+    <tr><td>Storax (Levant)</td><td><em>Liquidambar orientalis</em></td><td>Styracin (cinnamyl cinnamate), styrene, free cinnamic acid</td><td>Fumigating pastilles, incense</td></tr>
+    <tr><td>Compound Benzoin Tincture</td><td>Benzoin (Friar's Balsam)</td><td>Benzoic acid, cinnamic acid</td><td>Steam inhalation for respiratory conditions</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Balsam uses:</strong> Peru = Parasiticide (P=P); Tolu = Throat/cough (T=T); Benzoin tincture = Breathe in (steam); Storax = Smoke (fumigation).</div>
+
+<h3>1.5 Oleoresins</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Ginger oleoresin (Q15)</span><span class="a">From <em>Zingiber officinale</em>; gingerols + zingiberene</span><span class="why">Pungent principles = gingerols &amp; shogaols; volatile oil = zingiberene.</span></div>
+<div class="fact"><span class="q">Volatile oils called "essential" (Q19)</span><span class="a">Because they are the "essence" (odor) of the plant</span><span class="why">NOT because essential for survival. They are secondary metabolites. They DO evaporate at RT without greasy stain.</span></div>
+</div>
+
+<!-- ================ SECTION 2 ================ -->
+<h2>2. Fixed &amp; Volatile Oils</h2>
+
+<h3>2.1 Fixed vs Volatile Oils – Comparison</h3>
+<table>
+  <thead><tr><th>Feature</th><th>Fixed Oils</th><th>Volatile Oils</th></tr></thead>
+  <tbody>
+    <tr><td>Chemistry</td><td>Glycerides of fatty acids</td><td>Terpenes/aromatics; NOT glycerides</td></tr>
+    <tr><td>Stain on paper</td><td><strong>Permanent</strong> greasy stain</td><td>No permanent stain (evaporates)</td></tr>
+    <tr><td>Volatility</td><td>Non-volatile at RT</td><td>Volatile / evaporate at RT</td></tr>
+    <tr><td>Saponification</td><td>Yes (by alkali)</td><td>No</td></tr>
+    <tr><td>Extraction</td><td>Cold/hot expression, solvent extraction (multiple methods)</td><td>Steam distillation (preferred)</td></tr>
+    <tr><td>Detection</td><td>Saponification/acid/iodine values</td><td><strong>Clevenger apparatus</strong> (hydrodistillation)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q7:</strong> Fixed oils are NOT obtained exclusively by cold expression — they use multiple methods (cold/hot expression, solvent extraction). This is what distinguishes it as a wrong property.</div>
+<div class="key"><strong>Q12:</strong> Clevenger apparatus specifically detects/measures volatile oil content by hydrodistillation. Saponification/acid/iodine values are for fixed oils.</div>
+
+<h3>2.2 Analytical Values for Fixed Oils</h3>
+<table>
+  <thead><tr><th>Value</th><th>Definition</th><th>Indicates</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Iodine value</strong></td><td>g of I₂ absorbed per 100 g oil</td><td>Degree of unsaturation (more C=C → higher value). Drying oils &gt;100; non-drying &lt;100</td></tr>
+    <tr><td><strong>Saponification value</strong></td><td>mg KOH to saponify <strong>1 g</strong> of fat</td><td>Average molecular weight of FAs. High value = shorter chain FAs (e.g., coconut oil/lauric acid)</td></tr>
+    <tr><td><strong>Acid value</strong></td><td>mg KOH to neutralize free FAs in <strong>1 g</strong> oil</td><td>Degree of rancidity/hydrolysis. High = more free fatty acids</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Iodine = Unsaturation</strong> (I absorbs into double bonds); <strong>Acid value = Age/rancidity</strong> (free FAs accumulate over time).</div>
+
+<h3>2.3 Steam Distillation of Volatile Oils</h3>
+<div class="key"><strong>Q21, Q28:</strong> Volatile oils require steam distillation because they decompose at their normal boiling points. Principle: two immiscible liquids boil below the BP of either component alone → extracts oil without thermal decomposition. Standard method for essential oil extraction.</div>
+
+<!-- ================ SECTION 3 ================ -->
+<h2>3. Drugs of Animal &amp; Mineral Origin; Alkaloids</h2>
+
+<h3>3.1 Biological Sources – Animal Origin</h3>
+<table>
+  <thead><tr><th>Drug</th><th>Source</th><th>Use / Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Cod liver oil</td><td>Liver of <em>Gadus morrhua</em> (cod fish)</td><td>Fixed oil; vitamins A &amp; D</td></tr>
+    <tr><td>Shellac</td><td>Secretion of <em>Kerria lacca</em> (lac insect)</td><td>Enteric coating</td></tr>
+    <tr><td>Wool fat (lanolin)</td><td>Sebaceous glands of sheep's wool</td><td>Emollient base</td></tr>
+    <tr><td>Gelatin</td><td>Hydrolysis of collagen (skin, bones, connective tissue)</td><td>Capsule shells</td></tr>
+    <tr><td>Beeswax</td><td>Honeybees</td><td>Ointment base</td></tr>
+    <tr><td>Cochineal</td><td><em>Dactylopius coccus</em> (insect)</td><td>Red dye</td></tr>
+    <tr><td>Musk</td><td>Musk deer (gland)</td><td>Perfumery</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q10:</strong> Animal-origin drugs = Beeswax, Cochineal, Musk. Tragacanth = plant gum (<em>Astragalus</em>); Colophony = plant resin (pine trees).</div>
+
+<h3>3.2 Mineral-Origin Drug</h3>
+<div class="fact"><span class="q">Kaolin (Q14)</span><span class="a">Hydrated aluminum silicate — mineral origin</span><span class="why">Used as adsorbent in antidiarrheals &amp; protective dusting powder. Lanolin = animal; Agar = marine/plant; Shellac = animal.</span></div>
+
+<h3>3.3 Alkaloids – General Properties</h3>
+<ul>
+  <li><strong>Basic</strong> due to nitrogen lone pair; most are <strong>optically active &amp; levorotatory</strong>.</li>
+  <li>Form <strong>soluble salts</strong> with mineral acids (HCl, H₂SO₄) — NOT insoluble.</li>
+  <li>Form <strong>insoluble precipitates</strong> with alkaloidal reagents (Mayer's, Dragendorff's).</li>
+</ul>
+<div class="key"><strong>Q26:</strong> "Alkaloids form insoluble salts with mineral acids" is INCORRECT. They form SOLUBLE salts with mineral acids; insoluble precipitates with alkaloidal reagents.</div>
+
+<h3>3.4 Alkaloids – Biosynthetic Precursors</h3>
+<table>
+  <thead><tr><th>Alkaloid</th><th>Precursor Amino Acid</th><th>Class</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Reserpine</strong> (<em>Rauwolfia serpentina</em>)</td><td>Tryptophan</td><td>Indole alkaloid</td></tr>
+    <tr><td>Atropine</td><td>Ornithine</td><td>Tropane alkaloid</td></tr>
+    <tr><td>Ephedrine</td><td>Phenylalanine</td><td>Protoalkaloid</td></tr>
+    <tr><td>Colchicine</td><td>Tyrosine + Phenylalanine</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<!-- ================ SECTION 4 ================ -->
+<h2>4. Pharmaceutics – Extraction, Distillation &amp; Drying</h2>
+
+<h3>4.1 Percolation vs Maceration</h3>
+<table>
+  <thead><tr><th>Feature</th><th>Percolation</th><th>Maceration</th></tr></thead>
+  <tbody>
+    <tr><td>Principle</td><td>Fresh solvent continuously contacts drug → maintains concentration gradient</td><td>Drug soaked in solvent → equilibrium reached</td></tr>
+    <tr><td>Efficiency</td><td>More complete extraction</td><td>Less complete</td></tr>
+    <tr><td>Solvent use</td><td>Uses MORE solvent</td><td>Uses less</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q16:</strong> Key advantage of percolation = fresh solvent maintains concentration gradient → more efficient than maceration (where equilibrium is eventually reached).</div>
+<div class="key"><strong>Q30 (Worked example):</strong> Percolation for 100 mL extract; marc retains 15 mL → Total menstruum needed = 100 + 15 = <strong>115 mL</strong>.</div>
+
+<h3>4.2 Distillation Methods</h3>
+<table>
+  <thead><tr><th>Method</th><th>Principle / Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Simple distillation</strong></td><td>Requires BP difference ≥25°C between components</td></tr>
+    <tr><td><strong>Fractional distillation</strong></td><td>Separates miscible liquids by BP differences; fractionating column provides multiple vaporization-condensation cycles (theoretical plates)</td></tr>
+    <tr><td><strong>Steam distillation</strong></td><td>Immiscible liquids boil below either component's BP → volatile oils extracted without decomposition</td></tr>
+    <tr><td><strong>Vacuum distillation</strong></td><td>Reduced pressure lowers BP → prevents thermal decomposition of sensitive compounds</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q17, Q20:</strong> All three statements correct — simple needs ≥25°C BP diff; fractionating column = multiple theoretical plates; vacuum lowers BP preventing decomposition.</div>
+
+<h3>4.3 Evaporation</h3>
+<div class="key"><strong>Q23 (Worked example):</strong> 500 mL of 10% w/v → 25% w/v. Solute = 10% × 500 = 50 g constant. For 25%: 50 g in X mL → X = 50/0.25 = <strong>200 mL</strong> final volume (remove 300 mL solvent).</div>
+
+<h3>4.4 Spray Drying</h3>
+<div class="fact"><span class="q">"Spray drying is unsuitable for heat-sensitive materials" (Q25)</span><span class="a">INCORRECT — it CAN be used for heat-sensitive materials</span><span class="why">Rapid evaporation → evaporative cooling keeps particle temperature low; contact time = seconds. Used for vaccines &amp; proteins.</span></div>
+
+<!-- ================ SECTION 5 ================ -->
+<h2>5. Pharmaceutics – Weighing, Size Reduction &amp; Emulsification</h2>
+
+<h3>5.1 Prescription Balance</h3>
+<ul>
+  <li><strong>Class B (dispensing)</strong>: Sensitivity requirement = <strong>6 mg</strong>; Capacity = <strong>120 g</strong>.</li>
+  <li>Analytical balance (Class A) = 0.1 mg sensitivity; Microbalance = ultra-precise research.</li>
+</ul>
+<div class="formula">Minimum Weighable Qty (MWQ) = Sensitivity Requirement / Acceptable Error × 100</div>
+<div class="formula">% Error = (Sensitivity Requirement / Quantity Weighed) × 100</div>
+<div class="two-col">
+<div class="key"><strong>Q5:</strong> SR = 6 mg, acceptable error = 5% → MWQ = 6/0.05 = <strong>120 mg</strong>. Below 120 mg → aliquot method required.</div>
+<div class="key"><strong>Q11:</strong> Weighing 80 mg with SR 6 mg → % error = (6/80) × 100 = <strong>7.5%</strong>. Exceeds 5% → use aliquot method.</div>
+</div>
+
+<h3>5.2 IP Sieve Classification</h3>
+<table>
+  <thead><tr><th>Sieve No.</th><th>Aperture (μm)</th><th>Powder Grade</th></tr></thead>
+  <tbody>
+    <tr><td>10</td><td>2000</td><td>—</td></tr>
+    <tr><td>22</td><td>710</td><td>Coarse</td></tr>
+    <tr><td>44</td><td>355</td><td>Moderately coarse</td></tr>
+    <tr><td><strong>85</strong></td><td><strong>180</strong></td><td><strong>Moderately fine</strong></td></tr>
+    <tr><td>120</td><td>125</td><td>Fine</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q4 (Worked example):</strong> Sieve 22 retains 5%, sieve 44 retains 35%, sieve 85 retains 45%, passes 85 = 15%. Majority passes sieve 44 → <strong>moderately fine powder</strong> (IP classification).</div>
+<div class="mnem"><strong>Sieve number ↑ = aperture ↓.</strong> "85 = 180 μm = moderately fine" is a high-yield fact.</div>
+
+<h3>5.3 Size Reduction Methods</h3>
+<table>
+  <thead><tr><th>Method</th><th>Mechanism</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td>Trituration</td><td>Mortar &amp; pestle grinding</td><td>General size reduction</td></tr>
+    <tr><td>Levigation</td><td>Grinding with insoluble liquid</td><td>Ointment incorporation</td></tr>
+    <tr><td><strong>Pulverization by intervention</strong></td><td>Volatile solvent added → evaporates → fine particles</td><td>Gummy, resinous, waxy substances (e.g., camphor with alcohol)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q38:</strong> Both statements correct — pulverization by intervention uses volatile solvent; camphor is ground with alcohol (intervening agent) as it's waxy and hard to grind directly.</div>
+
+<h3>5.4 Emulsification – Dry Gum Method</h3>
+<table>
+  <thead><tr><th>Oil Type</th><th>Oil : Water : Gum Ratio</th></tr></thead>
+  <tbody>
+    <tr><td>Fixed oil (cod liver oil, olive)</td><td><strong>4 : 2 : 1</strong></td></tr>
+    <tr><td>Volatile oil</td><td>2 : 2 : 1</td></tr>
+    <tr><td>Mineral oil</td><td>3 : 2 : 1</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q9 (Worked example):</strong> Cod liver oil 40 mL (fixed oil → 4:2:1). Water = (2/4) × 40 = <strong>20 mL</strong>; Gum = (1/4) × 40 = 10 g. Method: triturate gum with oil, add ALL water at once with vigorous trituration.</div>
+<div class="key"><strong>Q32:</strong> Mineral oil ratio = 3:2:1 (harder to emulsify than fixed oils). For 200 mL mineral oil primary emulsion, gum ≈ 50 g by weight proportion.</div>
+<div class="mnem"><strong>Ratio memory:</strong> Fixed = 4:2:1 (easiest); Mineral = 3:2:1 (middle); Volatile = 2:2:1 (hardest). As difficulty ↑, oil portion ↓.</div>
+
+<!-- ================ SECTION 6 ================ -->
+<h2>6. Dispensing Pharmacy – Prescriptions &amp; Calculations</h2>
+
+<h3>6.1 Latin Abbreviations – Frequency &amp; Timing</h3>
+<table>
+  <thead><tr><th>Abbreviation</th><th>Latin</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>o.d.</td><td>omni die</td><td>Once daily</td></tr>
+    <tr><td>b.d. / b.i.d.</td><td>bis in die</td><td>Twice daily</td></tr>
+    <tr><td>t.i.d.</td><td>ter in die</td><td>Three times daily</td></tr>
+    <tr><td>q.i.d.</td><td>quater in die</td><td>Four times daily</td></tr>
+    <tr><td>o.n.</td><td>omni nocte</td><td>Every night</td></tr>
+    <tr><td>o.m.</td><td>omni mane</td><td>Every morning</td></tr>
+    <tr><td>h.s.</td><td>hora somni</td><td>At bedtime</td></tr>
+    <tr><td>stat.</td><td>statim</td><td>Immediately</td></tr>
+    <tr><td>p.r.n.</td><td>pro re nata</td><td>As needed</td></tr>
+    <tr><td>q4h</td><td>—</td><td>Every 4 hours</td></tr>
+  </tbody>
+</table>
+
+<h3>6.2 Latin Abbreviations – Route, Instruction &amp; Quantity</h3>
+<table>
+  <thead><tr><th>Abbreviation</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>gtt.</td><td>Guttae (drops)</td></tr>
+    <tr><td>a.u.</td><td>Auris utraque (each ear)</td></tr>
+    <tr><td>o.u.</td><td>Oculus uterque (each eye)</td></tr>
+    <tr><td>ad</td><td>"Up to" — make to stated final volume</td></tr>
+    <tr><td>Mitte (Mitt.)</td><td>Send/dispense this quantity</td></tr>
+    <tr><td>Misce (M.)</td><td>Mix</td></tr>
+    <tr><td>Fiat mistura</td><td>Let a mixture be made</td></tr>
+    <tr><td>Nocte</td><td>At night</td></tr>
+    <tr><td>Coch. parv.</td><td>Teaspoonful (5 mL)</td></tr>
+    <tr><td>Coch. mag.</td><td>Tablespoonful (15 mL)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q48:</strong> "gtt. ii a.u. t.i.d." = Two drops in each ear three times daily. a.u. = ear (NOT eye; eye = o.u.).</div>
+<div class="key"><strong>Q49, Q81:</strong> "ad" = up to (Latin). "Aq. dest. ad 100 mL" = add distilled water to make total volume 100 mL (not 100 mL <em>in addition</em>).</div>
+<div class="key"><strong>Q91:</strong> "Quoties opus sit" = as often as necessary (NOT every other day). Fiat mistura = let a mixture be made; Nocte = at night; Coch. mag. = tablespoon (15 mL).</div>
+
+<h3>6.3 Weights &amp; Measures</h3>
+<table>
+  <thead><tr><th>Measure</th><th>Equivalent</th></tr></thead>
+  <tbody>
+    <tr><td>1 teaspoonful</td><td><strong>5 mL</strong></td></tr>
+    <tr><td>1 dessertspoonful</td><td>10 mL</td></tr>
+    <tr><td>1 tablespoonful</td><td><strong>15 mL</strong></td></tr>
+    <tr><td>1 fluid ounce (Indian practice)</td><td><strong>30 mL</strong> (US ≈ 29.57 mL)</td></tr>
+    <tr><td>1 Imperial fluid ounce</td><td>28.4 mL</td></tr>
+    <tr><td>1 fluid drachm</td><td><strong>60 minims</strong> (≈ 3.55 mL)</td></tr>
+    <tr><td>1 fluid ounce</td><td>8 fluid drachms = 480 minims</td></tr>
+    <tr><td>1 Imperial pint</td><td>568 mL</td></tr>
+    <tr><td>1 Imperial gallon</td><td><strong>4546 mL</strong> (NOT 4000)</td></tr>
+    <tr><td>1 minim</td><td>≈ 0.06 mL</td></tr>
+  </tbody>
+</table>
+
+<h4>Apothecary Weights</h4>
+<table>
+  <thead><tr><th>Unit</th><th>Metric Equivalent</th><th>Relation</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1 grain (gr)</strong></td><td>64.8 mg (≈ 65 mg)</td><td>Basic unit</td></tr>
+    <tr><td>1 scruple</td><td>1.296 g</td><td>20 grains</td></tr>
+    <tr><td>1 drachm</td><td>3.888 g</td><td>60 grains = 3 scruples</td></tr>
+    <tr><td>1 ounce</td><td>31.1 g</td><td>480 grains = 8 drachms</td></tr>
+    <tr><td>1 apothecary pound</td><td>—</td><td><strong>12 ounces</strong> (NOT 16; avoirdupois = 16 oz)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q47:</strong> Grain is basic unit (✓); 1 ounce = 8 drachms (✓). "1 drachm = 60 minims" conflates weight &amp; volume — by weight, 1 drachm = 60 grains ≈ 3.888 g. Apothecary pound = 12 oz (NOT 16).</div>
+
+<h3>6.4 Dose Calculation Formulas</h3>
+<div class="formula">Young's: Child dose = [Age / (Age + 12)] × Adult dose</div>
+<div class="formula">Bastedo's: Child dose = [(Age + 3) / 30] × Adult dose</div>
+<div class="formula">Dilution: C₁V₁ = C₂V₂</div>
+<div class="key"><strong>Q86 (Worked example):</strong> Drug P adult dose 600 mg; child 4 yr. Young's = [4/(4+12)] × 600 = (4/16) × 600 = 150 mg. Convert to grains: 150/65 ≈ <strong>2.3 grains</strong>.</div>
+
+<h3>6.5 Prescription Calculations – Worked Examples</h3>
+<div class="two-col">
+<div class="key"><strong>Q39:</strong> Codeine tabs "ii q4h prn, max 12 tabs/day" × 3 days = 12 × 3 = <strong>36 tablets</strong>.</div>
+<div class="key"><strong>Q40:</strong> 2% stock → 0.1% in 500 mL. C₁V₁ = C₂V₂: 2 × V₁ = 0.1 × 500 → V₁ = <strong>25 mL</strong>.</div>
+<div class="key"><strong>Q41:</strong> Digoxin 0.0625 mg = 62.5 mcg. Stock = 62.5 mcg tab → <strong>1 tablet</strong> per dose.</div>
+<div class="key"><strong>Q45:</strong> Morphine 10 mg/mL; dose 0.1 mg/kg × 60 kg = 6 mg. Volume = 6/10 = <strong>0.6 mL</strong>.</div>
+<div class="key"><strong>Q46:</strong> KMnO₄ 1:500 w/v for 200 mL. 1 g/500 mL → (1/500) × 200 = <strong>0.4 g</strong>.</div>
+<div class="key"><strong>Q99:</strong> Paracetamol 120 mg/5 mL; child 18 kg × 10 mg/kg = 180 mg/dose. Vol/dose = (180/120) × 5 = 7.5 mL. Daily = 7.5 × 3 = 22.5 mL. 3 days = <strong>67.5 mL</strong>.</div>
+</div>
+
+<h3>6.6 Standard Doses of Preparations</h3>
+<table>
+  <thead><tr><th>Preparation</th><th>Dose</th></tr></thead>
+  <tbody>
+    <tr><td>Tincture Belladonna IP</td><td>0.5–1 mL</td></tr>
+    <tr><td>Aromatic Spirit of Ammonia</td><td>2–4 mL</td></tr>
+    <tr><td>Compound Tincture of Cardamom IP</td><td>2–4 mL</td></tr>
+    <tr><td>Paregoric (Camphorated Opium Tinct.)</td><td>5–10 mL</td></tr>
+    <tr><td>Syrup Ipecac (emesis)</td><td>15 mL</td></tr>
+    <tr><td>Normal Saline IV</td><td>Individualized (based on fluid deficit)</td></tr>
+  </tbody>
+</table>
+
+<h3>6.7 Dispensing Errors</h3>
+<ul>
+  <li><strong>Prescribing errors</strong>: omitting route, illegible handwriting, prescribing interacting drugs.</li>
+  <li><strong>Dispensing errors</strong>: wrong strength dispensed (Q96 Scenario A), wrong frequency on label (Scenario B).</li>
+  <li>Illegible handwriting = prescribing error (not dispensing error).</li>
+</ul>
+
+<!-- ================ SECTION 7 ================ -->
+<h2>7. Incompatibilities – Physical, Chemical &amp; Therapeutic</h2>
+
+<h3>7.1 Classification of Incompatibilities</h3>
+<table>
+  <thead><tr><th>Type</th><th>Occurs</th><th>Mechanism</th><th>Examples</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Physical</strong></td><td>In vitro (in preparation)</td><td>Immiscibility, liquefaction (eutectic), adsorption, insolubility</td><td>Oil + water (no emulsifier); Camphor + Menthol (eutectic); Kaolin adsorbing alkaloids</td></tr>
+    <tr><td><strong>Chemical</strong></td><td>In vitro</td><td>Oxidation, reduction, precipitation, effervescence, hydrolysis</td><td>Adrenaline oxidation in alkali; AgNO₃ + NaCl; NaHCO₃ + acid</td></tr>
+    <tr><td><strong>Therapeutic</strong></td><td><strong>In vivo</strong> (in patient)</td><td>Antagonism, synergism, drug interactions</td><td>CNS depressant + stimulant; Warfarin + Aspirin; Morphine + Naloxone</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q66:</strong> Physical incompatibility is NOT always visually detectable (e.g., adsorption is invisible). Chemical incompatibility involves redox reactions. Therapeutic incompatibility occurs in vivo. Not all incompatibilities resolved by vehicle change alone.</div>
+
+<h3>7.2 Physical Incompatibility – Key Types</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Immiscibility (Q59)</span><span class="a">Two immiscible liquids prescribed without emulsifier</span><span class="why">Overcome by adding suitable emulsifying agent.</span></div>
+<div class="fact"><span class="q">Eutectic / Liquefaction (Q53)</span><span class="a">Camphor + Menthol + Thymol → liquid at RT</span><span class="why">Combined melting point drops below room temperature. Overcome with absorbents (light MgCO₃, kaolin).</span></div>
+<div class="fact"><span class="q">Adsorption (Q54)</span><span class="a">Kaolin / activated charcoal adsorbs alkaloids</span><span class="why">Large surface area reduces drug availability. Not visually detectable.</span></div>
+</div>
+
+<h3>7.3 Chemical Incompatibility – Mechanisms</h3>
+<table>
+  <thead><tr><th>Mechanism</th><th>Example</th><th>Q Ref</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Oxidation</strong></td><td>Adrenaline → adrenochrome (pink/brown) in alkaline solution</td><td>Q64</td></tr>
+    <tr><td><strong>Precipitation (pH change)</strong></td><td>Quinine sulphate precipitates when alkali added (free base insoluble)</td><td>Q50</td></tr>
+    <tr><td><strong>Precipitation (alkaloid)</strong></td><td>Strychnine (Nux Vomica) precipitates in alkaline NaHCO₃</td><td>Q98</td></tr>
+    <tr><td><strong>Double decomposition</strong></td><td>AgNO₃ + NaCl → AgCl↓ (white ppt) + NaNO₃</td><td>Q97</td></tr>
+    <tr><td><strong>Double decomposition</strong></td><td>FeSO₄ + NaHCO₃ → FeCO₃↓ + Na₂SO₄ + CO₂</td><td>Q78</td></tr>
+    <tr><td><strong>Effervescence (gas evolution)</strong></td><td>NaHCO₃ + citric acid → CO₂↑</td><td>Q70, Q84</td></tr>
+    <tr><td><strong>Acid-base reaction</strong></td><td>Calamine (ZnO) + salicylic acid → zinc salicylate</td><td>Q60</td></tr>
+    <tr><td><strong>Hydrolysis</strong></td><td>Aspirin + NaHCO₃ (alkaline) → hydrolyzed/precipitates</td><td>Q83</td></tr>
+    <tr><td><strong>Iron-tannin complex</strong></td><td>Iron salts + tannins → blue-black iron tannate↓</td><td>Q76</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q61:</strong> Oxidative chemical incompatibility is overcome by adding <strong>antioxidants</strong> (sodium metabisulphite, ascorbic acid, BHT).</div>
+<div class="key"><strong>Q84:</strong> NaHCO₃ + citric acid effervescence — dispense separately; patient mixes before use (draught method).</div>
+
+<h3>7.4 Therapeutic (Physiological) Incompatibility</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Antagonism (Q52, Q55)</span><span class="a">CNS depressant + CNS stimulant; Morphine + Naloxone</span><span class="why">Opposing pharmacological actions in vivo.</span></div>
+<div class="fact"><span class="q">Synergism (Q82)</span><span class="a">Phenobarbitone + Chlorpromazine → excessive CNS depression</span><span class="why">Both are CNS depressants → additive/synergistic sedation &amp; respiratory depression.</span></div>
+<div class="fact"><span class="q">Warfarin interactions (Q57)</span><span class="a">Aspirin enhances (↑ bleeding); Vitamin K antagonizes warfarin</span><span class="why">Both are therapeutic incompatibilities occurring in vivo.</span></div>
+<div class="fact"><span class="q">Adrenaline in digits (Q51)</span><span class="a">Contraindicated — vasoconstriction of end-arteries → ischaemia/gangrene</span></div>
+<div class="fact"><span class="q">Liquid paraffin + fat-soluble vitamins (Q75)</span><span class="a">Impairs absorption of A, D, E, K</span><span class="why">Non-absorbable oil dissolves vitamins and carries them out unabsorbed.</span></div>
+</div>
+
+<h3>7.5 Overcoming Incompatibilities</h3>
+<table>
+  <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+  <tbody>
+    <tr><td>Immiscibility</td><td>Emulsification</td></tr>
+    <tr><td>Eutectic liquefaction</td><td>Absorbents (light MgCO₃, kaolin) — NOT adsorbents</td></tr>
+    <tr><td>Effervescence</td><td>Dispense separately; mix before use</td></tr>
+    <tr><td>Oxidation</td><td>Add antioxidants (Na metabisulphite, ascorbic acid)</td></tr>
+    <tr><td>Precipitation (pH)</td><td>Change order of mixing; adjust pH; use different salt form</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q94:</strong> Emulsification overcomes immiscibility (✓); changing order of mixing can prevent precipitation (✓); absorbents overcome liquefaction (✓). But adsorbents do NOT overcome eutectic formation — that statement is WRONG.</div>
+
+<h3>7.6 Dispensing Considerations</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Calamine lotion (Q73)</span><span class="a">Pink suspension — requires suspending agent (bentonite)</span><span class="why">Calamine (ZnO + Fe₂O₃) is insoluble; needs uniform distribution.</span></div>
+<div class="fact"><span class="q">KMnO₄ solutions (Q74)</span><span class="a">Do NOT use rubber closures</span><span class="why">Strong oxidizer attacks rubber; use glass stoppers or resistant plastic.</span></div>
+<div class="fact"><span class="q">Cloudy solution + precipitate (Q68)</span><span class="a">Chemical incompatibility by precipitation</span><span class="why">Insoluble product formed from reaction between ingredients.</span></div>
+</div>
+
+<!-- ================ SECTION 8 ================ -->
+<h2>8. Pharmacology – Dose, Potency &amp; ADRs</h2>
+
+<h3>8.1 Key Pharmacological Definitions</h3>
+<table>
+  <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Potency</strong></td><td>Amount of drug needed to produce a given effect (lower dose = more potent); measured by EC₅₀/ED₅₀</td></tr>
+    <tr><td><strong>Efficacy</strong></td><td>Maximum effect a drug can produce (regardless of dose)</td></tr>
+    <tr><td><strong>Drug idiosyncrasy</strong></td><td>Abnormal <em>genetically determined</em> drug reaction; qualitatively different from expected; unrelated to dose</td></tr>
+    <tr><td><strong>Drug cumulation</strong></td><td>Rate of administration exceeds rate of elimination → progressive ↑ in plasma levels</td></tr>
+    <tr><td><strong>Tachyphylaxis</strong></td><td>Rapid development of tolerance after repeated doses</td></tr>
+    <tr><td><strong>Cross-tolerance</strong></td><td>Tolerance to one drug extends to related drugs</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Q63:</strong> Tolerance = decreased response requiring higher doses but does NOT inherently increase toxicity. Tachyphylaxis (✓), cross-tolerance (✓), and tolerance is decreased response (✓) are all correct.</div>
+<div class="key"><strong>Q67 (Case):</strong> Hepatotoxic drug → liver damage → impaired own metabolism → drug cumulation → worsening toxicity (positive feedback loop).</div>
+<div class="key"><strong>Q69:</strong> Cumulation = administration rate > elimination rate → progressive plasma level increase → potential toxicity.</div>
+
+<h3>8.2 Antidotes &amp; Emergency Doses</h3>
+<table>
+  <thead><tr><th>Antidote</th><th>For</th><th>Dose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Atropine sulphate</strong></td><td>OP poisoning</td><td>1.8–3 mg IV, repeat q5–10 min until atropinization</td></tr>
+    <tr><td><strong>Naloxone</strong></td><td>Opioid overdose</td><td>0.4–2 mg IV, repeated</td></tr>
+    <tr><td><strong>N-Acetylcysteine (NAC)</strong></td><td>Paracetamol overdose</td><td>150 mg/kg IV initial loading</td></tr>
+    <tr><td><strong>Pralidoxime (2-PAM)</strong></td><td>OP poisoning (reactivates AChE)</td><td>1–2 g IV over 15–30 min</td></tr>
+    <tr><td><strong>Activated charcoal</strong></td><td>General acute poisoning</td><td>50–100 g oral (1 g/kg); children 25–50 g</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Universal antidote (Q65):</strong> Activated charcoal (adsorbent) + Magnesium oxide (neutralizes acids) + Tannic acid (precipitates alkaloids/metals). Largely replaced by charcoal alone.</div>
+
+<h3>8.3 Dose Modification in Renal Impairment</h3>
+<ul>
+  <li>Drugs excreted mainly by kidneys need dose reduction (✓).</li>
+  <li><strong>Creatinine clearance (CrCl)</strong> guides dosing decisions (✓).</li>
+  <li>Only drugs significantly eliminated renally need adjustment — hepatically metabolized drugs may NOT need renal dose adjustment.</li>
+  <li>"All drugs need dose adjustment in renal failure" is INCORRECT (Q79).</li>
+</ul>
+
+<!-- ================ LAST-MINUTE FACT DUMP ================ -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+<div class="fact"><span class="q">Gum-resin example</span><span class="a">Asafoetida (gum + resin + volatile oil)</span></div>
+<div class="fact"><span class="q">Acacia emulsifier type</span><span class="a">o/w emulsifier (anionic polysaccharide)</span></div>
+<div class="fact"><span class="q">Tragacanth insoluble fraction</span><span class="a">Bassorin (60–70%)</span></div>
+<div class="fact"><span class="q">Guar gum is NOT a</span><span class="a">Disintegrant (it's a binder)</span></div>
+<div class="fact"><span class="q">Agar gels at</span><span class="a">0.5–1% w/v concentration</span></div>
+<div class="fact"><span class="q">Benzoin classification</span><span class="a">Balsamic resin (not true balsam)</span></div>
+<div class="fact"><span class="q">Storax source</span><span class="a"><em>Liquidambar orientalis</em></span></div>
+<div class="fact"><span class="q">Volatile oils "essential" because</span><span class="a">Represent "essence" (odor) of plant</span></div>
+<div class="fact"><span class="q">Iodine value indicates</span><span class="a">Degree of unsaturation</span></div>
+<div class="fact"><span class="q">Saponification value: KOH per</span><span class="a">1 gram of fat/oil</span></div>
+<div class="fact"><span class="q">Volatile oil detection apparatus</span><span class="a">Clevenger (hydrodistillation)</span></div>
+<div class="fact"><span class="q">Reserpine precursor</span><span class="a">Tryptophan (indole alkaloid)</span></div>
+<div class="fact"><span class="q">Kaolin origin</span><span class="a">Mineral (hydrated Al silicate)</span></div>
+<div class="fact"><span class="q">Alkaloids + mineral acids form</span><span class="a">SOLUBLE salts (not insoluble)</span></div>
+<div class="fact"><span class="q">MWQ formula</span><span class="a">SR / acceptable error × 100</span></div>
+<div class="fact"><span class="q">IP Sieve 85 aperture</span><span class="a">180 μm (moderately fine)</span></div>
+<div class="fact"><span class="q">Dry gum ratio — fixed oil</span><span class="a">4 : 2 : 1 (oil:water:gum)</span></div>
+<div class="fact"><span class="q">Spray drying + heat-sensitive</span><span class="a">IS suitable (evaporative cooling)</span></div>
+<div class="fact"><span class="q">Percolation advantage</span><span class="a">Fresh solvent maintains concentration gradient</span></div>
+<div class="fact"><span class="q">"ad" in prescription means</span><span class="a">Make up to (final volume)</span></div>
+<div class="fact"><span class="q">1 grain =</span><span class="a">64.8 mg (≈ 65 mg)</span></div>
+<div class="fact"><span class="q">1 fluid drachm =</span><span class="a">60 minims</span></div>
+<div class="fact"><span class="q">Bastedo's formula</span><span class="a">(Age+3)/30 × Adult dose</span></div>
+<div class="fact"><span class="q">Camphor + Menthol =</span><span class="a">Eutectic (liquefaction)</span></div>
+<div class="fact"><span class="q">Adrenaline + alkali =</span><span class="a">Oxidation → adrenochrome (pink/brown)</span></div>
+<div class="fact"><span class="q">Overcome oxidation incompatibility</span><span class="a">Add antioxidants (Na metabisulphite)</span></div>
+<div class="fact"><span class="q">Iron + Tannin =</span><span class="a">Blue-black iron tannate precipitate</span></div>
+<div class="fact"><span class="q">NaHCO₃ + acid =</span><span class="a">Effervescence (CO₂) — chemical incompatibility</span></div>
+<div class="fact"><span class="q">Drug idiosyncrasy</span><span class="a">Genetically determined abnormal reaction</span></div>
+<div class="fact"><span class="q">Atropine dose in OP poisoning</span><span class="a">1.8–3 mg IV q5–10 min</span></div>
+<div class="fact"><span class="q">Activated charcoal adult dose</span><span class="a">50–100 g oral single dose</span></div>
+<div class="fact"><span class="q">Universal antidote components</span><span class="a">Charcoal + MgO + Tannic acid</span></div>
+<div class="fact"><span class="q">Potency vs Efficacy</span><span class="a">Potency = dose needed; Efficacy = max effect</span></div>
+<div class="fact"><span class="q">"Coch. parv. t.i.d."</span><span class="a">1 teaspoonful (5 mL) three times daily</span></div>
+<div class="fact"><span class="q">Apothecary pound =</span><span class="a">12 ounces (not 16)</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>
