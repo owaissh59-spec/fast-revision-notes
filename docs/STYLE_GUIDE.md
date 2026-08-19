@@ -99,9 +99,15 @@ Every design choice in the template exists for a reason. If a user challenges a 
 - A user in revision mode wants to compare related facts. Question order in the source is arbitrary (often randomized).
 - The AI reorganizes across the entire input.
 
-### Cite Q-numbers only for worked examples
-- The user occasionally wants to trace a worked example back to its source. That's the only reliable use case for a Q-number in the output.
-- Do NOT annotate every fact with its Q-number — it's visual clutter.
+### Never print source question numbers
+- Question numbers ("Q8", "Q30", "Question 5") are source artifacts. In revision material they are pure visual clutter and carry no meaning once questions are regrouped by concept.
+- Do NOT annotate any fact, point, worked example, or fact card with a source question number.
+- Label worked examples by what they demonstrate (e.g., "Staffing calc:", "Vd example:"), never by "Q#".
+
+### One concept, one entry (deduplicate)
+- Mock tests deliberately repeat concepts across many questions; the revision notes must not.
+- When multiple questions test the same concept, merge them into a single table row, bullet, or box, folding in any extra detail from the duplicates.
+- The reader should never encounter the same fact twice. Duplication wastes paper and slows revision.
 
 ### Last-minute fact dump at the end
 - A pre-exam skim needs a single dense page of one-liners.
