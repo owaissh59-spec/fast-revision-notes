@@ -38,13 +38,21 @@ The user's goal is to print these notes and refresh concepts quickly. **Do NOT p
 6. **Never insert forced page breaks** (`page-break-before: always`) between top-level sections. Let content flow naturally to save paper.
 7. **Do not add tests, quiz mode, or interactive features.** This is a print artifact.
 8. **File name:** `revision-notes.html` unless the user specifies otherwise.
+9. **Never print source question numbers.** Do NOT write "Q8:", "Q30", "(Q113)", "Question 5", or any reference to the original question number anywhere in the output — not in points, not next to worked examples, not in the fact dump. The notes must read as clean revision material, not as annotated answers. The order of questions in the source is arbitrary and the numbers carry no revision value.
+10. **Deduplicate concepts — one concept, one place.** When several questions test the same underlying concept, consolidate them into a **single** table row, bullet, fact card, or box. Never repeat the same fact because it appeared in multiple questions. Merge overlapping questions; keep only the most complete version, absorbing any extra detail from the duplicates into that single entry.
 
 ---
 
 ## 3. Workflow (Follow in Order)
 
-### Step 1 — Read & Categorize
-Parse the input and mentally group questions into thematic sections. Common categories include:
+### Step 1 — Read ALL Questions First, Then Categorize
+**Before writing anything, read every question together with its Answer and Explanation, end to end.** Only after you have the full picture should you design the notes. During this pass you must:
+
+- Identify the **distinct concepts** actually being tested (there are always far fewer concepts than questions).
+- **Detect duplicates and overlaps:** note every set of questions that hit the same concept so you can merge them into one entry later (see Non-Negotiable Rule 10).
+- Decide the best structure for the material as a whole — do not convert questions one-by-one in source order.
+
+Then group the distinct concepts into thematic sections. Common categories include:
 
 - Public Health / Health Administration / Programmes
 - Epidemiology / Biostatistics / Screening
@@ -58,7 +66,7 @@ Parse the input and mentally group questions into thematic sections. Common cate
 You are NOT limited to these — pick whatever categories match the actual content. **Group questions on the same concept together**, even if they appear far apart in the input.
 
 ### Step 2 — Convert to Concepts (Not Q&A)
-For each group of related questions, extract the underlying **facts and relationships**. Do not write "Q: … A: …". Instead, produce:
+For each group of related questions, extract the underlying **facts and relationships**. Do not write "Q: … A: …". **Collapse duplicates as you go:** if three questions all test "autoclave = 121°C/15 min/15 psi", that becomes exactly one entry, not three. Instead, produce:
 
 - **Tables** for anything comparative (dose ranges, classifications, hierarchies, populations, timings, ratios, drug classes, etc.).
 - **Bullet lists** for enumerable facts.
@@ -67,7 +75,7 @@ For each group of related questions, extract the underlying **facts and relation
 - **Key highlights** (`.key`) for critical rules, worked examples, and definitions.
 - **Mnemonics** (`.mnem`) where a memorable hook exists or you can construct one.
 
-Include **all worked examples** from the source (with the original question number as a reference, e.g., "Q8:"). Users find these numeric anchors helpful.
+Include **all worked examples** from the source, but **without any question-number label** (no "Q8:", no "(Q30)"). Present each worked example purely as the concept + calculation. If two or more questions are variations of the same worked example, keep **one** representative example only.
 
 ### Step 3 — Apply the Template
 Use `templates/base-template.html` as the starting HTML skeleton. It already has the correct CSS. Do not modify the CSS unless the user explicitly asks for a size/spacing change.
@@ -100,13 +108,15 @@ Before finishing, mentally walk through every question in the input and confirm 
 - Include worked examples with numerical answers, showing the calculation.
 - Distinguish confusable pairs (index vs primary case, reservoir vs source, sensitivity vs specificity, direct vs indirect standardization, etc.) using a two-column table or side-by-side layout.
 - Include mnemonics like "SnNout / SpPin", "5-30-120 rule", etc. Invent new ones where useful.
-- Cite original question numbers ("Q30", "Q113") next to worked examples so the user can trace back.
+- Merge every set of questions that share a concept into a single entry — the reader should never see the same fact twice.
 
 ### Content DON'T
 - Don't include the full MCQ text ("(a) 5,000 (b) 30,000 …"). Only the concept survives.
 - Don't include marketing language, motivational text, or emojis in body content (small icons like ★ inside `.mnem::before` are fine).
 - Don't add a section titled "Introduction" or "Conclusion".
 - Don't include page numbers, dates, or "prepared by" notes.
+- Don't print source question numbers ("Q8", "Q30", "Question 12") anywhere — in points, worked examples, or the fact dump.
+- Don't repeat a concept because it appeared in more than one question. One concept = one entry.
 
 ---
 

@@ -39,6 +39,8 @@ Read all questions once before writing anything. Cluster related concepts:
 
 Group and order sections logically (fundamentals → applications). Within each section, order sub-topics from general → specific.
 
+**Deduplicate while clustering.** Mock tests repeat the same concept across many questions. As you cluster, collapse every group of same-concept questions into a **single** planned entry. If five questions all revolve around "sensitivity = TP/(TP+FN)", that is one fact in the output, not five. Absorb any unique detail from the duplicates into that one entry, then discard the rest.
+
 ---
 
 ## Step 3 — Choose the Right Component for Each Fact
@@ -77,12 +79,12 @@ While preserving every concept, apply these compressions:
 Every numerical example in the source is worth keeping. Format:
 
 ```html
-<div class="key"><strong>Q8:</strong> Block pop 1,20,000 (plain) →
+<div class="key"><strong>Staffing calc:</strong> Block pop 1,20,000 (plain) →
 PHCs = 120000÷30000 = <strong>4</strong>;
 SCs = 120000÷5000 = <strong>24</strong>.</div>
 ```
 
-Cite the original question number so the user can trace back if needed.
+**Do NOT print the source question number** (no "Q8:", no "(Q30)"). Label the box by what it demonstrates (e.g., "Staffing calc:", "Vd example:") instead. If several questions are the same worked example, keep only one.
 
 ---
 
@@ -106,11 +108,13 @@ Example fact card:
 Before delivering, check:
 
 - [ ] Every input question's concept appears somewhere in the HTML.
+- [ ] No source question numbers ("Q8", "Q30", "Question 5") appear anywhere in the output.
+- [ ] Concepts tested by multiple questions appear exactly once (no duplicated facts).
 - [ ] No forced `page-break-before: always` between H2 sections.
 - [ ] Body font 8.5pt, line-height 1.22.
 - [ ] All boxes have `page-break-inside: avoid`.
 - [ ] Tables have zebra-striping.
-- [ ] Every worked example is included with its Q-number.
+- [ ] Every worked example is included (labelled by what it shows, not by a Q-number).
 - [ ] Last-minute fact dump has 25+ items.
 - [ ] File is a single self-contained HTML (no external assets).
 - [ ] Print preview shows no half-empty pages caused by forced breaks.
@@ -136,3 +140,5 @@ Write the HTML to `revision-notes.html` in the workspace root. In your response:
 4. **Redundant boxes.** Don't put a single sentence in a `.key` block — just make it a paragraph.
 5. **Missing worked examples.** These are high-value; always keep them.
 6. **Over-abbreviating.** "AChE" is fine; "acetylcholinesterase" is fine; "ACE" is not (ambiguous with the enzyme).
+7. **Printing question numbers.** Never carry "Q8", "Q30", or "Question 5" into the output — they are source artifacts with no revision value.
+8. **Duplicated concepts.** If the same fact shows up in several questions, it must appear only once in the notes. Merge, don't repeat.

@@ -41,6 +41,9 @@ Repeated here for emphasis (full details in `AGENTS.md`):
 5. **Organize by concept**, not by question number.
 6. **Preserve every distinct concept** — nothing dropped.
 7. **Include a Last-Minute Fact Dump** with 25–35 one-line facts in a 3-column layout.
+8. **Never print source question numbers** ("Q8", "Q30", "Question 5") anywhere in the output — not in points, worked examples, or the fact dump.
+9. **Deduplicate concepts** — when multiple questions test the same concept, merge them into a single entry; never repeat the same fact.
+10. **Read and analyse ALL questions + explanations first**, then design the notes as a whole — do not convert questions one-by-one in source order.
 
 ## What NOT To Do
 
@@ -49,6 +52,8 @@ Repeated here for emphasis (full details in `AGENTS.md`):
 - Do not add JavaScript, web fonts, or external assets.
 - Do not force page breaks that waste paper.
 - Do not truncate content to save space — compress structure, not concepts.
+- Do not label anything with a source question number ("Q8:", "(Q30)", "Question 12").
+- Do not repeat a fact just because several questions tested it — merge into one entry.
 
 ## Delivery
 
