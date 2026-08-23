@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes – Nursing</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes — Nursing</h1>
+<p class="subtitle">Home Nursing &amp; First Aid · Vital Signs · Infection &amp; Immunisation · Shock &amp; Transfusion · Surgical &amp; Post-op · Obstetrics &amp; Newborn · Geriatric &amp; Mental Health</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Positions &amp; Bed-Making</li>
+    <li>Immobility, Pressure Sores &amp; Skin Care</li>
+    <li>Sick Room, Hygiene &amp; Nurse's Role</li>
+    <li>Vital Signs &amp; Observation</li>
+    <li>Fever &amp; Hot / Cold Applications</li>
+    <li>Nutrition &amp; Fluid Balance</li>
+    <li>Tube Feeding, Wounds &amp; Asepsis</li>
+    <li>Bandaging &amp; Slings</li>
+    <li>Enemas &amp; Special Procedures</li>
+    <li>Oxygen Therapy</li>
+    <li>Drug Administration &amp; Drug Laws</li>
+    <li>Infection, Immunity &amp; Immunisation</li>
+    <li>Isolation Precautions</li>
+    <li>Shock &amp; Haemorrhage</li>
+    <li>Blood &amp; Transfusion</li>
+    <li>Peri-operative &amp; Post-op Care</li>
+    <li>Obstetrics, Labour &amp; Newborn</li>
+    <li>Geriatric &amp; Mental Health</li>
+    <li>Hospital Departments</li>
+    <li>Last-Minute Fact Dump</li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<h2>1. Positions &amp; Bed-Making</h2>
+
+<h3>1.1 Patient Positions &amp; Indications</h3>
+<table>
+  <thead><tr><th>Position</th><th>Description</th><th>Primary use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Fowler's</strong></td><td>Sitting up 45–60°</td><td>Respiratory / cardiac patients — improves breathing</td></tr>
+    <tr><td><strong>High Fowler's</strong></td><td>Head 60–90°</td><td>Pneumonia — max lung expansion (diaphragm drops)</td></tr>
+    <tr><td><strong>Supine / flat</strong></td><td>Lying flat on back</td><td>Post-lumbar puncture — prevents CSF-leak headache</td></tr>
+    <tr><td><strong>Lateral (recovery)</strong></td><td>On side</td><td>Unconscious / breathing patient — airway protection, prevents aspiration</td></tr>
+    <tr><td><strong>Prone</strong></td><td>On abdomen</td><td>Back burns, chest drainage, after spinal/back surgery</td></tr>
+    <tr><td><strong>Trendelenburg</strong> (legs up 20°)</td><td>Head-down / legs raised</td><td>Shock — ↑ venous return &amp; preload to heart</td></tr>
+    <tr><td><strong>Supine, legs elevated</strong></td><td>Flat + legs up</td><td>Shock — ↑ venous return</td></tr>
+    <tr><td><strong>Feeding position</strong></td><td>Upright ≥45° Fowler's</td><td>Dependent feeding — gravity aids swallow, prevents aspiration (stay up 30 min after)</td></tr>
+  </tbody>
+</table>
+
+<h3>1.2 Bed Layers &amp; Linen</h3>
+<div class="formula">Mattress → BOTTOM sheet → MACKINTOSH → DRAW sheet → [patient] → TOP sheet → BLANKET → counterpane</div>
+<div class="two-col">
+  <div class="fact"><span class="q">Mackintosh</span><span class="a">Waterproof rubber/plastic sheet</span><span class="why">Protects mattress; lies over middle third, UNDER draw sheet (not on skin). Named after Charles Macintosh.</span></div>
+  <div class="fact"><span class="q">Draw sheet</span><span class="a">Folded sheet across middle 3rd</span><span class="why">Shoulders→below buttocks, over mackintosh. Easily changed when soiled; aids turning; "drawn" side to side.</span></div>
+  <div class="fact"><span class="q">Counterpane</span><span class="a">Decorative top cover</span></div>
+</div>
+
+<h3>1.3 Bed-Making Accessories</h3>
+<table>
+  <thead><tr><th>Item</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Air ring</strong> (rubber ring)</td><td>Under sacrum — redistributes pressure, prevents bedsores</td></tr>
+    <tr><td><strong>Bed blocks</strong></td><td>Under bed legs — elevate head/foot end (Trendelenburg, Fowler's)</td></tr>
+    <tr><td><strong>Foot board</strong></td><td>Firm board at foot — prevents plantar flexion / foot drop</td></tr>
+    <tr><td><strong>Side rails</strong></td><td>Safety — prevent confused/restless patients falling</td></tr>
+    <tr><td><strong>Bed cradle</strong></td><td>Arched frame keeps bedclothes OFF legs/injured part (burns, fractures, PVD, sensitive skin)</td></tr>
+    <tr><td><strong>Back rest</strong></td><td>Support behind pillows for sitting-up (cardiac, respiratory)</td></tr>
+    <tr><td><strong>Hospital (mitered) corner</strong></td><td>Neat triangular fold tucked under mattress — keeps sheets secure</td></tr>
+  </tbody>
+</table>
+
+<h3>1.4 Occupied Bed-Making Sequence</h3>
+<div class="key"><strong>Steps:</strong> Explain procedure (reduce anxiety, gain cooperation) → loosen linen → roll patient to one side (facing away from working side) → roll used bottom sheet toward patient → place clean bottom sheet + mackintosh + draw sheet on cleared half, tuck → roll patient over the bundle to clean side → remove soiled linen → pull clean linen through → tuck in. <strong>First action = explain + roll to one side.</strong></div>
+
+<!-- ============================================================ -->
+<h2>2. Immobility, Pressure Sores &amp; Skin Care</h2>
+
+<h3>2.1 Pressure Ulcers (Decubitus / Bedsores)</h3>
+<div class="mnem"><strong>MOST effective prevention = reposition every 2 h + skin inspection.</strong> Do NOT vigorously massage reddened areas (damages fragile capillaries); talcum cakes/irritates; same position CAUSES sores.</div>
+<table>
+  <thead><tr><th>Stage</th><th>Feature</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Stage 1</strong></td><td>Non-blanchable erythema, skin intact — needs immediate pressure relief</td></tr>
+    <tr><td><strong>Stage 2</strong></td><td>Blister / shallow crater (partial skin loss)</td></tr>
+    <tr><td><strong>Stage 3</strong></td><td>Full-thickness skin loss</td></tr>
+    <tr><td><strong>Stage 4</strong></td><td>Muscle / bone exposed</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Common sites (supine):</strong> sacrum (commonest), heels, elbows, occiput, scapulae. <strong>Lateral:</strong> greater trochanter, malleolus, ear. Bony prominences with little fat = most vulnerable.</div>
+<div class="fact"><span class="q">Back care (back rub) technique</span><span class="a">Long firm strokes sacrum→upward with lotion</span><span class="why">Circular around bony points; AVOID reddened areas; warm lotion; 3–5 min; promotes venous return. No vigorous rubbing.</span></div>
+
+<h3>2.2 Complications of Prolonged Immobility</h3>
+<ul>
+  <li><strong>Pressure sores</strong> — sustained pressure → ischaemia.</li>
+  <li><strong>DVT</strong> — venous stasis → clot; calf swelling + positive Homans' sign.</li>
+  <li><strong>Hypostatic (chest) pneumonia</strong> — secretions pool in dependent lung.</li>
+  <li><strong>Renal calculi</strong> — disuse osteoporosis → hypercalciuria → stones.</li>
+  <li><strong>Constipation, urinary stasis, muscle wasting (atrophy), contractures, depression.</strong></li>
+</ul>
+<div class="mnem">Immobility causes muscle <strong>WASTING</strong> &amp; weakness — never increased strength. Early mobilisation + passive/active ROM always encouraged.</div>
+
+<!-- ============================================================ -->
+<h2>3. Sick Room, Hygiene &amp; Nurse's Role</h2>
+
+<h3>3.1 Ideal Sick Room</h3>
+<ul>
+  <li><strong>Well-ventilated</strong> — fresh air, no direct drafts on patient.</li>
+  <li><strong>Quiet</strong> location; <strong>adequate natural light</strong> (cheerful, aids observation) with option to dim for rest — constant dim light is depressing &amp; hinders observation.</li>
+  <li><strong>Temp 18–20°C (65–68°F)</strong>; humidity <strong>40–60%</strong>; newborns/elderly slightly warmer (20–22°C).</li>
+</ul>
+
+<h3>3.2 Oral Hygiene</h3>
+<ul>
+  <li>Give mouth care <strong>≥ twice daily + after meals</strong>.</li>
+  <li>Unconscious: use moistened swabs/gauze on forceps (toothbrush = aspiration risk); position on <strong>SIDE (lateral)</strong>.</li>
+  <li>Especially important when <strong>NPO / on IV</strong> — ↓ saliva → dry mouth, bacteria/fungi multiply → thrush.</li>
+</ul>
+<div class="fact"><span class="q">White tongue patches + foul mouth + low urine (500 mL/day) in bedridden patient</span><span class="a">Oral thrush (candidiasis) from dehydration + poor mouth care</span><span class="why">Rx: ↑ fluids, mouth care ≥4-hrly, antifungal if prescribed, inform doctor.</span></div>
+
+<h3>3.3 Role &amp; Ethics of the Nurse</h3>
+<ul>
+  <li>Maintain accurate records (vitals, drugs given, intake/output); be cheerful &amp; tactful; report changes to doctor.</li>
+  <li><strong>Confidentiality</strong> — never discuss patient information with neighbours/anyone not involved in care.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2>4. Vital Signs &amp; Observation</h2>
+
+<h3>4.1 Normal Adult Values</h3>
+<table>
+  <thead><tr><th>Sign</th><th>Normal (adult)</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pulse</strong></td><td>60–100 bpm</td><td>&lt;60 bradycardia (normal in athletes); &gt;100 tachycardia (fever, pain, haemorrhage, shock). Newborn 120–160, child 80–120.</td></tr>
+    <tr><td><strong>Respiration</strong></td><td>12–20 /min</td><td>&lt;12 bradypnoea (opioids, ↑ICP); &gt;20 tachypnoea. Newborn 30–60. ~500 mL tidal volume.</td></tr>
+    <tr><td><strong>Blood pressure</strong></td><td>&lt;120/80 mmHg</td><td>Stage 1 HTN 130–139/80–89; Stage 2 ≥140/90. 150/95 = Stage 2 HTN.</td></tr>
+    <tr><td><strong>CVP</strong></td><td>5–10 cmH₂O (2–8 mmHg)</td><td>Measured mid-axillary line; low = hypovolaemia, high = overload/cardiac failure.</td></tr>
+    <tr><td><strong>Neonatal BP</strong></td><td>60–80 / 40–50 mmHg</td><td>Rises with age.</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">TPR chart</span><span class="a">Temperature, Pulse, Respiration chart</span><span class="why">Recorded at regular intervals (4–6 hrly); temp as dots+lines, pulse as crosses. Shows trends. Aka observation/vital-signs chart.</span></div>
+<div class="fact"><span class="q">Pulse oximeter</span><span class="a">Non-invasive SpO₂ via fingertip/earlobe</span><span class="why">Light absorption; not BP (sphygmo), not CVP (invasive), not ABG (arterial puncture).</span></div>
+
+<h3>4.2 BP Measurement (Correct Steps)</h3>
+<ul>
+  <li>Patient <strong>rested 5 min</strong>, seated/lying comfortably — measure at REST (exercise falsely raises reading).</li>
+  <li>Cuff snug on <strong>bare arm at heart level</strong>; inflate 30 mmHg above estimated systolic (palpatory).</li>
+  <li>Deflate 2–3 mmHg/sec; first sound = systolic, disappearance = diastolic.</li>
+</ul>
+
+<h3>4.3 Abnormal Observation Terms</h3>
+<table>
+  <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Dyspnoea</strong></td><td>Difficulty breathing / shortness of breath</td></tr>
+    <tr><td><strong>Haematuria</strong></td><td>Blood in urine (UTI, stones, tumour)</td></tr>
+    <tr><td><strong>Retention / anuria</strong></td><td>Inability to pass urine (obstruction, post-op, neuro)</td></tr>
+    <tr><td><strong>Haematemesis</strong></td><td>Vomiting blood (peptic ulcer, varices)</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">Dark amber, reduced-volume urine</span><span class="a">Dehydration → ↑ fluid intake</span><span class="why">Normal = straw/pale yellow, ~1500 mL/day. Record I&amp;O; report if persistent.</span></div>
+
+<h3>4.4 Vital-Sign Interpretation</h3>
+<table>
+  <thead><tr><th>Finding</th><th>Suggests</th></tr></thead>
+  <tbody>
+    <tr><td>High fever 39.5°C + rigors</td><td>Acute infection / sepsis</td></tr>
+    <tr><td>Rapid, weak, thready pulse</td><td>Hypovolaemia (compensatory tachycardia)</td></tr>
+    <tr><td>Kussmaul breathing (deep, rapid)</td><td>Diabetic ketoacidosis (blowing off CO₂)</td></tr>
+    <tr><td>↓BP + tachycardia</td><td>Shock / severe haemorrhage</td></tr>
+    <tr><td>T 38.8 · P 110 · R 24 · BP 90/60</td><td><strong>Sepsis</strong> — urgent IV antibiotics, fluids, monitoring</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2>5. Fever &amp; Hot / Cold Applications</h2>
+
+<h3>5.1 Fever Management &amp; Patterns</h3>
+<div class="fact"><span class="q">High fever 40.2°C nursing care</span><span class="a">Tepid sponge, light clothing, ↑ fluids, prescribed antipyretic</span><span class="why">Tepid (not cold — cold → shivering → more heat); no heavy blankets; don't withhold fluids.</span></div>
+<table>
+  <thead><tr><th>Pattern</th><th>Feature</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Intermittent</strong></td><td>Returns to normal ≥1×/day</td><td>Malaria, septicaemia</td></tr>
+    <tr><td><strong>Remittent</strong></td><td>Fluctuates &gt;1°C, stays above normal</td><td>Most infections</td></tr>
+    <tr><td><strong>Continuous</strong></td><td>Constant, &lt;1°C fluctuation</td><td>Typhoid, pneumonia</td></tr>
+  </tbody>
+</table>
+<div class="mnem">Not all fevers need antibiotics — viral fevers are self-limiting; treat the CAUSE.</div>
+
+<h3>5.2 Hot vs Cold Applications</h3>
+<table>
+  <thead><tr><th>Application</th><th>Effect</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hot fomentation</strong></td><td>Vasodilation → ↑ blood flow</td><td>Muscle spasm, joint stiffness, chronic pain, localise abscess, promote healing</td></tr>
+    <tr><td><strong>Ice pack</strong></td><td>Vasoconstriction</td><td>Acute swelling, bleeding, inflammation, pain</td></tr>
+    <tr><td><strong>Warm gargle</strong></td><td>Local warmth to pharynx</td><td>Soothes sore throat</td></tr>
+    <tr><td><strong>Cold / tepid sponging</strong></td><td>Evaporative heat loss</td><td>Reduce fever</td></tr>
+    <tr><td><strong>Sitz bath</strong></td><td>Warm water 37–40°C, 15–20 min</td><td>Hips + perineum only: episiotomy, haemorrhoids, fissures, perineal surgery</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Heat CONTRAINDICATED:</strong> acute injury &lt;48 h (worsens swelling/bleeding); impaired sensation (diabetic neuropathy, unconscious — can't feel burn); over malignancy; over metallic implants; active bleeding. <em>Chronic backache with stiffness = INDICATION, not contraindication.</em></div>
+<div class="two-col">
+  <div class="fact"><span class="q">Hot water bottle</span><span class="a">⅔ full, 50–55°C, wrapped</span><span class="why">Expel air, test on forearm, check skin q10–15 min. Caution in unconscious/insensate.</span></div>
+  <div class="fact"><span class="q">Cold compress temp</span><span class="a">15–18°C</span><span class="why">Apply 15–20 min, off 20 min. Direct ice (0°C) → frostbite.</span></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>6. Nutrition &amp; Fluid Balance</h2>
+
+<h3>6.1 Therapeutic Diets</h3>
+<table>
+  <thead><tr><th>Diet</th><th>Contents</th><th>Indications</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Clear liquid</strong></td><td>Water, broth, jelly, clear juice</td><td>Post-op, pre-procedure, acute GI upset — <strong>FIRST diet after NPO</strong></td></tr>
+    <tr><td><strong>Low sodium</strong> (&lt;2 g/day)</td><td>—</td><td>Hypertension, heart failure, renal oedema</td></tr>
+    <tr><td><strong>High protein</strong></td><td>Eggs, meat, dairy, pulses</td><td>Burns, wounds, post-surgery, malnutrition</td></tr>
+    <tr><td><strong>Diabetic</strong></td><td>Controlled carbs, regular fixed-time meals</td><td>Matches insulin action; avoids hypo/hyperglycaemia</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Post-op oral progression:</strong> sips of water → clear liquids → full liquids (milk, soup) → soft → normal. Clear liquids first: easy to digest, minimal residue, assess swallow/tolerance.</div>
+<div class="fact"><span class="q">Elderly nutrition</span><span class="a">↓ calories, adequate protein, Ca + Vit D, fibre + fluid</span><span class="why">Small frequent meals (5–6×) — large meals poorly tolerated. Protein prevents sarcopenia; Ca/D prevent osteoporosis.</span></div>
+
+<h3>6.2 Fluid Balance &amp; Restriction</h3>
+<ul>
+  <li>Record <strong>ALL</strong> intake (oral, IV, NG feeds) &amp; <strong>ALL</strong> output (urine, vomit, drains, diarrhoea).</li>
+  <li><strong>1 kg weight gain ≈ 1 litre</strong> fluid retention. Needed in heart failure, renal disease, post-op, burns, oedema — not only ICU.</li>
+</ul>
+<div class="fact"><span class="q">Restriction 1000 mL/day — how to divide</span><span class="a">~500 day / 300 evening / 200 night (50/30/20%)</span><span class="why">Bulk in day (active, meals, meds); offer ice chips; small cups; never withhold for meds.</span></div>
+
+<!-- ============================================================ -->
+<h2>7. Tube Feeding, Wounds &amp; Asepsis</h2>
+
+<h3>7.1 Nasogastric Tube</h3>
+<div class="fact"><span class="q">Confirm NG placement before feed</span><span class="a">Aspirate + test pH (acidic 1–5.5)</span><span class="why">'Whoosh'/auscultation test unreliable (no longer recommended). X-ray = gold standard. Length marking detects migration only.</span></div>
+<div class="fact"><span class="q">NG feeding position</span><span class="a">30–45° Fowler's during + 30 min after</span><span class="why">Prevents aspiration/reflux. Check position each feed; room-temp feed; flush water before &amp; after.</span></div>
+
+<h3>7.2 Wound Healing</h3>
+<table>
+  <thead><tr><th>Type</th><th>Feature</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Primary intention</strong></td><td>Clean edges sutured together; fast, minimal scar (surgical incision)</td></tr>
+    <tr><td><strong>Secondary intention</strong></td><td>Large/infected wound heals from base by granulation; bigger scar, slower</td></tr>
+    <tr><td><strong>Tertiary (delayed primary)</strong></td><td>Left open (contaminated), cleaned over days, then closed surgically</td></tr>
+    <tr><td><strong>Dehiscence</strong></td><td>Wound breaks open after closure (complication)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Wound dehiscence / evisceration:</strong> partial/total separation of layers; risk in debilitated patients. <strong>NEVER push exposed viscera back</strong> — cover with sterile saline-soaked dressing &amp; take to OT.</div>
+
+<h3>7.3 Asepsis &amp; Sharps</h3>
+<div class="two-col">
+  <div class="fact"><span class="q">Aseptic (no-touch) technique</span><span class="a">Sterile method preventing microbe entry to wound</span><span class="why">Sterile kit, hand decontamination, non-touch, clean→dirty, sterile field. For dressings, catheter, injections.</span></div>
+  <div class="fact"><span class="q">Surgical drain</span><span class="a">Tube draining blood/pus/fluid from op site</span><span class="why">Penrose, Jackson-Pratt, Hemovac — prevents haematoma/seroma.</span></div>
+  <div class="fact"><span class="q">Sharps / needle disposal</span><span class="a">Straight into puncture-proof sharps box, NO recapping</span><span class="why">Recapping = commonest needlestick cause. Never bend/break; seal at ¾ full.</span></div>
+  <div class="fact"><span class="q">Butterfly strip (Steri-Strip)</span><span class="a">Adhesive strips holding wound edges together</span><span class="why">Suture alternative for superficial, clean, linear wounds. Not for deep/tense/contaminated wounds or joints.</span></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>8. Bandaging &amp; Slings</h2>
+
+<h3>8.1 Roller Bandage Turns</h3>
+<table>
+  <thead><tr><th>Turn</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Spiral</strong></td><td>Uniform-width parts (forearm, fingers, trunk); each turn covers ⅔ previous</td></tr>
+    <tr><td><strong>Reverse spiral</strong></td><td>Tapering parts (calf, thigh) — bandage folded</td></tr>
+    <tr><td><strong>Figure-of-8</strong></td><td>Joints (elbow, knee, ankle)</td></tr>
+    <tr><td><strong>Recurrent</strong></td><td>Rounded ends — scalp/head, amputation stump, fingertip (goes back &amp; forth, secured by circular turns)</td></tr>
+  </tbody>
+</table>
+
+<h3>8.2 Bandage Width vs Body Part</h3>
+<table>
+  <thead><tr><th>Width</th><th>Body part</th></tr></thead>
+  <tbody>
+    <tr><td><strong>2.5 cm (1")</strong></td><td>Fingers, toes</td></tr>
+    <tr><td><strong>5 cm (2")</strong></td><td>Hand, wrist, forearm</td></tr>
+    <tr><td><strong>7.5 cm (3")</strong></td><td>Upper arm, lower leg, elbow, knee</td></tr>
+    <tr><td><strong>10–15 cm (4–6")</strong></td><td>Trunk, hip, thigh</td></tr>
+  </tbody>
+</table>
+<div class="two-col">
+  <div class="fact"><span class="q">Broad arm sling knot</span><span class="a">Hollow above collarbone, UNINJURED side</span><span class="why">Supraclavicular fossa is padded/comfortable; avoid over spine/injury/front.</span></div>
+  <div class="fact"><span class="q">Many-tailed (scultetus) bandage</span><span class="a">Abdomen — post-op support/dressing</span><span class="why">Overlapping tails applied bottom→up; no rolling of patient; individually adjustable.</span></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>9. Enemas &amp; Special Procedures</h2>
+
+<h3>9.1 Types of Enema</h3>
+<table>
+  <thead><tr><th>Enema</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cleansing</strong> (soap/saline)</td><td>Evacuate bowel — pre-surgery/procedure, constipation</td></tr>
+    <tr><td><strong>Retention</strong> (oil)</td><td>Held 30–60 min to soften impacted faeces</td></tr>
+    <tr><td><strong>Medicated</strong></td><td>Local drug (hydrocortisone for colitis, antibiotics)</td></tr>
+    <tr><td><strong>Barium</strong></td><td>Radiopaque contrast fills colon for X-ray</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Cleansing enema:</strong> solution <strong>37–40°C</strong> (body temp — too hot burns, too cold cramps); adult volume 500–1000 mL; <strong>left lateral</strong> position; container 30–45 cm above rectum; retain 5–10 min.</div>
+
+<h3>9.2 Special Procedures — Indications</h3>
+<table>
+  <thead><tr><th>Procedure</th><th>Indication</th></tr></thead>
+  <tbody>
+    <tr><td>Steam inhalation</td><td>Respiratory congestion</td></tr>
+    <tr><td>Catheterisation</td><td>Urinary retention / output monitoring</td></tr>
+    <tr><td>Nasogastric tube</td><td>Gastric decompression / feeding</td></tr>
+    <tr><td>Oxygen therapy</td><td>Hypoxaemia / respiratory distress</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2>10. Oxygen Therapy</h2>
+<ul>
+  <li><strong>Indications:</strong> cyanosis (bluish lips/nails), severe dyspnoea, suspected MI, shock, CO poisoning. Mild common cold does NOT need O₂.</li>
+  <li>O₂ is a <strong>drug</strong> — give per physician's order; unnecessary use is harmful (COPD, retinopathy of prematurity).</li>
+  <li><strong>Supports combustion</strong> (fire hazard — no smoking/flames); requires <strong>humidification</strong>.</li>
+  <li>Flow rate depends on condition/device — NOT always 15 L/min. High flow can suppress respiratory drive in COPD.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2>11. Drug Administration &amp; Drug Laws</h2>
+
+<h3>11.1 Routes — Speed of Onset</h3>
+<div class="formula">IV (sec) &gt; inhalation &gt; sublingual (1–2 min) &gt; IM (10–20) &gt; SC (15–30) &gt; oral (30–90) &gt; rectal &gt; topical</div>
+<div class="fact"><span class="q">Fastest route</span><span class="a">IV — direct to bloodstream, 100% bioavailability</span></div>
+<div class="fact"><span class="q">IM site in infants</span><span class="a">Vastus lateralis (anterolateral thigh)</span><span class="why">Well-developed at birth, no major nerve/vessel. Dorsogluteal avoided &lt;3 yrs (sciatic nerve risk).</span></div>
+
+<h3>11.2 Safe Administration &amp; Refusal</h3>
+<ul>
+  <li>Check drug label <strong>3 times</strong> (from shelf, when pouring, before giving); never give drugs prepared by others; document <strong>AFTER</strong> giving (documenting before = falsification).</li>
+  <li>Patients have the <strong>RIGHT to refuse</strong> — forcing is assault/illegal. Document refusal, inform doctor.</li>
+  <li>Mental-illness refusal: FIRST calmly explain importance &amp; offer again later; explore reason; document; inform doctor. Hidden meds = illegal; restraint = last resort.</li>
+</ul>
+
+<h3>11.3 Indian Drug Schedules &amp; Laws</h3>
+<table>
+  <thead><tr><th>Drug / Schedule</th><th>Control</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Schedule X</strong> — morphine, diazepam</td><td>Narcotic/psychotropic; strictest, double-lock, register</td></tr>
+    <tr><td><strong>Schedule H</strong> — amoxicillin</td><td>Prescription-only; no OTC</td></tr>
+    <tr><td><strong>Schedule H1</strong></td><td>Subset of H — pharmacist keeps register (prescriber, patient, drug, qty, date); antibiotics, anti-TB, habit-forming (curbs resistance)</td></tr>
+    <tr><td><strong>Schedule K / OTC</strong> — paracetamol</td><td>No prescription needed</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">NDPS Act</span><span class="a">1985 — Narcotic Drugs &amp; Psychotropic Substances</span><span class="why">Controls manufacture/sale/use; strict penalties. Works with Drugs &amp; Cosmetics Act 1940.</span></div>
+
+<!-- ============================================================ -->
+<h2>12. Infection, Immunity &amp; Immunisation</h2>
+
+<h3>12.1 Diseases &amp; Causative Organisms</h3>
+<table>
+  <thead><tr><th>Disease</th><th>Organism</th><th>Spread</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cholera</strong></td><td><em>Vibrio cholerae</em></td><td>Faecal-oral (water); rice-water diarrhoea. Incubation few hrs–5 days</td></tr>
+    <tr><td><strong>Typhoid</strong></td><td><em>Salmonella typhi</em></td><td>Faecal-oral; NOT mosquito-borne</td></tr>
+    <tr><td><strong>Hepatitis B</strong></td><td>HBV</td><td>Blood / sexual / mother-to-child; NOT waterborne (Hep A &amp; E are)</td></tr>
+    <tr><td><strong>Malaria</strong></td><td><em>Plasmodium</em></td><td>Female <em>Anopheles</em> mosquito; cyclical fever + chills</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Typhoid course:</strong> Wk1 step-ladder fever, coated tongue, relative bradycardia; Wk2 sustained fever, rose spots (abdomen), hepatosplenomegaly. Dx blood/stool culture (Widal supportive). Rx bed rest (prevents perforation), high-calorie soft diet; tepid sponging IS allowed.</div>
+<div class="key"><strong>Transmission routes:</strong> Direct contact (touch, sexual, droplet &lt;1 m) · Airborne (nuclei &lt;5 µm — TB, measles, chickenpox) · Vehicle (food/water = faecal-oral; blood; fomites) · Vector (mosquito=malaria, flea=plague). Hep B: blood-borne; HCWs at risk (needlestick); 3-dose vaccine (0,1,6 mo).</div>
+
+<h3>12.2 Types of Immunity</h3>
+<table>
+  <thead><tr><th>Type</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Natural active</strong></td><td>Antibodies after natural infection (chickenpox → lifelong)</td></tr>
+    <tr><td><strong>Artificial active</strong></td><td>Vaccination (measles vaccine)</td></tr>
+    <tr><td><strong>Natural passive</strong></td><td>Maternal antibodies via placenta (IgG) / breast milk (IgA)</td></tr>
+    <tr><td><strong>Artificial passive</strong></td><td>Pre-formed antibodies injected (ATS, anti-rabies Ig, anti-D)</td></tr>
+  </tbody>
+</table>
+
+<h3>12.3 Indian National Immunisation Schedule</h3>
+<table>
+  <thead><tr><th>Age</th><th>Vaccine</th></tr></thead>
+  <tbody>
+    <tr><td><strong>At birth</strong></td><td>BCG (intradermal, L upper arm), OPV-0, Hep B birth dose (&lt;24 h)</td></tr>
+    <tr><td>6, 10, 14 wks</td><td>DPT (Diphtheria, Pertussis, Tetanus) — often pentavalent (+HepB+Hib)</td></tr>
+    <tr><td><strong>9–12 mo</strong></td><td>MR (measles-rubella) 1st dose</td></tr>
+    <tr><td>16–24 mo</td><td>MR 2nd dose; DPT booster</td></tr>
+  </tbody>
+</table>
+<div class="mnem">Measles/MR NOT at birth — maternal IgG interferes; by 9 mo it has waned. DPT = <strong>D</strong>iphtheria + <strong>P</strong>ertussis + <strong>T</strong>etanus.</div>
+
+<!-- ============================================================ -->
+<h2>13. Isolation Precautions</h2>
+<ul>
+  <li><strong>Source isolation</strong> separates infected patients; <strong>protective/reverse isolation</strong> protects immunocompromised (leukaemia, transplant, burns). PPE (apron, gloves, mask) on entry; visitors RESTRICTED.</li>
+</ul>
+<table>
+  <thead><tr><th>Disease</th><th>Precaution</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pulmonary TB</strong></td><td>Airborne — N95, negative-pressure room</td></tr>
+    <tr><td><strong>Cholera / diarrhoea</strong></td><td>Enteric — hand hygiene, gloves, separate toilet</td></tr>
+    <tr><td><strong>Chickenpox</strong></td><td>Airborne + contact (vesicle fluid + airborne)</td></tr>
+    <tr><td><strong>MRSA</strong></td><td>Contact — direct contact with wound/skin</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2>14. Shock &amp; Haemorrhage</h2>
+
+<h3>14.1 Types of Shock</h3>
+<table>
+  <thead><tr><th>Shock</th><th>Cause</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hypovolaemic</strong></td><td>Fluid / blood loss</td></tr>
+    <tr><td><strong>Cardiogenic</strong></td><td>Pump failure (MI) → ↑CVP; fluids CONTRAINDICATED (worsen pulmonary oedema); Rx inotropes + diuretics</td></tr>
+    <tr><td><strong>Anaphylactic</strong></td><td>Allergic vasodilation + ↑ permeability + bronchospasm; Rx <strong>epinephrine</strong></td></tr>
+    <tr><td><strong>Neurogenic</strong></td><td>Loss of sympathetic tone (spinal injury)</td></tr>
+    <tr><td><strong>Septic</strong></td><td>Early: warm, flushed skin, bounding pulse; tachycardia + hypotension (cold skin = late)</td></tr>
+  </tbody>
+</table>
+
+<h3>14.2 Hypovolaemic Shock — Signs</h3>
+<ul>
+  <li>Cold, clammy, pale skin (vasoconstriction); rapid weak thready pulse; restlessness (cerebral hypoperfusion); tachypnoea (RR ↑, not ↓).</li>
+  <li><strong>Earliest sign = tachycardia (&gt;100 bpm)</strong>; hypotension, anuria, cyanosis are LATE (decompensation).</li>
+  <li><strong>Trendelenburg</strong> (legs up 20°) → ↑ venous return/preload.</li>
+</ul>
+
+<h3>14.3 Blood Loss Estimation</h3>
+<div class="formula">Total blood volume ≈ 70 mL/kg &nbsp;|&nbsp; Min urine output 0.5 mL/kg/hr</div>
+<div class="key"><strong>Worked:</strong> 70 kg adult → ~5000 mL blood; 1500 mL loss = <strong>30%</strong> (Class III → transfusion). &nbsp; 60 kg, Class II (15–30%): 4200 mL × 0.15–0.30 = <strong>630–1260 mL</strong> (crystalloid). &nbsp; Post-op urine, 60 kg × 8 h × 0.5 = <strong>240 mL</strong> minimum (anuria 8 h → investigate).</div>
+
+<!-- ============================================================ -->
+<h2>15. Blood &amp; Transfusion</h2>
+
+<h3>15.1 Groups, Storage, Rate</h3>
+<div class="two-col">
+  <div class="fact"><span class="q">Universal RBC donor</span><span class="a">O negative (no A, B, Rh)</span><span class="why">Safe alternative for any group in emergency (e.g. B+ patient). AB+ = universal plasma donor.</span></div>
+  <div class="fact"><span class="q">Whole blood / packed RBC storage</span><span class="a">2–6°C (shelf 35–42 days)</span><span class="why">Freezing destroys RBCs; room temp → bacteria.</span></div>
+  <div class="fact"><span class="q">Donation unit volume</span><span class="a">350–450 mL whole blood</span></div>
+  <div class="fact"><span class="q">Transfusion rate — first 15 min</span><span class="a">Slow 20–30 drops/min</span><span class="why">Watch for reactions; most acute reactions occur early.</span></div>
+</div>
+
+<h3>15.2 Blood Components</h3>
+<ul>
+  <li><strong>FFP</strong> — all clotting factors; stored ≤ −18°C.</li>
+  <li><strong>Platelets</strong> — 20–24°C, continuous agitation, shelf life 5 days.</li>
+  <li><strong>Cryoprecipitate</strong> — Factor VIII, fibrinogen, vWF, Factor XIII.</li>
+  <li><strong>Packed RBCs</strong> — 2–6°C, NOT frozen.</li>
+</ul>
+
+<h3>15.3 Transfusion Reactions</h3>
+<div class="key"><strong>Acute haemolytic reaction (ABO mismatch)</strong> — MOST dangerous, fatal in minutes. Fever + chills + <strong>low back pain</strong> (renal capsule distension) within minutes → DIC, renal failure. (Febrile reaction lacks back pain; allergic = urticaria; TRALI = respiratory distress.)</div>
+
+<!-- ============================================================ -->
+<h2>16. Peri-operative &amp; Post-op Care</h2>
+
+<h3>16.1 Pre-operative</h3>
+<ul>
+  <li>Obtain <strong>informed written consent</strong>; remove prosthetics/jewellery; record baseline vitals; give pre-meds <strong>in the ward</strong> (not after shifting to OT).</li>
+  <li><strong>NPO 6–8 h</strong> before surgery → empty stomach → prevents aspiration (Mendelson syndrome) under GA.</li>
+  <li><strong>Skin prep (shaving)</strong> reduces bacterial count at op site; done close to surgery to avoid micro-abrasion colonisation.</li>
+</ul>
+<div class="key"><strong>WHO Surgical Safety Checklist — Sign In</strong> (before induction): confirm identity/site/procedure · anaesthesia machine &amp; pulse oximeter check · allergies · airway/aspiration risk · blood-loss risk. <em>Instrument/sponge count = Sign Out.</em></div>
+
+<h3>16.2 Post-op Positions</h3>
+<table>
+  <thead><tr><th>Position</th><th>Indication</th></tr></thead>
+  <tbody>
+    <tr><td>Fowler's</td><td>After thoracic/abdominal surgery — aids breathing</td></tr>
+    <tr><td>Lateral</td><td>Unconscious — prevents aspiration</td></tr>
+    <tr><td>Supine, legs elevated</td><td>Shock — ↑ venous return</td></tr>
+    <tr><td>Prone</td><td>After spinal/back surgery</td></tr>
+  </tbody>
+</table>
+
+<h3>16.3 Post-op Complications by Timing</h3>
+<table>
+  <thead><tr><th>Complication</th><th>Timing</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Reactionary haemorrhage</strong></td><td>Within 24 h (slipped ligature / rising BP)</td></tr>
+    <tr><td><strong>DVT</strong></td><td>Day 3–5 (immobility)</td></tr>
+    <tr><td><strong>Pulmonary embolism</strong></td><td>~Day 5 — sudden dyspnoea + chest pain + tachycardia (dislodged DVT)</td></tr>
+    <tr><td><strong>Wound infection</strong></td><td>Day 5–7</td></tr>
+    <tr><td><strong>Secondary haemorrhage</strong></td><td>Day 7–14 (infection erodes vessel)</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2>17. Obstetrics, Labour &amp; Newborn</h2>
+
+<h3>17.1 Pregnancy &amp; Antenatal</h3>
+<div class="two-col">
+  <div class="fact"><span class="q">Full-term duration</span><span class="a">280 days / 40 wks from LMP (Naegele)</span><span class="why">Preterm &lt;37 wks; post-term &gt;42.</span></div>
+  <div class="fact"><span class="q">WHO antenatal contacts</span><span class="a">Minimum 8 (2016)</span><span class="why">Previously 4 visits.</span></div>
+  <div class="fact"><span class="q">Placenta praevia</span><span class="a">Low placenta over internal os — painless bright-red bleed</span><span class="why">Abruption = painful; ectopic = tubal.</span></div>
+  <div class="fact"><span class="q">Severe pre-eclampsia</span><span class="a">BP ≥160/110 + headache + blurred vision + proteinuria (&gt;20 wks)</span><span class="why">Emergency → MgSO₄ + delivery.</span></div>
+  <div class="fact"><span class="q">Eclamptic seizure — drug of choice</span><span class="a">Magnesium sulphate (IV/IM; Pritchard/Zuspan)</span><span class="why">Superior to diazepam/phenytoin.</span></div>
+  <div class="fact"><span class="q">C-section indications</span><span class="a">CPD, major placenta praevia, unresponsive foetal distress</span><span class="why">Normal vertex + adequate pelvis → vaginal delivery.</span></div>
+</div>
+
+<h3>17.2 Stages of Labour</h3>
+<table>
+  <thead><tr><th>Stage</th><th>Definition</th><th>Duration (primi)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>First</strong></td><td>Onset of true contractions → full dilatation (10 cm)</td><td>12–16 h (multi 6–8 h)</td></tr>
+    <tr><td><strong>Second</strong></td><td>Full dilatation → delivery of baby</td><td>1–2 h</td></tr>
+    <tr><td><strong>Third</strong></td><td>Delivery of baby → placental expulsion</td><td>15–30 min (retained if &gt;30)</td></tr>
+    <tr><td><strong>Fourth</strong></td><td>First 1–2 h post-placenta — observation</td><td>1–2 h</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">Partograph</span><span class="a">Graphic record of labour progress</span><span class="why">Cervical dilatation, descent, contractions, maternal/foetal state; alert &amp; action lines detect obstructed labour early.</span></div>
+
+<h3>17.3 Post-partum, PPH &amp; Lactation</h3>
+<div class="key"><strong>Well-contracted uterus:</strong> firm, globular, at/below umbilicus, minimal bleeding (compressed vessels). Soft, boggy, displaced/high = <strong>atony</strong> → commonest cause of PPH. <strong>Fundal massage</strong> stimulates contraction to prevent PPH.</div>
+<table>
+  <thead><tr><th>Concept</th><th>Value / fact</th></tr></thead>
+  <tbody>
+    <tr><td>PPH definition</td><td>≥500 mL after vaginal (≥1000 mL after CS) within 24 h; primary &lt;24 h, secondary 24 h–6 wks</td></tr>
+    <tr><td>Soaked large pad</td><td>~250–350 mL each; 3 soaked = 750–1000 mL (significant PPH if uterus soft/high)</td></tr>
+    <tr><td>Lochia (first 24 h)</td><td>250–500 mL, bright red (rubra); → serosa (pink/brown d4–10) → alba (white d10–14)</td></tr>
+    <tr><td>Oxytocin</td><td>Posterior pituitary — milk ejection (let-down); Prolactin = production</td></tr>
+    <tr><td>Puerperal fever</td><td>Temp ≥38°C on any 2 of first 10 days (excl. first 24 h); streptococci; notifiable</td></tr>
+  </tbody>
+</table>
+<div class="fact"><span class="q">Episiotomy</span><span class="a">Surgical incision of perineum to widen outlet</span><span class="why">Medio-lateral commonest (avoids sphincter); ALWAYS needs suturing. Perineal care prevents infection of episiotomy/laceration (lochia + urine contaminate).</span></div>
+
+<h3>17.4 Newborn Care</h3>
+<table>
+  <thead><tr><th>APGAR (1 &amp; 5 min)</th><th>Meaning → action</th></tr></thead>
+  <tbody>
+    <tr><td><strong>7–10</strong></td><td>Normal — routine care</td></tr>
+    <tr><td><strong>4–6</strong></td><td>Moderate depression — stimulation, O₂, active resuscitation / PPV</td></tr>
+    <tr><td><strong>0–3</strong></td><td>Severe — immediate resuscitation</td></tr>
+  </tbody>
+</table>
+<div class="mnem">APGAR = <strong>A</strong>ppearance, <strong>P</strong>ulse, <strong>G</strong>rimace, <strong>A</strong>ctivity, <strong>R</strong>espiration.</div>
+<div class="two-col">
+  <div class="fact"><span class="q">Neonatal fluid, day 1</span><span class="a">60 mL/kg/day (3 kg → 180 mL)</span><span class="why">↑10–20 mL/kg/day to 150 mL/kg by day 7.</span></div>
+  <div class="fact"><span class="q">Birth vaccines</span><span class="a">BCG, OPV-0, Hep B</span></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>18. Geriatric &amp; Mental Health</h2>
+
+<h3>18.1 Geriatric Conditions &amp; Interventions</h3>
+<table>
+  <thead><tr><th>Condition</th><th>Intervention</th></tr></thead>
+  <tbody>
+    <tr><td>Constipation</td><td>Fibre, fluids, exercise, regular bowel habit</td></tr>
+    <tr><td>Insomnia</td><td>Sleep hygiene (regular bedtime, no stimulants, quiet room, limit naps)</td></tr>
+    <tr><td>Incontinence</td><td>Timed voiding, Kegel exercises, pads, bladder training</td></tr>
+    <tr><td>Isolation</td><td>Social engagement, day centres, visitors, support groups</td></tr>
+    <tr><td>Polypharmacy (5 drugs)</td><td>Pill organiser / dosette box labelled day &amp; time; large-print list; link to routine</td></tr>
+    <tr><td>Musculoskeletal ageing</td><td>Osteoporosis (bone loss) + ↓ muscle mass (sarcopenia) → fall/fracture risk</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Bedridden elderly care:</strong> keep skin clean/dry/moisturised (fragile skin); reposition 2-hrly; passive/active ROM. Complete immobility is HARMFUL. <strong>Wandering in dementia:</strong> safe supervised environment, redirect attention, ID bracelet, consistent routine — never lock/heavily sedate.</div>
+<div class="fact"><span class="q">Bedridden elderly: swollen, shiny, warm skin (legs + sacrum) + ↓ urine</span><span class="a">Fluid overload / oedema — heart failure or renal decline</span><span class="why">Elevate legs, monitor I&amp;O, daily weight, restrict Na/fluid, urgent doctor review (diuretics, cardiac/renal assessment).</span></div>
+
+<h3>18.2 Mental Health Observations</h3>
+<table>
+  <thead><tr><th>Condition</th><th>Features</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Depression</strong></td><td>Persistent low mood, anhedonia, sleep/appetite change, fatigue, worthlessness, suicidal ideation</td></tr>
+    <tr><td><strong>Acute psychosis</strong></td><td>Hallucinations, delusions, thought disorder, bizarre behaviour</td></tr>
+    <tr><td><strong>Dementia</strong></td><td>Progressive cognitive decline, memory loss, confusion, functional impairment</td></tr>
+    <tr><td><strong>Anxiety disorder</strong></td><td>Excessive worry, palpitations/sweating, restlessness, insomnia</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2>19. Hospital Departments</h2>
+<div class="two-col">
+  <div class="fact"><span class="q">Casualty / Emergency</span><span class="a">Immediate unscheduled care for accidents &amp; acute illness</span></div>
+  <div class="fact"><span class="q">Pathology / Clinical Lab</span><span class="a">Diagnostic tests on blood, urine, tissue</span><span class="why">Haematology, biochemistry, microbiology, histopathology. (OPD=scheduled, Radiology=imaging, CSSD=sterilisation.)</span></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">Fowler's position use</span><span class="a">Respiratory/cardiac — breathing</span></div>
+  <div class="fact"><span class="q">Recovery position</span><span class="a">Lateral — unconscious airway</span></div>
+  <div class="fact"><span class="q">Post-LP position</span><span class="a">Supine/flat — prevent CSF headache</span></div>
+  <div class="fact"><span class="q">Pressure sore prevention</span><span class="a">Reposition q2h + skin check</span></div>
+  <div class="fact"><span class="q">Stage 1 pressure ulcer</span><span class="a">Non-blanchable erythema, skin intact</span></div>
+  <div class="fact"><span class="q">Commonest supine sore site</span><span class="a">Sacrum</span></div>
+  <div class="fact"><span class="q">Bed layer order</span><span class="a">Sheet→mackintosh→draw sheet→patient</span></div>
+  <div class="fact"><span class="q">Sick room temp</span><span class="a">18–20°C (65–68°F)</span></div>
+  <div class="fact"><span class="q">Normal pulse</span><span class="a">60–100 bpm</span></div>
+  <div class="fact"><span class="q">Normal respiration</span><span class="a">12–20 /min</span></div>
+  <div class="fact"><span class="q">Normal CVP</span><span class="a">5–10 cmH₂O</span></div>
+  <div class="fact"><span class="q">150/95 mmHg</span><span class="a">Stage 2 hypertension</span></div>
+  <div class="fact"><span class="q">Neonatal BP</span><span class="a">60–80 / 40–50 mmHg</span></div>
+  <div class="fact"><span class="q">Sepsis vitals</span><span class="a">Fever + ↑P + ↑R + ↓BP</span></div>
+  <div class="fact"><span class="q">High fever care</span><span class="a">Tepid sponge, ↑fluids, antipyretic</span></div>
+  <div class="fact"><span class="q">Heat contraindicated</span><span class="a">Acute injury &lt;48 h</span></div>
+  <div class="fact"><span class="q">Sitz bath area/time</span><span class="a">Hips+perineum, 15–20 min</span></div>
+  <div class="fact"><span class="q">Enema temp / position</span><span class="a">37–40°C, left lateral</span></div>
+  <div class="fact"><span class="q">First diet after NPO</span><span class="a">Clear liquids</span></div>
+  <div class="fact"><span class="q">1 kg weight gain</span><span class="a">≈ 1 L fluid retained</span></div>
+  <div class="fact"><span class="q">Confirm NG tube</span><span class="a">Aspirate + pH 1–5.5</span></div>
+  <div class="fact"><span class="q">Feeding position</span><span class="a">Upright ≥45°</span></div>
+  <div class="fact"><span class="q">Fastest drug route</span><span class="a">Intravenous</span></div>
+  <div class="fact"><span class="q">Infant IM site</span><span class="a">Vastus lateralis</span></div>
+  <div class="fact"><span class="q">Needle disposal</span><span class="a">Sharps box, no recapping</span></div>
+  <div class="fact"><span class="q">NDPS Act</span><span class="a">1985</span></div>
+  <div class="fact"><span class="q">Schedule H1</span><span class="a">Pharmacist keeps register</span></div>
+  <div class="fact"><span class="q">Birth vaccines</span><span class="a">BCG, OPV-0, Hep B</span></div>
+  <div class="fact"><span class="q">DPT protects</span><span class="a">Diphtheria, Pertussis, Tetanus</span></div>
+  <div class="fact"><span class="q">MR 1st dose</span><span class="a">9–12 months</span></div>
+  <div class="fact"><span class="q">TB isolation</span><span class="a">Airborne — N95, neg pressure</span></div>
+  <div class="fact"><span class="q">Universal RBC donor</span><span class="a">O negative</span></div>
+  <div class="fact"><span class="q">Blood storage</span><span class="a">2–6°C</span></div>
+  <div class="fact"><span class="q">Most dangerous transfusion rxn</span><span class="a">Acute haemolytic (ABO)</span></div>
+  <div class="fact"><span class="q">Total blood volume</span><span class="a">70 mL/kg</span></div>
+  <div class="fact"><span class="q">Min urine output</span><span class="a">0.5 mL/kg/hr</span></div>
+  <div class="fact"><span class="q">Earliest hypovolaemic sign</span><span class="a">Tachycardia</span></div>
+  <div class="fact"><span class="q">Anaphylaxis drug</span><span class="a">Epinephrine</span></div>
+  <div class="fact"><span class="q">Pre-op NPO</span><span class="a">6–8 h — prevent aspiration</span></div>
+  <div class="fact"><span class="q">Reactionary haemorrhage</span><span class="a">Within 24 h</span></div>
+  <div class="fact"><span class="q">Day-5 dyspnoea+chest pain</span><span class="a">Pulmonary embolism</span></div>
+  <div class="fact"><span class="q">Full-term pregnancy</span><span class="a">280 days / 40 wks</span></div>
+  <div class="fact"><span class="q">WHO antenatal contacts</span><span class="a">Minimum 8</span></div>
+  <div class="fact"><span class="q">Eclampsia drug</span><span class="a">Magnesium sulphate</span></div>
+  <div class="fact"><span class="q">First stage labour (primi)</span><span class="a">12–16 h</span></div>
+  <div class="fact"><span class="q">Third stage duration</span><span class="a">15–30 min</span></div>
+  <div class="fact"><span class="q">PPH definition</span><span class="a">≥500 mL vaginal / 24 h</span></div>
+  <div class="fact"><span class="q">Milk ejection hormone</span><span class="a">Oxytocin</span></div>
+  <div class="fact"><span class="q">Fundal massage</span><span class="a">Contract uterus, prevent PPH</span></div>
+  <div class="fact"><span class="q">APGAR normal</span><span class="a">7–10</span></div>
+  <div class="fact"><span class="q">Neonatal fluid day 1</span><span class="a">60 mL/kg/day</span></div>
+  <div class="fact"><span class="q">Pneumonia position</span><span class="a">High Fowler's 60–90°</span></div>
+  <div class="fact"><span class="q">Immobility → kidney stones</span><span class="a">Disuse osteoporosis → hypercalciuria</span></div>
+  <div class="fact"><span class="q">Spiral bandage</span><span class="a">Uniform-width parts</span></div>
+  <div class="fact"><span class="q">Sling knot</span><span class="a">Uninjured side, above clavicle</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>
