@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes — Sterilization · Health Education · Store Management</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "\2605 TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " \2022 "; }
+  .inline-list { padding-left: 0; list-style: none; }
+  @media print { .no-print { display: none; } }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes</h1>
+<p class="subtitle">Sterilization &amp; Disinfection · Health Education &amp; Promotion · Pharmaceutical Store &amp; Inventory Management</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Sterilization &amp; Disinfection — Methods</li>
+    <li>Sterilization Kinetics &amp; SAL (worked examples)</li>
+    <li>Filtration &amp; Mechanical Methods</li>
+    <li>Chemical Agents &amp; Disinfectants</li>
+    <li>Indicators &amp; Disinfectant Testing</li>
+    <li>Biomedical Waste Management</li>
+    <li>Health Education — Methods &amp; AV Aids</li>
+    <li>Dale's Cone &amp; Learning Retention</li>
+    <li>Health Promotion, Milestones &amp; Bodies</li>
+    <li>HE Ethics, Planning &amp; Concepts</li>
+    <li>Store — Schedules, Codification &amp; Storage</li>
+    <li>Inventory Control &amp; Formulas</li>
+    <li>Store Documents &amp; Verification</li>
+    <li>Last-Minute Fact Dump</li>
+  </ol>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<h2>1. Sterilization &amp; Disinfection — Methods</h2>
+
+<h3>1.1 Sterilization vs Disinfection — the core divide</h3>
+<div class="key"><strong>Sterilization</strong> = destruction of ALL microbes incl. bacterial spores. <strong>Disinfection</strong> = kills vegetative forms but NOT reliably spores.</div>
+<div class="fact"><span class="q">Why is boiling (100°C, 10–20 min) only disinfection, not sterilization?</span><span class="a">Cannot reliably kill bacterial endospores</span><span class="why">Spores of <em>Clostridium</em> &amp; <em>Bacillus</em> survive hours of boiling; need &gt;100°C under pressure (autoclave).</span></div>
+
+<h3>1.2 Heat methods — moist vs dry</h3>
+<table>
+<thead><tr><th>Feature</th><th>Moist heat (steam)</th><th>Dry heat</th></tr></thead>
+<tbody>
+<tr><td>Kill mechanism</td><td>Protein coagulation/denaturation</td><td>Oxidation (charring cell constituents)</td></tr>
+<tr><td>Energy needed</td><td>Lower (latent heat of steam)</td><td>Higher → higher temp + longer time</td></tr>
+<tr><td>Temp / time</td><td>121°C, 15 min, 15 psi (autoclave)</td><td>160–170°C; hot air oven 160°C / 60 min</td></tr>
+</tbody>
+</table>
+<div class="mnem"><strong>Moist beats dry</strong> — steam's latent heat transfers energy straight to proteins, so lower temp + shorter time suffice than dry-heat oxidation.</div>
+
+<h4>Moist heat family (all moist EXCEPT incineration, which is dry)</h4>
+<table>
+<thead><tr><th>Method</th><th>Condition</th><th>Use / principle</th></tr></thead>
+<tbody>
+<tr><td>Autoclave</td><td>121°C / 15 min / 15 psi</td><td>Standard steam sterilization</td></tr>
+<tr><td>Tyndallization (intermittent)</td><td>100°C / 30 min × 3 successive days</td><td>Spores germinate between cycles (incubate 37°C), killed as vegetative form next cycle</td></tr>
+<tr><td>Inspissation</td><td>Steam, coagulates egg media</td><td>Serum/egg-based media (e.g. LJ)</td></tr>
+<tr><td>Pasteurization — holder</td><td>63°C / 30 min</td><td>Thermolabile liquids</td></tr>
+<tr><td>Pasteurization — HTST/flash</td><td>72°C / 15 s → rapid cool &lt;10°C</td><td>Short exposure minimises thermal degradation</td></tr>
+<tr><td>Boiling</td><td>100°C / 10–20 min</td><td>Disinfection only (no spores)</td></tr>
+</tbody>
+</table>
+
+<h4>Dry heat &amp; heat-sensitive materials</h4>
+<div class="fact"><span class="q">Why sterilize glass syringes in a hot-air oven, not an autoclave?</span><span class="a">Dry heat avoids alkaline-condensate damage</span><span class="why">Repeated autoclaving etches/frosts glass → ruins barrel–plunger fit. Dry heat 160°C / 60 min preferred.</span></div>
+<div class="fact"><span class="q">Method that DESTROYS rubber goods</span><span class="a">Hot air oven 160°C (melts/degrades)</span><span class="why">Rubber OK by: autoclave, gamma, EO gas, H₂O₂ plasma.</span></div>
+
+<h3>1.3 Loading the autoclave</h3>
+<ul>
+<li><strong>Loose arrangement</strong> → allows steam penetration. <strong>Drain clear</strong> → gravity air displacement.</li>
+<li><strong>Mixed loads:</strong> textiles on TOP (absorb dripping condensate), hard goods BELOW.</li>
+<li><strong>Liquid containers:</strong> fill only to <strong>2/3</strong> capacity (expansion / prevent boil-over) — NOT full.</li>
+</ul>
+
+<!-- ================= SECTION 2 ================= -->
+<h2>2. Sterilization Kinetics &amp; SAL</h2>
+
+<h3>2.1 D-value, Z-value, F₀, SAL</h3>
+<table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>D-value</td><td>Time for 1 log (90%) reduction at given temp</td></tr>
+<tr><td>Z-value</td><td>Temp change for 10× change in D-value; ≈ <strong>10°C</strong> for <em>G. stearothermophilus</em> (moist heat)</td></tr>
+<tr><td>SAL</td><td>Sterility Assurance Level = probability of a surviving / non-sterile unit</td></tr>
+</tbody>
+</table>
+<div class="formula">log reductions = exposure time ÷ D-value &nbsp;|&nbsp; SAL = log(initial bioburden) − total log reductions</div>
+
+<h3>2.2 Pharmacopoeial SAL targets</h3>
+<div class="fact"><span class="q">SAL for terminally sterilized parenterals</span><span class="a">10⁻⁶ (≤1 non-sterile unit per million)</span><span class="why">Aseptically processed products may accept 10⁻³ due to process limits.</span></div>
+
+<h3>2.3 Worked examples</h3>
+<div class="key"><strong>SAL calc:</strong> D₁₂₁ = 1.5 min, initial spores = 10⁶, exposure 15 min. Log reductions = 15÷1.5 = <strong>10</strong>. SAL = 6 − 10 = −4 → <strong>10⁻⁴</strong>. (12D = 18 min would give the pharmacopoeial 10⁻⁶.)</div>
+<div class="key"><strong>Dry-heat tunnel calc:</strong> exposure = length ÷ belt speed = 150 cm ÷ 10 cm/min = <strong>15 min</strong>. Endotoxin reduction = log(10 000 ÷ 0.25) = log(40 000) = <strong>4.6 log</strong>. Depyrogenation needs ≥3 log → <strong>PASS</strong>.</div>
+
+<!-- ================= SECTION 3 ================= -->
+<h2>3. Filtration &amp; Mechanical Methods</h2>
+
+<h3>3.1 Filter types &amp; materials</h3>
+<table>
+<thead><tr><th>Filter</th><th>Material / basis</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Membrane</td><td>Cellulose derivatives, 0.22 μm</td><td><strong>Preferred for sterility testing</strong> — quantitative recovery + direct transfer to media</td></tr>
+<tr><td>Sintered glass</td><td>Fused glass particles</td><td>Autoclavable &amp; reusable</td></tr>
+<tr><td>Berkefeld</td><td>Diatomaceous earth (kieselguhr) — candle</td><td>Grades V (coarse), N (normal), W (fine)</td></tr>
+<tr><td>Seitz</td><td>Asbestos pads</td><td>Sieving + electrostatic/adsorptive retention</td></tr>
+<tr><td>HEPA</td><td>Air filter</td><td>Creates ISO 5 / Class 100 environment</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">What can pass a 0.22 μm membrane filter?</span><span class="a">Mycoplasma (0.1–0.3 μm) &amp; viruses</span><span class="why">Centrifugation is NOT a sterilization method — separates but doesn't kill/remove all microbes.</span></div>
+
+<!-- ================= SECTION 4 ================= -->
+<h2>4. Chemical Agents &amp; Disinfectants</h2>
+
+<h3>4.1 Mechanisms of action</h3>
+<table>
+<thead><tr><th>Agent</th><th>Class</th><th>Mechanism</th></tr></thead>
+<tbody>
+<tr><td>Peracetic acid</td><td>Oxidizer</td><td>Disrupts sulfhydryl (–SH) &amp; disulfide bonds</td></tr>
+<tr><td>Chlorhexidine</td><td>Biguanide</td><td>Disrupts cell membrane</td></tr>
+<tr><td>Ethylene oxide (EO)</td><td>Alkylating gas</td><td>Alkylates amino/carboxyl/hydroxyl groups of protein &amp; DNA</td></tr>
+<tr><td>Formaldehyde</td><td>Alkylating</td><td>Cross-links amino groups of proteins &amp; nucleic acids</td></tr>
+<tr><td>H₂O₂ vapor/plasma</td><td>Oxidizer</td><td>Generates hydroxyl free radicals; STERRAD, &lt;50°C, heat-sensitive items</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 Disinfectant spectrum &amp; uses</h3>
+<div class="fact"><span class="q">Class of QACs (benzalkonium chloride)</span><span class="a">Low-level disinfectant</span><span class="why">Kills vegetative bacteria, some fungi, enveloped viruses only. Ineffective vs mycobacteria, non-enveloped viruses, spores.</span></div>
+<div class="fact"><span class="q">Lysol (cresol + soap) 3–5% — used for?</span><span class="a">Non-critical surfaces only (floors, walls, furniture)</span><span class="why">Too toxic/corrosive for semi-critical or critical items.</span></div>
+<div class="fact"><span class="q">Formaldehyde gas (from paraformaldehyde) main use</span><span class="a">Fumigation of cleanrooms, LAF hoods, OTs</span><span class="why">Needs sealed space; neutralise with ammonia before reuse.</span></div>
+
+<h3>4.3 Alcohols</h3>
+<ul>
+<li><strong>Ethanol 70% &gt; isopropanol 70%</strong> against non-enveloped viruses.</li>
+<li>Act by denaturing proteins + dissolving lipids; cannot penetrate spore coats.</li>
+<li><strong>Absolute alcohol</strong> dehydrates surface too fast → coagulated protein layer blocks further penetration → 70% is optimal.</li>
+</ul>
+
+<h3>4.4 Radiation sterilization</h3>
+<ul>
+<li>Electron beam: <strong>lower penetration</strong> (few cm) but high dose rate → fast processing.</li>
+<li>Standard sterilizing dose = <strong>25 kGy</strong>.</li>
+<li>Ionizing radiation → free radicals (hydroxyl from water radiolysis) damage DNA.</li>
+<li>Infrared = non-ionizing thermal, NOT in the gamma/e-beam class.</li>
+</ul>
+
+<!-- ================= SECTION 5 ================= -->
+<h2>5. Indicators &amp; Disinfectant Testing</h2>
+
+<h3>5.1 Biological indicators by method</h3>
+<table>
+<thead><tr><th>Organism (spores)</th><th>Sterilization method monitored</th></tr></thead>
+<tbody>
+<tr><td><em>Bacillus atrophaeus</em> (ex-<em>B. subtilis</em> var. niger)</td><td>Dry heat (also EO)</td></tr>
+<tr><td><em>Bacillus pumilus</em></td><td>Radiation (gamma / e-beam)</td></tr>
+<tr><td><em>Geobacillus stearothermophilus</em></td><td>Steam / autoclave</td></tr>
+<tr><td><em>B. subtilis</em> var. niger (historic)</td><td>Ethylene oxide gas</td></tr>
+</tbody>
+</table>
+
+<h3>5.2 Chemical indicators</h3>
+<table>
+<thead><tr><th>Indicator</th><th>Type / function</th></tr></thead>
+<tbody>
+<tr><td>Browne's tube (Type I)</td><td>Single-parameter (colour change at set temp)</td></tr>
+<tr><td>Bowie-Dick tape/test</td><td>Air removal &amp; steam penetration in pre-vacuum autoclave</td></tr>
+<tr><td>Thermalog-S</td><td>Multi-parameter integrating (Class 5): time + temp + steam</td></tr>
+<tr><td>Class 6 emulating</td><td>Reacts to all critical variables of a specified cycle</td></tr>
+</tbody>
+</table>
+
+<h3>5.3 Aseptic flaming &amp; disinfectant testing</h3>
+<div class="fact"><span class="q">Primary purpose of flaming tube mouths</span><span class="a">Upward convection current bars airborne contaminants</span></div>
+<div class="fact"><span class="q">Rideal-Walker coefficient — organism &amp; standard</span><span class="a"><em>Salmonella typhi</em> vs phenol</span><span class="why">Ratio of highest effective dilution of test disinfectant to phenol under standardized conditions.</span></div>
+
+<!-- ================= SECTION 6 ================= -->
+<h2>6. Biomedical Waste Management</h2>
+<div class="fact"><span class="q">Culture plates / microbial stocks awaiting autoclave → which container?</span><span class="a">Yellow non-chlorinated bags, biohazard symbol</span><span class="why">Category 1 (Yellow); pre-treat by autoclave/microwave, then incinerate.</span></div>
+<div class="fact"><span class="q">Correct sharps disposal practices</span><span class="a">Puncture-proof biohazard containers; autoclave first; white translucent tamper-proof lids</span><span class="why">NEVER manually recap needles (needlestick risk); phenolic soak not standard for sharps.</span></div>
+<div class="key"><strong>Contaminated media disposal:</strong> decontaminate ALL media (autoclave 121°C); hypochlorite OK for liquid waste; solid plates → incineration. Yellow bags carry pathological/infectious waste in this scheme.</div>
+
+<!-- ================= SECTION 7 ================= -->
+<h2>7. Health Education — Methods &amp; AV Aids</h2>
+
+<h3>7.1 Method classification (individual / group / mass)</h3>
+<table>
+<thead><tr><th>Individual</th><th>Group</th><th>Mass</th></tr></thead>
+<tbody>
+<tr><td>Home visit; personal counselling</td><td>Brainstorming; role play; panel; workshop; seminar; buzz group</td><td>Poster; television; health fairs/exhibitions; folk media/street plays; newspapers</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">Is brainstorming an individual method?</span><span class="a">No — it is a GROUP method</span><span class="why">It does involve free idea generation without immediate criticism — but within a group.</span></div>
+<div class="fact"><span class="q">Buzz group technique</span><span class="a">Large group splits into small groups (5–6) for 5–10 min, then report back</span></div>
+
+<h3>7.2 Group-method descriptions</h3>
+<ul class="inline-list">
+<li><strong>Panel</strong> = experts, differing viewpoints</li>
+<li><strong>Workshop</strong> = intensive hands-on training</li>
+<li><strong>Seminar</strong> = academic presentation + discussion</li>
+<li><strong>Brainstorming</strong> = rapid idea generation, no criticism</li>
+</ul>
+
+<h3>7.3 Audio-visual aids: projected vs non-projected</h3>
+<table>
+<thead><tr><th>Projected (need projection)</th><th>Non-projected (no projector/electricity)</th></tr></thead>
+<tbody>
+<tr><td>OHP; slides; film screening; LCD projector</td><td>Puppet show; specimen/model; flannel graph/felt board; flash cards; bulletin board</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">Flannel graph (felt board) classification</span><span class="a">Non-projected aid</span><span class="why">Non-projected = no projection equipment / electricity needed.</span></div>
+<div class="fact"><span class="q">Folk media best suited for</span><span class="a">Rural / semi-literate remote communities</span><span class="why">Culturally familiar, entertaining, no literacy needed.</span></div>
+
+<!-- ================= SECTION 8 ================= -->
+<h2>8. Dale's Cone &amp; Learning Retention</h2>
+<div class="mnem"><strong>10–20–30–50–70–90</strong> retention ladder — Read 10, Hear 20, See 30, Hear+See 50, Say 70, Do 90.</div>
+<table>
+<thead><tr><th>Activity</th><th>Retained</th></tr></thead>
+<tbody>
+<tr><td>Read</td><td>10%</td></tr>
+<tr><td>Hear</td><td>20%</td></tr>
+<tr><td>See (demonstration alone)</td><td>30%</td></tr>
+<tr><td>Hear + See (demonstration + lecture)</td><td>50%</td></tr>
+<tr><td>Say</td><td>70%</td></tr>
+<tr><td>Do actively (perform activity)</td><td>90%</td></tr>
+</tbody>
+</table>
+<div class="key"><strong>Common trap:</strong> "Demonstration + Lecture = 50%" DOES align (hear+see). Demonstration <em>alone</em> would be 30%.</div>
+<div class="key"><strong>Efficiency calc:</strong> efficiency = behaviour change ÷ knowledge gain. 8/30=0.27 · 35/60=0.58 · 12/45=0.27 · <strong>40/55=0.73 (highest)</strong> → participatory community involvement most effective.</div>
+
+<!-- ================= SECTION 9 ================= -->
+<h2>9. Health Promotion, Milestones &amp; Bodies</h2>
+
+<h3>9.1 Health education vs health promotion</h3>
+<table>
+<thead><tr><th>Health education</th><th>Health promotion (broader)</th></tr></thead>
+<tbody>
+<tr><td>Voluntary behaviour change via info + skills</td><td>HE + legislative, fiscal, organizational, environmental measures</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">Ottawa Charter (1986)</span><span class="a">5 action areas for health PROMOTION</span><span class="why">Policy, supportive environments, community action, personal skills, reorient services — not "health education" as an area.</span></div>
+
+<h3>9.2 Milestones &amp; organizations</h3>
+<table>
+<thead><tr><th>Milestone / body</th><th>Year</th></tr></thead>
+<tbody>
+<tr><td>Alma-Ata Declaration</td><td>1978</td></tr>
+<tr><td>Ottawa Charter</td><td>1986</td></tr>
+<tr><td>Jakarta Declaration</td><td>1997</td></tr>
+<tr><td>CHEB established</td><td>1956 (some cite 1957)</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">Apex central body for health education in India</span><span class="a">Central Health Education Bureau (CHEB)</span><span class="why">Under Directorate General of Health Services, Ministry of Health &amp; Family Welfare.</span></div>
+<div class="fact"><span class="q">UNICEF &amp; India HE structure</span><span class="a">UNICEF supports ICDS + immunisation/maternal education; works national→district; focus children &amp; mothers</span><span class="why">State Health Education Bureaux set up after CHEB; IEC/BCC added to programmes over time (not from 1st Five Year Plan).</span></div>
+
+<!-- ================= SECTION 10 ================= -->
+<h2>10. HE Ethics, Planning &amp; Concepts</h2>
+
+<h3>10.1 Ethical principles &amp; educator attributes</h3>
+<div class="fact"><span class="q">NOT an ethical principle of HE</span><span class="a">Coercion for compliance</span><span class="why">Core principles: autonomy, beneficence, non-maleficence, justice, truthfulness, cultural sensitivity.</span></div>
+<div class="fact"><span class="q">"Beneficence" means</span><span class="a">Acting in best interest/welfare of people (doing good)</span><span class="why">Non-maleficence = avoid harm; justice = fairness; autonomy = respect choice.</span></div>
+<div class="fact"><span class="q">Effective educator attributes</span><span class="a">Cultural competence, empathy, communication, rapport, credibility</span><span class="why">Authoritarian approach is NOT an attribute (contrary to participatory philosophy).</span></div>
+<div class="fact"><span class="q">Core HE learning principle</span><span class="a">Participatory learning</span><span class="why">Active involvement → better retention &amp; sustainable behaviour change.</span></div>
+
+<h3>10.2 Programme planning</h3>
+<div class="key"><strong>4-step cycle:</strong> (1) Need assessment [FIRST step] → (2) Set objectives / plan → (3) Implement &amp; monitor → (4) Evaluate + follow-up. Evaluation is ONGOING (formative + summative), not only at the end.</div>
+<div class="fact"><span class="q">Health literacy</span><span class="a">Capacity to obtain, process &amp; understand basic health info to make decisions</span><span class="why">Goes beyond simple reading ability.</span></div>
+
+<!-- ================= SECTION 11 ================= -->
+<h2>11. Store — Schedules, Codification &amp; Storage</h2>
+
+<h3>11.1 Drug schedules &amp; storage</h3>
+<table>
+<thead><tr><th>Schedule</th><th>Storage / requirement</th></tr></thead>
+<tbody>
+<tr><td>H &amp; H1</td><td>Poison cupboard, restricted access; recorded in <strong>Poison Register</strong></td></tr>
+<tr><td>X (narcotic/psychotropic)</td><td>Double-locked safe + separate register</td></tr>
+<tr><td>C (biologicals: vaccines, sera)</td><td>Cold storage + temp monitoring</td></tr>
+<tr><td>P</td><td>General storage + shelf-life monitoring</td></tr>
+<tr><td>M</td><td>GMP — storage conditions, temp control, cold chain, warehousing</td></tr>
+</tbody>
+</table>
+
+<h3>11.2 Storage temperature ranges</h3>
+<table>
+<thead><tr><th>Condition</th><th>Range</th></tr></thead>
+<tbody>
+<tr><td>Cold storage</td><td>2–8°C (insulin — protein, denatures if warm)</td></tr>
+<tr><td>Cool place</td><td>8–15°C</td></tr>
+<tr><td>Room temperature</td><td>15–25°C</td></tr>
+<tr><td>Controlled room temp</td><td>20–25°C</td></tr>
+</tbody>
+</table>
+<div class="fact"><span class="q">Amber container for Chlorpromazine injection — why?</span><span class="a">Light protection (photodegradation)</span><span class="why">Amber guards against LIGHT (turns pink/purple), NOT oxidation.</span></div>
+
+<h3>11.3 Codification</h3>
+<ul>
+<li><strong>Methods:</strong> alphabetical, numerical, alpha-numeric, Dewey decimal. (Binary coded decimal = computing, not stores.)</li>
+<li><strong>Advantages:</strong> easy identification/location, fewer clerical errors, enables computerization, standardizes communication.</li>
+<li><strong>Does NOT</strong> eliminate need for physical verification.</li>
+</ul>
+
+<!-- ================= SECTION 12 ================= -->
+<h2>12. Inventory Control &amp; Formulas</h2>
+
+<h3>12.1 Stock level &amp; EOQ formulas</h3>
+<div class="formula">EOQ = √(2DS/H) &nbsp;|&nbsp; Reorder Level = Max consumption × Max lead time</div>
+<div class="formula">Min stock = ROL − (Normal consumption × Normal lead time)</div>
+<div class="formula">Max stock = ROL + Reorder Qty − (Min consumption × Min lead time)</div>
+<p><em>D</em> = annual demand, <em>S</em> = ordering cost/order, <em>H</em> = carrying cost/unit/yr.</p>
+
+<h3>12.2 Worked EOQ examples</h3>
+<div class="key"><strong>EOQ calc A:</strong> D=10 000, S=100, H=25%×40=10 → EOQ=√(2·10000·100/10)=√200000 ≈ <strong>447 units</strong>.</div>
+<div class="key"><strong>EOQ calc B:</strong> D=5000, S=200, H=10 → EOQ=√(2·5000·200/10)=√200000 ≈ <strong>447 units</strong>.</div>
+
+<h3>12.3 Inventory analysis methods</h3>
+<table>
+<thead><tr><th>Method</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>ABC (Always Better Control)</td><td>Consumption VALUE — A ≈ 70% value / 10% items</td></tr>
+<tr><td>VED</td><td>Criticality — Vital, Essential, Desirable</td></tr>
+<tr><td>FSN</td><td>Movement — Fast, Slow, Non-moving</td></tr>
+<tr><td>SDE</td><td>Procurement difficulty — Scarce, Difficult, Easy</td></tr>
+</tbody>
+</table>
+<div class="mnem"><strong>ABC = money, VED = criticality, FSN = speed, SDE = supply difficulty.</strong></div>
+
+<h3>12.4 Near-expiry &amp; rate contracts</h3>
+<ul>
+<li><strong>Near-expiry:</strong> alert 3–6 months ahead; segregate + distinct labels; destroy per procedure; transfer to high-consumption areas. (Return-to-supplier depends on contract, not universal.)</li>
+<li><strong>DGS&amp;D</strong> = Directorate General of Supplies &amp; Disposals; rate contracts fix prices for a period, uniform pricing across govt institutions, standard quality specs. (Individual indents/supply orders STILL required.)</li>
+</ul>
+
+<!-- ================= SECTION 13 ================= -->
+<h2>13. Store Documents &amp; Verification</h2>
+
+<h3>13.1 Key documents</h3>
+<table>
+<thead><tr><th>Document</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Bin card</td><td>At item location; tracks QUANTITY movements &amp; running balance (not value). Perpetual record.</td></tr>
+<tr><td>Stock register</td><td>Opening bal, date-wise receipts (batch), date-wise issues (dept), closing balance. (No market price fluctuations.)</td></tr>
+<tr><td>GRN (Goods Received Note)</td><td>Qty, condition, supplier, PO ref, date, receiver. (NOT consumption forecasts.)</td></tr>
+<tr><td>Receipt/Issue voucher</td><td>Stores accounting entries; both need authorized signatures. Do NOT replace GRN.</td></tr>
+<tr><td>Material Requisition Form (MRF)</td><td>Dept requests materials from central store; dept-head authorized.</td></tr>
+<tr><td>Indents</td><td>Routine (periodic); special (non-rate-contract items); ALL need specs + approval (even emergency, expedited).</td></tr>
+</tbody>
+</table>
+
+<h3>13.2 Receipt / inspection / verification</h3>
+<div class="fact"><span class="q">Checking received goods vs PO specs is called</span><span class="a">Quality inspection &amp; verification</span><span class="why">Physical appearance, packaging, labelling, batch, expiry ± lab sampling.</span></div>
+<div class="fact"><span class="q">Goods acceptance/rejection procedure</span><span class="a">Visual inspect; verify label/batch/expiry; cold-chain records; document rejections</span><span class="why">Approved-supplier goods STILL require full inspection.</span></div>
+<div class="fact"><span class="q">Verification on a rotating basis all year</span><span class="a">Continuous (perpetual) stock verification</span><span class="why">Spreads workload vs periodic (fixed intervals).</span></div>
+<div class="fact"><span class="q">Physical verification facts</span><span class="a">Reconciles actual vs book stock; investigate discrepancies; independent team</span><span class="why">Can be periodic, continuous OR surprise — not year-end only.</span></div>
+
+<!-- ================= LAST-MINUTE FACT DUMP ================= -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">Autoclave standard</span><span class="a">121°C / 15 min / 15 psi</span></div>
+  <div class="fact"><span class="q">Hot air oven (dry heat)</span><span class="a">160°C / 60 min</span></div>
+  <div class="fact"><span class="q">Sterility test — preferred filter</span><span class="a">Membrane 0.22 μm</span></div>
+  <div class="fact"><span class="q">Berkefeld filter material</span><span class="a">Diatomaceous earth (kieselguhr)</span></div>
+  <div class="fact"><span class="q">Seitz filter material</span><span class="a">Asbestos pads</span></div>
+  <div class="fact"><span class="q">Passes 0.22 μm filter</span><span class="a">Mycoplasma &amp; viruses</span></div>
+  <div class="fact"><span class="q">Z-value (moist heat)</span><span class="a">≈ 10°C</span></div>
+  <div class="fact"><span class="q">Radiation sterilizing dose</span><span class="a">25 kGy</span></div>
+  <div class="fact"><span class="q">SAL (terminal sterilization)</span><span class="a">10⁻⁶</span></div>
+  <div class="fact"><span class="q">Tyndallization</span><span class="a">100°C/30 min × 3 days</span></div>
+  <div class="fact"><span class="q">HTST pasteurization</span><span class="a">72°C / 15 s</span></div>
+  <div class="fact"><span class="q">Holder pasteurization</span><span class="a">63°C / 30 min</span></div>
+  <div class="fact"><span class="q">Steam BI organism</span><span class="a"><em>G. stearothermophilus</em></span></div>
+  <div class="fact"><span class="q">Dry heat BI organism</span><span class="a"><em>B. atrophaeus</em></span></div>
+  <div class="fact"><span class="q">Radiation BI organism</span><span class="a"><em>B. pumilus</em></span></div>
+  <div class="fact"><span class="q">Rideal-Walker organism/standard</span><span class="a"><em>S. typhi</em> vs phenol</span></div>
+  <div class="fact"><span class="q">H₂O₂ plasma system</span><span class="a">STERRAD, hydroxyl radicals, &lt;50°C</span></div>
+  <div class="fact"><span class="q">Best alcohol conc.</span><span class="a">70% (ethanol &gt; IPA vs non-env virus)</span></div>
+  <div class="fact"><span class="q">Culture waste bag</span><span class="a">Yellow, biohazard symbol</span></div>
+  <div class="fact"><span class="q">Read / Do retention</span><span class="a">10% / 90%</span></div>
+  <div class="fact"><span class="q">Hear+See retention</span><span class="a">50%</span></div>
+  <div class="fact"><span class="q">Ottawa Charter</span><span class="a">1986 · 5 action areas</span></div>
+  <div class="fact"><span class="q">Alma-Ata / Jakarta</span><span class="a">1978 / 1997</span></div>
+  <div class="fact"><span class="q">CHEB established</span><span class="a">1956</span></div>
+  <div class="fact"><span class="q">Brainstorming type</span><span class="a">Group method</span></div>
+  <div class="fact"><span class="q">Flannel graph</span><span class="a">Non-projected aid</span></div>
+  <div class="fact"><span class="q">Buzz group size</span><span class="a">5–6 persons, 5–10 min</span></div>
+  <div class="fact"><span class="q">First HE planning step</span><span class="a">Need assessment</span></div>
+  <div class="fact"><span class="q">EOQ formula</span><span class="a">√(2DS/H)</span></div>
+  <div class="fact"><span class="q">Reorder level</span><span class="a">Max consumption × Max lead time</span></div>
+  <div class="fact"><span class="q">Min stock level</span><span class="a">ROL − (Normal cons. × Normal lead time)</span></div>
+  <div class="fact"><span class="q">Max stock level</span><span class="a">ROL + ROQ − (Min cons. × Min lead time)</span></div>
+  <div class="fact"><span class="q">ABC "A" items</span><span class="a">70% value / 10% items</span></div>
+  <div class="fact"><span class="q">VED basis</span><span class="a">Criticality (Vital/Essential/Desirable)</span></div>
+  <div class="fact"><span class="q">Cold storage / Cool place</span><span class="a">2–8°C / 8–15°C</span></div>
+  <div class="fact"><span class="q">Insulin storage</span><span class="a">2–8°C (protein denatures)</span></div>
+  <div class="fact"><span class="q">Poison Register drugs</span><span class="a">Schedule H &amp; H1</span></div>
+  <div class="fact"><span class="q">Schedule X storage</span><span class="a">Double-locked safe + register</span></div>
+  <div class="fact"><span class="q">GMP schedule</span><span class="a">Schedule M</span></div>
+  <div class="fact"><span class="q">Chlorpromazine container</span><span class="a">Amber (light protection)</span></div>
+  <div class="fact"><span class="q">Dept requests materials via</span><span class="a">Material Requisition Form</span></div>
+  <div class="fact"><span class="q">Bin card records</span><span class="a">Quantity only + balance</span></div>
+  <div class="fact"><span class="q">DGS&amp;D</span><span class="a">Dir. Gen. of Supplies &amp; Disposals</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes · Print A4 (Ctrl/Cmd+P) —</p>
+
+</body>
+</html>
