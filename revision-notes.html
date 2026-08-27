@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes — Surgical Instruments</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes</h1>
+<p class="subtitle">Surgical Instruments &amp; Sets · General Surgery · Tracheostomy · ENT · Ophthalmology</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Cutting, Dissecting &amp; Bone Instruments</li>
+    <li>Haemostatic (Artery) Forceps</li>
+    <li>Tissue-Holding Forceps, Clamps &amp; Clips</li>
+    <li>Retractors &amp; Exposure</li>
+    <li>Needle Holders, Sutures &amp; Diathermy</li>
+    <li>Suction Devices</li>
+    <li>Regional Sets: Thyroid, Parotid, Bowel, Jaw</li>
+    <li>Tracheostomy</li>
+    <li>ENT — Ear</li>
+    <li>ENT — Nose &amp; Sinus</li>
+    <li>ENT — Throat, Tonsil, Adenoid, Larynx</li>
+    <li>Ophthalmology — Cornea, Cataract, IOL</li>
+    <li>Ophthalmology — Lacrimal System</li>
+    <li>Ophthalmology — Retina, Vitreous, Glaucoma</li>
+    <li>Ophthalmology — Lids, Iris, Muscle, Orbit</li>
+    <li>Last-Minute Fact Dump</li>
+  </ol>
+</div>
+
+<!-- ================ 1 ================ -->
+<h2>1. Cutting, Dissecting &amp; Bone Instruments</h2>
+
+<h3>1.1 Scalpel Handles &amp; Blades</h3>
+<table>
+  <thead><tr><th style="width:14%">Handle</th><th style="width:32%">Shape / Character</th><th>Blades accepted &amp; use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>#3</strong></td><td>Standard short flat handle</td><td>#10, #11, #15 — routine incisions</td></tr>
+    <tr><td><strong>#4</strong></td><td><strong>Broad flat</strong> handle</td><td>#20, #22 — large blades, big incisions</td></tr>
+    <tr><td><strong>#7</strong></td><td><strong>Long, thin, round (pen-like)</strong></td><td>#10, #11, #15 (same as #3) — precision work in <strong>deep / narrow</strong> fields</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th style="width:14%">Blade</th><th>Shape</th><th>Primary use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>#10</strong></td><td>Curved cutting edge (on handle #3)</td><td><strong>Commonest for long skin incisions</strong> (abdominal surgery)</td></tr>
+    <tr><td><strong>#11</strong></td><td>Pointed / lance</td><td><strong>Stab incisions</strong>, pointed cuts, abscess drainage</td></tr>
+    <tr><td><strong>#15</strong></td><td>Small curved</td><td>Short, precise incisions</td></tr>
+    <tr><td><strong>#20 / #22</strong></td><td>Larger version of #10 (handle #4)</td><td>Long/thick tissue incisions</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Minimum blade sizes in a standard general-surgery set = 3</strong> → #10 (long incisions) + #15 (precise/short) + #11 (stab). These three cover most cutting needs.</div>
+<div class="mnem"><strong>10 = Long · 11 = Lance (stab) · 15 = Fine</strong>. Handle: <strong>3 = short, 4 = fat/broad, 7 = long &amp; thin.</strong></div>
+
+<h3>1.2 Scissors</h3>
+<table>
+  <thead><tr><th style="width:26%">Scissors</th><th>Use / Feature</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Metzenbaum</strong></td><td>Delicate tissue cutting &amp; <strong>blunt dissection</strong> (long shank, short blades)</td></tr>
+    <tr><td><strong>Mayo — straight</strong></td><td>Primarily <strong>cutting sutures</strong> ("suture scissors")</td></tr>
+    <tr><td>Mayo — curved</td><td>Cutting tough tissue/fascia</td></tr>
+    <tr><td><strong>Stitch (suture-removal) scissors</strong></td><td><strong>Hook on one blade</strong> to slip under the stitch</td></tr>
+    <tr><td><strong>Iris scissors</strong></td><td>Originally ophthalmic, but <strong>also widely used in general surgery</strong> for fine dissection — NOT exclusive to ophthalmology</td></tr>
+    <tr><td>Enucleation scissors</td><td><strong>Curved on flat</strong> — cut optic nerve close to globe (see §15)</td></tr>
+    <tr><td>Conjunctival / corneal (Vannas)</td><td>Cut conjunctiva / corneoscleral tissue</td></tr>
+  </tbody>
+</table>
+
+<h3>1.3 Dissectors, Elevators &amp; Bone Instruments</h3>
+<table>
+  <thead><tr><th style="width:28%">Instrument</th><th>Character</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Kocher's thyroid dissector</strong></td><td><strong>Blunt-ended</strong></td><td>Blunt dissection around thyroid — blunt <em>because</em> sharp dissection risks <strong>recurrent laryngeal nerve</strong> &amp; <strong>parathyroids</strong></td></tr>
+    <tr><td><strong>Howarth periosteal elevator</strong></td><td><strong>Double-ended</strong>: one sharp, one blunt</td><td><strong>Strips periosteum</strong> off bone — jaw surgery, ENT, orthopaedics</td></tr>
+    <tr><td><strong>Freer's (Cottle's) septum elevator</strong></td><td>Sharp end + blunt end</td><td>Elevate mucoperiosteal/mucoperichondrial flap in <strong>SMR / septoplasty</strong></td></tr>
+    <tr><td><strong>Bone nibbler (rongeur)</strong></td><td>Biting jaws</td><td><strong>Cuts &amp; removes small pieces of bone</strong> — trim bony edges, remove spurs, shape bone in jaw surgery</td></tr>
+    <tr><td><strong>Gigli saw</strong></td><td><strong>Flexible wire saw</strong> of twisted strands</td><td>Bone cutting — <strong>craniotomy</strong> (passed between bone &amp; dura) and <strong>amputation</strong></td></tr>
+    <tr><td>Kerrison punch</td><td>Bone-biting punch</td><td>Remove bone between lacrimal sac &amp; nose in <strong>DCR</strong></td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Sternum is NOT divided with a Gigli saw</strong> → use an oscillating/sternal saw. Gigli saw is also <strong>not</strong> part of a tracheostomy set.</div>
+
+<!-- ================ 2 ================ -->
+<h2>2. Haemostatic (Artery) Forceps</h2>
+
+<h3>2.1 Serration Pattern — The Examiner's Favourite Discriminator</h3>
+<table>
+  <thead><tr><th style="width:24%">Forceps</th><th style="width:34%">Jaw serrations</th><th>Teeth at tip?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Mosquito (Halsted)</strong></td><td>Transverse, <strong>entire jaw length</strong></td><td><strong>NO</strong></td><td><strong>Smallest haemostat</strong>; small vessels &amp; delicate tissue; straight &amp; curved available</td></tr>
+    <tr><td><strong>Kelly</strong></td><td>Transverse, <strong>distal half only</strong></td><td>NO</td><td>Straight &amp; curved</td></tr>
+    <tr><td><strong>Crile</strong></td><td>Transverse, <strong>full length</strong></td><td>NO</td><td>Straight &amp; curved</td></tr>
+    <tr><td><strong>Spencer Wells</strong></td><td>Transverse, <strong>full length</strong></td><td>NO (non-toothed)</td><td>Workhorse artery forceps</td></tr>
+    <tr><td><strong>Kocher's</strong></td><td>Transverse serrations</td><td><strong>YES — teeth at tip</strong></td><td>Firm grip on tough tissue/fascia; traumatic</td></tr>
+    <tr><td><strong>Negus</strong></td><td>Angled jaws, long shaft</td><td>NO</td><td>Haemostasis deep in <strong>tonsillar fossa</strong></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Kelly = "Kloser to tip" (distal half) · Crile = "Complete length"</strong>. And <strong>Kocher = "Kills" (has teeth)</strong>, Spencer Wells is smooth.</div>
+<div class="key"><strong>Standard general surgical tray contains 6–12 Spencer Wells artery forceps</strong> (mix of straight and curved) — enough for adequate haemostasis; 15–30 would be excessive.</div>
+
+<!-- ================ 3 ================ -->
+<h2>3. Tissue-Holding Forceps, Clamps &amp; Clips</h2>
+
+<h3>3.1 Traumatic vs Atraumatic</h3>
+<table>
+  <thead><tr><th style="width:22%">Forceps</th><th style="width:16%">Class</th><th style="width:30%">Jaws</th><th>Typical tissue</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Allis</strong></td><td><strong>Traumatic</strong> tissue-holding</td><td><strong>4 × 5 interlocking teeth</strong> (multiple fine teeth)</td><td>Fascia, skin edges, tough tissue for traction</td></tr>
+    <tr><td><strong>Lane's</strong></td><td><strong>Traumatic</strong> tissue-holding</td><td><strong>Fewer but stronger</strong> interlocking teeth (vs Allis' many fine teeth)</td><td>Tough tissue — <strong>fascia, periosteum</strong>. NOT atraumatic → unsuitable for delicate structures</td></tr>
+    <tr><td><strong>Babcock</strong></td><td><strong>Atraumatic</strong> tissue-holding</td><td><strong>Smooth, rounded, fenestrated</strong> jaws</td><td>Bowel, appendix, delicate structures</td></tr>
+    <tr><td><strong>Lahey</strong></td><td>Thyroid-specific holding</td><td>Serrated jaws with teeth — grips without slipping</td><td><strong>Thyroid lobe</strong> (see §7)</td></tr>
+    <tr><td><strong>Doyen bowel clamp</strong></td><td><strong>Atraumatic</strong> occlusion clamp</td><td>Long, flexible, longitudinally ridged blades</td><td>Bowel</td></tr>
+    <tr><td><strong>Backhaus towel clip</strong></td><td>Drape fixation</td><td><strong>Sharp pointed crossed tips</strong></td><td>Drapes (± superficial skin)</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Allis has teeth = Aggressive · Babcock is Bland/Blunt = Bowel.</strong> Allis tip = <strong>4 × 5</strong> teeth.</div>
+
+<h3>3.2 Doyen Bowel Clamp — Indications</h3>
+<div class="two-col">
+<ul>
+  <li>✔ Occlude bowel <strong>lumen during anastomosis</strong>.</li>
+  <li>✔ Prevent <strong>spillage of bowel contents</strong>.</li>
+  <li>✔ <strong>Gentle (atraumatic)</strong> handling of bowel wall.</li>
+  <li>✘ <strong>NOT for major blood vessels</strong> → use <strong>Satinsky</strong> or <strong>bulldog</strong> vascular clamps.</li>
+</ul>
+<div class="fact"><span class="q">Backhaus towel clip — all true?</span><span class="a">Yes, all four</span><span class="why">Penetrates drape (and sometimes superficial skin); holds drapes in position; occasionally used for skin traction; can mark incision points.</span></div>
+</div>
+
+<!-- ================ 4 ================ -->
+<h2>4. Retractors &amp; Exposure</h2>
+
+<h3>4.1 Self-Retaining vs Hand-Held</h3>
+<table>
+  <thead><tr><th style="width:26%">Retractor</th><th style="width:20%">Type</th><th>Description &amp; use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Balfour</strong></td><td><strong>Self-retaining</strong></td><td>Abdominal surgery; frame + <strong>bladder blade</strong></td></tr>
+    <tr><td><strong>Weitlaner</strong></td><td><strong>Self-retaining</strong> (ratchet)</td><td>Prongs available <strong>sharp OR blunt</strong>; thyroid surgery, limb surgery. <strong>Needs no assistant.</strong></td></tr>
+    <tr><td><strong>Gelpi</strong></td><td><strong>Self-retaining</strong></td><td>Single sharp point per arm; deep narrow exposure</td></tr>
+    <tr><td><strong>Green's</strong></td><td>Self-retaining (thyroid)</td><td>Retracts <strong>strap muscles (sternohyoid + sternothyroid) laterally</strong> in thyroidectomy</td></tr>
+    <tr><td><strong>Deaver</strong></td><td><strong>Hand-held</strong></td><td>Large <strong>C-shaped</strong> blade — retracts <strong>liver / abdominal wall</strong> in deep abdominal surgery</td></tr>
+    <tr><td><strong>Langenbeck</strong></td><td>Hand-held</td><td><strong>Narrow, flat</strong> blade; versatile general-purpose retraction</td></tr>
+    <tr><td><strong>Army-Navy</strong></td><td>Hand-held, double-ended</td><td><strong>Small, narrow</strong> blades — <strong>superficial</strong> retraction</td></tr>
+    <tr><td><strong>Richardson</strong></td><td>Hand-held, double-ended</td><td><strong>Wider, deeper blade</strong> than Army-Navy → <strong>deeper</strong> retraction</td></tr>
+    <tr><td><strong>Morris</strong></td><td>Hand-held</td><td>Superficial retraction (abdominal wall)</td></tr>
+    <tr><td><strong>Kilner ("cat's paw")</strong></td><td>Hand-held, small prongs</td><td><strong>Face and lip surgery</strong> — delicate facial tissue</td></tr>
+    <tr><td>Bjork flap retractor</td><td>Hand-held</td><td>Tracheostomy (Bjork flap technique)</td></tr>
+    <tr><td>Desmarres lid retractor</td><td>Hand-held (<strong>NOT</strong> self-retaining)</td><td>Eyelid retraction (see §15)</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Self-retaining trio = B-W-G: Balfour · Weitlaner · Gelpi.</strong> <strong>Deaver = "D for Deep but hand-helD"</strong> — always needs an assistant.</div>
+<div class="key"><strong>Richardson vs Army-Navy:</strong> both hand-held, both double-ended — the ONLY real difference is <strong>blade width/depth</strong> (Richardson wider &amp; deeper).</div>
+
+<h3>4.2 Skin Hooks vs Forceps</h3>
+<div class="key"><strong>Facial surgery → skin hooks (e.g., Gillies skin hook) preferred over forceps.</strong> Hooks engage skin with <strong>minimal crushing</strong>; forceps crush skin edges → poor scarring. Minimal trauma → <strong>better cosmetic outcome</strong> (cosmesis is paramount on the face).</div>
+
+<!-- ================ 5 ================ -->
+<h2>5. Needle Holders, Sutures &amp; Diathermy</h2>
+
+<h3>5.1 Needle Holders</h3>
+<table>
+  <thead><tr><th style="width:24%">Needle holder</th><th>Distinguishing feature</th><th>Field</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Mayo-Hegar</strong></td><td>Plain ratcheted jaws</td><td><strong>Commonest general-purpose</strong> needle holder</td></tr>
+    <tr><td><strong>Olsen-Hegar</strong></td><td><strong>Built-in scissor blades within the jaws</strong>, sited <em>proximal</em> to the needle-grasping area → holds needle AND cuts suture without changing instruments</td><td>General / veterinary</td></tr>
+    <tr><td><strong>Gillies</strong></td><td>Combined needle holder + scissors; asymmetric handles, no ratchet</td><td><strong>Plastic surgery</strong></td></tr>
+    <tr><td><strong>Castroviejo</strong></td><td><strong>Spring-action</strong> handle, <strong>lock mechanism</strong>, <strong>STRAIGHT</strong> jaws with fine serrations</td><td><strong>Microsurgery / ophthalmic</strong> (also used in DCR)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Castroviejo — EXCEPT question:</strong> it does NOT have a curved jaw design. It has lock + spring action + <strong>straight</strong> fine-serrated jaws.</div>
+
+<h3>5.2 Suture Materials</h3>
+<table>
+  <thead><tr><th style="width:16%">Suture</th><th style="width:18%">Origin</th><th style="width:20%">Absorbable?</th><th>Key facts</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Vicryl</strong></td><td>Synthetic — <strong>polyglactin 910</strong></td><td><strong>Absorbable</strong> (hydrolysis)</td><td>Fully absorbed <strong>56–70 days</strong>; retains ~<strong>75% strength at 2 wk</strong>, ~<strong>50% at 3 wk</strong></td></tr>
+    <tr><td><strong>Catgut</strong></td><td>Natural — <strong>submucosa of SHEEP or COW intestine</strong> (NOT cat!; likely from "cattlegut")</td><td>Absorbable</td><td>Plain vs chromic</td></tr>
+    <tr><td><strong>Silk</strong></td><td>Natural (silkworm)</td><td><strong>Non-absorbable</strong></td><td>Braided; good handling, high tissue reaction</td></tr>
+    <tr><td><strong>Nylon</strong></td><td>Synthetic</td><td><strong>Non-absorbable</strong></td><td><strong>Monofilament</strong>; skin closure</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Vicryl "Vanishes in ~2 months" (56–70 d)</strong>; strength ladder <strong>75% @ 2 wk → 50% @ 3 wk</strong>. <strong>Catgut is a misnomer — sheep/cow, never cat.</strong></div>
+
+<h3>5.3 Diathermy (Electrosurgery)</h3>
+<table>
+  <thead><tr><th style="width:22%">Feature</th><th>Monopolar</th><th>Bipolar</th></tr></thead>
+  <tbody>
+    <tr><td>Return electrode</td><td><strong>Requires patient grounding pad</strong></td><td><strong>Not required</strong></td></tr>
+    <tr><td>Current path</td><td>Active electrode → <strong>through patient's body</strong> → grounding pad</td><td><strong>Only between the two forceps tips</strong> — does NOT traverse the body</td></tr>
+    <tr><td>Modes</td><td><strong>Cutting and coagulation</strong></td><td>Mainly coagulation</td></tr>
+    <tr><td>Preference</td><td>Bulk dissection/cutting</td><td><strong>Preferred near vital structures</strong> (nerves, vessels), paediatrics, pacemakers</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Bipolar = "Between the tips" (no pad) · Monopolar = "Must have pad".</strong></div>
+
+<!-- ================ 6 ================ -->
+<h2>6. Suction Devices</h2>
+<table>
+  <thead><tr><th style="width:22%">Suction tip</th><th style="width:34%">Design</th><th>Primary use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Yankauer</strong></td><td>Rigid, slightly <strong>curved</strong>; <strong>bulbous tip with multiple openings</strong></td><td><strong>Oropharyngeal suction</strong> &amp; general surgical field; <strong>tonsillectomy</strong> and oral surgery. Bulbous multi-hole tip <strong>distributes suction → prevents mucosal damage</strong> and <strong>reduces clogging</strong> by clots/debris</td></tr>
+    <tr><td><strong>Poole</strong></td><td><strong>Multiple holes</strong> along an outer perforated sheath</td><td><strong>Large volumes of pooled fluid</strong> from the abdominal cavity (prevents omentum/bowel plugging)</td></tr>
+    <tr><td><strong>Frazier</strong></td><td><strong>Fine, angled</strong> tip with thumb-port</td><td><strong>Neurosurgery &amp; ENT</strong> — precise, low-volume suction</td></tr>
+    <tr><td><strong>Rampley sponge holder</strong></td><td>(Not a suction device) long ringed handles</td><td><strong>Holding swabs for skin preparation</strong></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Yankauer = Yap (mouth) · Poole = Pool of fluid (abdomen) · Frazier = Fine (neuro/ENT).</strong></div>
+
+<!-- ================ 7 ================ -->
+<h2>7. Regional Sets: Thyroid, Parotid, Bowel, Jaw</h2>
+
+<h3>7.1 Thyroidectomy Set</h3>
+<table>
+  <thead><tr><th style="width:28%">Instrument</th><th>Role in thyroidectomy</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Lahey forceps</strong></td><td><strong>Grasp the thyroid lobe and retract it medially</strong> → exposes the <strong>tracheo-oesophageal groove</strong> for identifying &amp; preserving the <strong>recurrent laryngeal nerve</strong>. Serrated toothed jaws grip without slipping.</td></tr>
+    <tr><td><strong>Green's retractor</strong></td><td>Retract <strong>strap muscles</strong> laterally for gland exposure</td></tr>
+    <tr><td><strong>Kocher's thyroid dissector</strong></td><td><strong>Blunt</strong> dissection — protects RLN &amp; parathyroids</td></tr>
+    <tr><td><strong>Weitlaner retractor</strong></td><td>Self-retaining skin/subcutaneous retraction</td></tr>
+    <tr><td>Spencer Wells / mosquito forceps</td><td>Haemostasis of superior &amp; inferior thyroid vessels</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Lahey for the Lobe · Green's for the Goitre's strap muscles.</strong> Both are thyroid-specific.</div>
+
+<h3>7.2 Parotidectomy</h3>
+<div class="key"><strong>Nerve stimulator / monitor is essential to identify and preserve the FACIAL NERVE (CN VII)</strong>, which traverses the parotid gland (dividing it into superficial &amp; deep lobes). Injury → postoperative facial paralysis.</div>
+
+<h3>7.3 Jaw Surgery</h3>
+<div class="two-col">
+<div class="fact"><span class="q">Bone nibbler (rongeur)</span><span class="a">Cut &amp; remove small pieces of bone</span><span class="why">Biting action; trims bony edges/spurs, shapes bone.</span></div>
+<div class="fact"><span class="q">Periosteal elevator for stripping periosteum off bone</span><span class="a">Howarth elevator</span><span class="why">Double-ended: sharp end for initial elevation, blunt end for further dissection.</span></div>
+</div>
+
+<!-- ================ 8 ================ -->
+<h2>8. Tracheostomy</h2>
+
+<h3>8.1 The Tracheostomy Set</h3>
+<table>
+  <thead><tr><th style="width:28%">Component</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tracheal hook</strong></td><td><strong>Holds trachea steady and lifts/retracts it forward</strong> during the approach — NOT for dilating the stoma</td></tr>
+    <tr><td><strong>Trousseau's tracheal dilator</strong></td><td><strong>Three-pronged</strong>; <strong>dilates and holds open the tracheal stoma</strong> for tube insertion. Does not cut, hold the tube, or suction</td></tr>
+    <tr><td><strong>Tracheostomy tube + obturator / inner cannula</strong></td><td>Airway maintenance; obturator aids insertion, inner cannula removable for cleaning</td></tr>
+    <tr><td><strong>Bjork flap retractor</strong></td><td>Used with the <strong>Bjork flap</strong> = <strong>inferiorly based tracheal flap sutured to skin</strong></td></tr>
+    <tr><td>Suction (Yankauer), artery forceps, retractors</td><td>Field clearance &amp; haemostasis</td></tr>
+    <tr><td><strong>NOT in the set</strong></td><td><strong>Gigli saw</strong> (bone cutting) · <strong>Laryngeal mirror</strong> (indirect laryngoscopy)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Emergency tracheostomy sequence:</strong> incision → strap muscles separated → <strong>tracheal hook</strong> stabilises &amp; lifts trachea → tracheal window made <strong>between 2nd–3rd or 3rd–4th tracheal rings</strong> → <strong>Trousseau's dilator</strong> widens the stoma → tube inserted.</div>
+
+<h3>8.2 Tracheostomy Tubes</h3>
+<table>
+  <thead><tr><th style="width:20%">Tube</th><th style="width:20%">Material</th><th>Features</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Shiley</strong></td><td><strong>Silicone / PVC plastic</strong> (disposable)</td><td><strong>Cuffed</strong>; <strong>removable inner cannula</strong> for cleaning. <strong>NOT metallic</strong></td></tr>
+    <tr><td><strong>Portex</strong></td><td><strong>PVC plastic</strong> (not metal)</td><td>Cuffed / uncuffed variants</td></tr>
+    <tr><td><strong>Jackson's</strong></td><td><strong>Metal</strong></td><td>Classic <strong>metallic</strong> tracheostomy tube</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Cuffed vs uncuffed:</strong> a <strong>cuffed</strong> tube is preferred for patients on <strong>mechanical ventilation</strong> — the inflated cuff <strong>seals the airway</strong>, preventing <strong>air leak</strong> around the tube (which would compromise ventilation) and preventing <strong>aspiration of oropharyngeal secretions</strong> into the lower airway.</div>
+<div class="formula">Adult MALE cuffed tube ID = <strong>7.0–8.0 mm</strong> &nbsp;|&nbsp; Adult FEMALE = <strong>6–7 mm</strong></div>
+<div class="mnem">Sizing balance: large enough for <strong>adequate ventilation</strong>, small enough to <strong>minimise tracheal wall pressure</strong> (ischaemia/stenosis). OD is always larger than ID.</div>
+
+<!-- ================ 9 ================ -->
+<h2>9. ENT — Ear</h2>
+
+<h3>9.1 Aural Specula &amp; Otoscopy</h3>
+<table>
+  <thead><tr><th style="width:24%">Speculum</th><th>Description</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Gruber's</strong></td><td>Simple, <strong>funnel-shaped</strong> aural speculum; no lens, no pneumatic attachment</td><td>Routine otoscopic examination</td></tr>
+    <tr><td><strong>Siegle's</strong></td><td><strong>Magnifying lens</strong> + <strong>rubber tube for pneumatic insufflation</strong></td><td><strong>Pneumatic otoscopy</strong> — tests <strong>TM mobility/compliance</strong>. Preferred over Gruber's for this <em>because</em> Gruber's has no pneumatic capability</td></tr>
+  </tbody>
+</table>
+
+<h3>9.2 Ear Instruments</h3>
+<table>
+  <thead><tr><th style="width:26%">Instrument</th><th>Feature</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Wilde's ear forceps</strong> (aural polypus forceps)</td><td><strong>Cup-shaped jaws</strong>, robust</td><td><strong>Removing aural polyps</strong> from the external auditory canal — NOT for wax</td></tr>
+    <tr><td><strong>Wax hook</strong></td><td>Fine blunt hook</td><td>Remove <strong>impacted wax</strong> from EAC. <em>Wax-removal set = wax hook, Jobson Horne probe, ear syringe</em></td></tr>
+    <tr><td><strong>Jobson Horne probe</strong></td><td><strong>Ring (curette) at one end</strong>, <strong>cotton-wool carrier (pointed) at the other</strong></td><td>Ring end <strong>curettes wax</strong>; also <strong>mops discharge</strong> &amp; <strong>applies medication</strong> — NOT exclusively for wax</td></tr>
+    <tr><td><strong>Hartmann's forceps</strong></td><td><strong>Crocodile / alligator action</strong></td><td>Ear procedures — grasp foreign bodies, place grommets</td></tr>
+    <tr><td><strong>Myringotomy knife</strong></td><td><strong>Sharp lance- / sickle-shaped blade</strong></td><td>Precise incision of the TM</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Myringotomy INDICATION trap:</strong> performed for <strong>acute otitis media with effusion (secretory/serous OM)</strong> or <strong>acute suppurative OM</strong> — <strong>NOT for CSOM</strong>, where the TM is <em>already</em> perforated. (The blade description is correct; the CSOM reason is wrong.)</div>
+<div class="formula">Tuning fork for Rinne / Weber / Schwabach = <strong>512 Hz</strong></div>
+<div class="mnem"><strong>512 Hz</strong> — best balance of <strong>vibration duration vs minimal overtones</strong>, and lies in the <strong>speech frequency range</strong>.</div>
+
+<!-- ================ 10 ================ -->
+<h2>10. ENT — Nose &amp; Sinus</h2>
+<table>
+  <thead><tr><th style="width:26%">Instrument</th><th>Feature</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Thudichum's speculum</strong></td><td><strong>Self-retaining</strong> (own spring action → frees both hands)</td><td><strong>Anterior rhinoscopy</strong></td></tr>
+    <tr><td><strong>Killian's speculum</strong></td><td><strong>Long blades</strong></td><td><strong>Posterior nasal cavity examination</strong> &amp; <strong>septal surgery (SMR/septoplasty)</strong></td></tr>
+    <tr><td><strong>Tilley's nasal dressing forceps</strong></td><td><strong>Bayonet-shaped (offset/angled) handle</strong> — keeps the hand <strong>out of the line of vision</strong>; <strong>serrated angled jaws</strong></td><td>Insert/remove <strong>nasal packing</strong>, dressings, foreign bodies in the narrow nasal cavity</td></tr>
+    <tr><td><strong>Blakesley's forceps</strong> (ethmoid forceps)</td><td>Straight/upturned cupped jaws</td><td><strong>Polypectomy &amp; endoscopic sinus surgery</strong></td></tr>
+    <tr><td><strong>Freer's (Cottle's) septum elevator</strong></td><td>Sharp end (incision) + blunt end (elevation)</td><td><strong>Elevate mucoperiosteal / mucoperichondrial flap in SMR &amp; septoplasty</strong></td></tr>
+    <tr><td><strong>Lichtwitz trocar &amp; cannula</strong></td><td>Sharp trocar within cannula</td><td><strong>Antral puncture (maxillary sinus washout)</strong> — inserted via the <strong>inferior meatus</strong> through the <strong>medial wall of the maxillary sinus</strong> for drainage/irrigation in maxillary sinusitis</td></tr>
+    <tr><td><strong>Nasal packing forceps</strong></td><td>Long, angled</td><td>Pack the <strong>nasal cavity</strong></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Thudichum = Thumbs-free (self-retaining, anterior) · Killian = "Kilometre-long" blades (posterior/septal).</strong> <strong>Lichtwitz = "Lights up the antrum".</strong></div>
+
+<!-- ================ 11 ================ -->
+<h2>11. ENT — Throat, Tonsil, Adenoid, Larynx</h2>
+
+<h3>11.1 Adenotonsillectomy Set</h3>
+<table>
+  <thead><tr><th style="width:28%">Instrument</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Boyle-Davis mouth gag</strong></td><td><strong>Holds mouth open AND depresses the tongue simultaneously</strong> (tongue blade on a frame) → excellent view of the tonsillar fossa. Instrument of choice for <strong>tonsillectomy</strong></td></tr>
+    <tr><td><strong>Waugh's tonsil dissector</strong></td><td><strong>Separates the tonsil from its bed</strong> (dissection)</td></tr>
+    <tr><td><strong>Eve's tonsil snare</strong></td><td><strong>Wire loop → guillotine method</strong> of tonsil removal</td></tr>
+    <tr><td><strong>St. Clair Thomson adenoid curette</strong></td><td><strong>Standard instrument for adenoidectomy</strong></td></tr>
+    <tr><td><strong>Negus artery forceps</strong></td><td><strong>Long shaft + angled jaws</strong> → reach deep into the <strong>tonsillar fossa</strong> to clamp bleeders. <strong>Instrument of choice for post-tonsillectomy haemorrhage</strong></td></tr>
+    <tr><td><strong>NOT in this set</strong></td><td><strong>Lichtwitz trocar</strong> (antral puncture, §10)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Clinical vignette — reactionary haemorrhage after adenotonsillectomy:</strong> take patient back to <strong>OT</strong> → apply <strong>Boyle-Davis gag</strong> → clamp the bleeding vessel with <strong>Negus artery forceps</strong> → ligate.</div>
+<div class="mnem"><strong>Negus for the tonsil-fossa Nightmare (bleed)</strong> · <strong>Eve's = "Eve's noose" (snare/guillotine)</strong> · <strong>St. Clair Thomson = adenoid Curette.</strong></div>
+
+<h3>11.2 Mirrors &amp; Depressors</h3>
+<table>
+  <thead><tr><th style="width:28%">Instrument</th><th>Description &amp; use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Laryngeal mirror</strong></td><td><strong>Small circular mirror on a long handle</strong>; <strong>warmed before use</strong> (spirit lamp / warm water) to prevent fogging from the patient's breath; placed against the <strong>soft palate</strong> for <strong>indirect laryngoscopy</strong></td></tr>
+    <tr><td><strong>Rhinoscope</strong> (posterior rhinoscopy mirror)</td><td>Essentially a <strong>SMALLER version of the laryngeal mirror</strong>; introduced <strong>behind the soft palate</strong> to see <strong>choana, posterior ends of turbinates, nasopharynx</strong>; <strong>also warmed before use</strong></td></tr>
+    <tr><td><strong>Tongue depressor</strong></td><td>Depresses the tongue for <strong>oral cavity examination</strong></td></tr>
+  </tbody>
+</table>
+
+<!-- ================ 12 ================ -->
+<h2>12. Ophthalmology — Cornea, Cataract, IOL</h2>
+
+<h3>12.1 Cornea</h3>
+<table>
+  <thead><tr><th style="width:24%">Instrument</th><th>Description</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Corneal trephine</strong></td><td><strong>Circular cutting blade of pre-determined diameter (typically 7–8 mm)</strong></td><td>Creates a <strong>full-thickness circular corneal button</strong> in <strong>penetrating keratoplasty</strong> — removes diseased tissue &amp; prepares the host bed for the donor graft</td></tr>
+    <tr><td><strong>Keratome</strong></td><td>Angled flat blade</td><td><strong>Precise corneal / limbal incision</strong> (entry wound)</td></tr>
+    <tr><td><strong>Corneal scissors</strong> (e.g., Vannas)</td><td>Fine, angled</td><td>Cut <strong>corneoscleral</strong> tissue</td></tr>
+    <tr><td>Conjunctival scissors</td><td>Blunt-tipped</td><td>Cut <strong>conjunctival</strong> tissue</td></tr>
+  </tbody>
+</table>
+
+<h3>12.2 Cataract Surgery — Instruments by Technique</h3>
+<table>
+  <thead><tr><th style="width:24%">Instrument</th><th style="width:22%">Technique</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Phaco handpiece</strong></td><td><strong>Phacoemulsification</strong></td><td><strong>Ultrasonic energy emulsifies</strong> the lens nucleus into fragments, then aspirates them. Frequency <strong>28,000–40,000 Hz (28–40 kHz)</strong></td></tr>
+    <tr><td><strong>Capsulorrhexis forceps</strong></td><td>Phaco</td><td>Continuous curvilinear capsulorrhexis (CCC)</td></tr>
+    <tr><td><strong>IOL folder / injector</strong></td><td>Phaco</td><td><strong>Folds a flexible (foldable) IOL</strong> and injects it through a <strong>micro-incision (2.2–3.2 mm)</strong> into the capsular bag</td></tr>
+    <tr><td><strong>Lens expressor</strong></td><td><strong>ECCE</strong> (extracapsular)</td><td><strong>Expresses the nucleus</strong> — NOT an ICCE instrument</td></tr>
+    <tr><td><strong>Irrigating vectis</strong></td><td><strong>ICCE</strong> (intracapsular)</td><td>Delivers the lens <strong>in toto</strong>. (ICCE also uses a <strong>cryoprobe</strong>)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Correct phaco sequence (foldable IOL):</strong> <strong>Keratome</strong> (incision) → <strong>Capsulorrhexis forceps</strong> (CCC) → <strong>Phaco handpiece</strong> (hydrodissection, emulsification, aspiration) → <strong>IOL folder/injector</strong> (implantation into capsular bag).</div>
+<div class="mnem"><strong>K-C-P-I</strong> = <strong>K</strong>eratome, <strong>C</strong>apsulorrhexis, <strong>P</strong>haco, <strong>I</strong>OL. Foldable IOL exists <em>because</em> a small incision (2.2–3.2 mm) beats the large wound needed for rigid PMMA lenses.</div>
+<div class="key"><strong>Rigid vs foldable:</strong> rigid PMMA IOL needs a large incision; foldable IOL + injector allows micro-incision surgery → less astigmatism, faster recovery.</div>
+
+<!-- ================ 13 ================ -->
+<h2>13. Ophthalmology — Lacrimal System</h2>
+<table>
+  <thead><tr><th style="width:26%">Instrument</th><th>Description</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Punctum dilator</strong></td><td>Fine tapered tip</td><td><strong>Dilates the lacrimal punctum</strong> before probing/syringing</td></tr>
+    <tr><td><strong>Bowman's probe</strong></td><td>Thin, flexible metallic probe; <strong>graduated set 0000 → 8</strong></td><td><strong>Probing/dilating the nasolacrimal duct</strong> in CNLDO / dacryocystitis. Also identifies &amp; probes the sac in DCR</td></tr>
+    <tr><td><strong>Lacrimal cannula + syringe</strong></td><td>Blunt-tipped <strong>curved</strong> cannula on a <strong>2 mL syringe</strong> of saline</td><td><strong>Syringing</strong> to test NLD patency — inserted via the dilated punctum into the canaliculus; <strong>fluid reaching the throat = patent duct</strong>. (Bowman's probe is for probing, NOT syringing)</td></tr>
+    <tr><td><strong>Kerrison punch</strong></td><td>Bone punch</td><td><strong>DCR</strong> — removes bone between lacrimal sac and nasal cavity</td></tr>
+    <tr><td><strong>Castroviejo needle holder</strong></td><td>Spring-action, straight jaws</td><td><strong>DCR</strong> — suturing the mucosal flaps</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th style="width:34%">Bowman's probe size</th><th>Approx. diameter</th></tr></thead>
+  <tbody>
+    <tr><td><strong>0000</strong> (smallest)</td><td>≈ <strong>0.5 mm</strong></td></tr>
+    <tr><td><strong>1</strong></td><td>≈ <strong>1.1 mm</strong></td></tr>
+    <tr><td><strong>8</strong> (largest)</td><td>≈ <strong>2.2 mm</strong></td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>CNLDO management ladder:</strong> conservative first — <strong>Crigler massage + topical antibiotics</strong>. If persistent → <strong>probing with Bowman's probe at 6–12 months of age</strong>. Earlier is often unnecessary (many resolve spontaneously); delaying beyond 12 months <strong>reduces success rates</strong>.</div>
+<div class="mnem"><strong>DCR set = P.B.S.C.</strong> — <strong>P</strong>robe (Bowman's), <strong>B</strong>one punch (Kerrison), <strong>S</strong>yringe (lacrimal), <strong>C</strong>astroviejo needle holder. <strong>Goniotomy knife is NOT a DCR instrument</strong> (it's glaucoma).</div>
+
+<!-- ================ 14 ================ -->
+<h2>14. Ophthalmology — Retina, Vitreous, Glaucoma</h2>
+<table>
+  <thead><tr><th style="width:26%">Instrument / device</th><th>Mechanism</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Vitrectomy cutter</strong></td><td><strong>Guillotine-type (reciprocating)</strong> — inner blade moves within an outer sleeve, cutting vitreous entering a small port, with <strong>simultaneous aspiration</strong>. Modern rates up to <strong>10,000 cuts/min</strong> to minimise retinal traction</td><td><strong>Vitreoretinal surgery</strong> — cut &amp; aspirate vitreous gel</td></tr>
+    <tr><td><strong>Scleral buckle</strong></td><td><strong>Silicone sponge / solid silicone</strong> sutured to sclera</td><td><strong>Retinal detachment surgery</strong> — <strong>indents sclera inward</strong>, pushing sclera/choroid/<strong>RPE</strong> toward the detached retina to <strong>close the retinal break</strong>; <strong>cryotherapy</strong> around the break creates adhesion</td></tr>
+    <tr><td><strong>Indirect ophthalmoscope</strong></td><td>Condensing lens + light source</td><td><strong>Wide-field view of the peripheral retina</strong></td></tr>
+    <tr><td><strong>Goniotomy knife</strong></td><td>Fine blade for the trabecular meshwork</td><td><strong>Congenital (developmental) glaucoma</strong> — goniotomy</td></tr>
+    <tr><td><strong>Trabeculectomy set</strong></td><td>—</td><td>Creates a <strong>guarded fistula between the anterior chamber and the subconjunctival space</strong> for aqueous drainage</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th style="width:20%">Condensing lens</th><th style="width:26%">Magnification</th><th>Field of view</th><th>Comment</th></tr></thead>
+  <tbody>
+    <tr><td><strong>14 D</strong></td><td>Higher</td><td>Smaller</td><td>Detail work (macula)</td></tr>
+    <tr><td><strong>20 D</strong></td><td>≈ <strong>3×</strong></td><td>≈ <strong>45–50°</strong></td><td><strong>Best balance → routine peripheral retinal exam (commonest)</strong></td></tr>
+    <tr><td><strong>28 D</strong></td><td>Lower</td><td>Widest</td><td>Paediatrics, wide screening</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>20 D = the "default" lens</strong> for indirect ophthalmoscopy. Inverse rule: <strong>higher dioptre → wider field but lower magnification</strong>.</div>
+<div class="key"><strong>Trap:</strong> the <strong>scleral buckle belongs to retinal detachment surgery, NOT glaucoma surgery.</strong></div>
+
+<!-- ================ 15 ================ -->
+<h2>15. Ophthalmology — Lids, Iris, Muscle, Orbit</h2>
+
+<h3>15.1 Lid Retraction &amp; Chalazion</h3>
+<table>
+  <thead><tr><th style="width:26%">Instrument</th><th>Self-retaining?</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Desmarres lid retractor</strong></td><td><strong>NO — an assistant must hold it</strong></td><td>Retracts eyelids; <strong>available in different sizes</strong> for upper &amp; lower lids; made of <strong>stainless steel</strong> (not copper)</td></tr>
+    <tr><td><strong>Wire eye speculum</strong> (Barraquer's, Alfonso's)</td><td><strong>YES — spring mechanism</strong></td><td>Holds lids apart hands-free during surgery</td></tr>
+    <tr><td><strong>Chalazion clamp</strong></td><td>Locking screw</td><td><strong>Everts the lid</strong> + provides <strong>haemostasis by compression</strong>. <strong>SOLID plate on the SKIN side</strong> (acts as platform); <strong>FENESTRATED plate on the CONJUNCTIVAL side</strong>; the chalazion is <strong>incised from the conjunctival surface through the fenestration</strong></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Chalazion clamp: Solid on Skin, Fenestrated on Fornix</strong> (conjunctival side) — and you always cut through the <strong>fenestration, from the conjunctiva</strong>. <strong>Desmarres = "Demands an assistant".</strong></div>
+
+<h3>15.2 Iris, Extraocular Muscle &amp; Enucleation</h3>
+<table>
+  <thead><tr><th style="width:28%">Instrument</th><th>Description &amp; use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Iris repositor</strong></td><td><strong>Smooth, spatula-like</strong>; gently <strong>sweeps prolapsed iris back into the anterior chamber</strong> through the wound (cataract surgery, trauma, corneal/limbal wound with iris prolapse)</td></tr>
+    <tr><td><strong>Muscle hook (squint / strabismus hook)</strong></td><td>Smooth curved hook passed <strong>beneath the muscle insertion</strong> to <strong>isolate an extraocular muscle</strong> before recession/resection in <strong>strabismus surgery</strong></td></tr>
+    <tr><td><strong>Caliper</strong></td><td>Measures the <strong>limbus-to-muscle-insertion distance</strong> in strabismus surgery</td></tr>
+    <tr><td><strong>Enucleation scissors</strong></td><td><strong>Curved on flat</strong> — the curvature lets the surgeon navigate around the globe, conform to orbital anatomy, and <strong>cut the optic nerve as far posteriorly as possible</strong></td></tr>
+  </tbody>
+</table>
+
+<!-- ================ FACT DUMP ================ -->
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">Allis forceps teeth at tip</span><span class="a">4 × 5 interlocking</span></div>
+  <div class="fact"><span class="q">Kelly vs Crile serrations</span><span class="a">Kelly = distal half; Crile = full length</span></div>
+  <div class="fact"><span class="q">Smallest haemostatic forceps</span><span class="a">Mosquito (Halsted)</span><span class="why">Serrations full length; NO teeth at tip.</span></div>
+  <div class="fact"><span class="q">Artery forceps WITH teeth at tip</span><span class="a">Kocher's</span><span class="why">Spencer Wells = non-toothed, 6–12 per standard tray.</span></div>
+  <div class="fact"><span class="q">Atraumatic vs traumatic tissue holder</span><span class="a">Babcock (smooth, fenestrated) vs Allis / Lane's (teeth)</span></div>
+  <div class="fact"><span class="q">Blade &amp; handle map</span><span class="a">#10 long · #11 stab · #15 fine; handle #7 = long thin round</span><span class="why">Min. 3 blade sizes in a general set: #10, #15, #11.</span></div>
+  <div class="fact"><span class="q">Flexible wire bone saw</span><span class="a">Gigli saw</span><span class="why">Craniotomy, amputation. NOT sternum, NOT trach set.</span></div>
+  <div class="fact"><span class="q">Blunt thyroid dissector — and why blunt</span><span class="a">Kocher's — protects RLN &amp; parathyroids</span><span class="why">Howarth elevator = strips periosteum in jaw surgery.</span></div>
+  <div class="fact"><span class="q">Large C-shaped hand-held retractor</span><span class="a">Deaver</span><span class="why">Liver / abdominal wall; always needs an assistant.</span></div>
+  <div class="fact"><span class="q">Self-retaining retractors</span><span class="a">Balfour, Weitlaner, Gelpi</span><span class="why">Deaver, Langenbeck, Army-Navy, Richardson, Morris = hand-held.</span></div>
+  <div class="fact"><span class="q">Richardson vs Army-Navy</span><span class="a">Richardson = wider, deeper blade</span><span class="why">Both hand-held &amp; double-ended — width is the ONLY difference.</span></div>
+  <div class="fact"><span class="q">Face &amp; lip retractor (cat's paw)</span><span class="a">Kilner</span><span class="why">Skin hooks over forceps on the face → less crushing, better cosmesis.</span></div>
+  <div class="fact"><span class="q">Retracts neck strap muscles</span><span class="a">Green's retractor</span></div>
+  <div class="fact"><span class="q">Grasps thyroid lobe → exposes RLN</span><span class="a">Lahey forceps</span><span class="why">Retracted medially to open the tracheo-oesophageal groove.</span></div>
+  <div class="fact"><span class="q">Nerve monitored in parotidectomy</span><span class="a">Facial nerve (CN VII)</span></div>
+  <div class="fact"><span class="q">Needle holder with built-in scissors</span><span class="a">Olsen-Hegar (also Gillies)</span><span class="why">Mayo-Hegar = commonest plain general-purpose.</span></div>
+  <div class="fact"><span class="q">Castroviejo jaw shape</span><span class="a">STRAIGHT — not curved</span><span class="why">Spring action + lock; microsurgery/ophthalmic.</span></div>
+  <div class="fact"><span class="q">Vicryl</span><span class="a">Polyglactin 910 · absorbed 56–70 days</span><span class="why">75% strength @2 wk, 50% @3 wk.</span></div>
+  <div class="fact"><span class="q">Catgut source</span><span class="a">Sheep/cow intestinal submucosa</span><span class="why">NOT cat — from "cattlegut". Silk = natural non-absorbable; nylon = synthetic monofilament.</span></div>
+  <div class="fact"><span class="q">Diathermy needing a grounding pad</span><span class="a">Monopolar only</span><span class="why">Bipolar: current only between the 2 tips → safe near vital structures.</span></div>
+  <div class="fact"><span class="q">Suction tip map</span><span class="a">Yankauer = oral · Poole = abdominal pooled fluid · Frazier = neuro/ENT</span><span class="why">Rampley sponge holder = swabs for skin prep (not suction).</span></div>
+  <div class="fact"><span class="q">Atraumatic bowel clamp</span><span class="a">Doyen</span><span class="why">NOT for vessels → Satinsky / bulldog.</span></div>
+  <div class="fact"><span class="q">Dilates the tracheal stoma</span><span class="a">Trousseau's dilator (3-pronged)</span><span class="why">Window between 2nd–3rd or 3rd–4th rings; tracheal hook stabilises earlier.</span></div>
+  <div class="fact"><span class="q">Metallic tracheostomy tube</span><span class="a">Jackson's</span><span class="why">Shiley &amp; Portex = PVC/silicone plastic, cuffed, removable inner cannula.</span></div>
+  <div class="fact"><span class="q">Adult cuffed trach tube ID</span><span class="a">Male 7.0–8.0 mm · Female 6–7 mm</span><span class="why">Cuff seals airway → no air leak, no aspiration on ventilator.</span></div>
+  <div class="fact"><span class="q">Pneumatic otoscopy speculum</span><span class="a">Siegle's (lens + rubber tube)</span><span class="why">Gruber's = plain funnel, no pneumatic capability.</span></div>
+  <div class="fact"><span class="q">Aural polyp removal</span><span class="a">Wilde's ear forceps</span><span class="why">Wax → wax hook / Jobson Horne ring end / syringe. Hartmann's = crocodile action.</span></div>
+  <div class="fact"><span class="q">Myringotomy indication</span><span class="a">AOM with effusion / acute suppurative OM</span><span class="why">NOT CSOM (TM already perforated). Tuning fork = 512 Hz.</span></div>
+  <div class="fact"><span class="q">Nasal specula</span><span class="a">Thudichum = self-retaining, anterior · Killian = long blades, posterior/septal</span></div>
+  <div class="fact"><span class="q">Nose instrument map</span><span class="a">Tilley's = bayonet dressing · Blakesley = FESS/polyp · Freer's = SMR flap · Lichtwitz = antral puncture</span></div>
+  <div class="fact"><span class="q">Adenotonsillectomy set</span><span class="a">Boyle-Davis gag · Waugh's dissector · Eve's snare · St. Clair Thomson curette</span><span class="why">Negus artery forceps = post-tonsillectomy fossa bleed. Laryngeal mirror &amp; rhinoscope are warmed before use.</span></div>
+  <div class="fact"><span class="q">Cataract essentials</span><span class="a">Trephine 7–8 mm · Phaco 28–40 kHz · IOL folder 2.2–3.2 mm</span><span class="why">Sequence: Keratome → Capsulorrhexis → Phaco → IOL. Expressor = ECCE; irrigating vectis/cryo = ICCE.</span></div>
+  <div class="fact"><span class="q">Lacrimal essentials</span><span class="a">Bowman's probe 0000–8 (size 1 ≈ 1.1 mm); probe CNLDO at 6–12 months</span><span class="why">Syringing = lacrimal cannula + 2 mL syringe. DCR adds Kerrison punch + Castroviejo.</span></div>
+  <div class="fact"><span class="q">Retina &amp; glaucoma</span><span class="a">Vitrectomy = guillotine cut + aspirate · Buckle indents sclera → break to RPE · 20 D lens</span><span class="why">Goniotomy knife = congenital glaucoma; trabeculectomy = AC→subconjunctival fistula.</span></div>
+  <div class="fact"><span class="q">Lids, iris, muscle, orbit</span><span class="a">Desmarres NOT self-retaining · Chalazion clamp: solid on SKIN, fenestrated on conjunctiva</span><span class="why">Iris repositor → prolapsed iris to AC; muscle hook → EOM; enucleation scissors curved on flat.</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>
