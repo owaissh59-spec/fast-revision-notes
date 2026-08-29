@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fast Revision Notes — Surgical Instruments</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #fafafa; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #aaa;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #444;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Fast Revision Notes — Surgical Instruments</h1>
+<p class="subtitle">Urology · Thoracic &amp; Cardiac · Vascular · Orthopaedics · Neurosurgery · Obstetrics &amp; Gynaecology</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Urinary Catheters &amp; Drainage</li>
+    <li>Urethral Dilators &amp; Bladder Stone Instruments</li>
+    <li>Urological Endoscopes &amp; TURP</li>
+    <li>Open Urology &amp; Male Genital Instruments</li>
+    <li>Thoracic Access: Retractors, Saws, Haemostasis</li>
+    <li>Thoracic Clamps, Endoscopy &amp; Pleural Biopsy</li>
+    <li>Chest Drain (UWSD) &amp; Pericardiocentesis</li>
+    <li>Vascular &amp; Cardiac Instruments</li>
+    <li>Ortho: Pins, Wires, Nails, Fixators</li>
+    <li>Ortho: Plates — DCP / LC-DCP / LCP</li>
+    <li>Bone-Cutting, Holding &amp; Periosteal</li>
+    <li>Arthroplasty &amp; Theatre Tables</li>
+    <li>Neurosurgical Instruments</li>
+    <li>Gynaecology: Speculae, Dilators, Curettes</li>
+    <li>Obstetrics: Forceps, Ventouse, LSCS</li>
+    <li>Clinical Scenarios &amp; Troubleshooting</li>
+    <li>Last-Minute Fact Dump</li>
+  </ol>
+</div>
+
+<h2>1. Urinary Catheters &amp; Drainage</h2>
+
+<h3>1.1 Foley Catheter — Core Facts</h3>
+<table>
+  <thead><tr><th>Attribute</th><th>Fact</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td>Type</td><td><strong>Self-retaining</strong> catheter</td><td>Retention by inflatable balloon at tip</td></tr>
+    <tr><td>Balloon volume (adult)</td><td><strong>10 mL</strong> sterile water</td><td><strong>30 mL</strong> for 3-way / haematuria catheters; use water, not air/saline</td></tr>
+    <tr><td>Sizing</td><td><strong>French gauge (Fr)</strong></td><td><strong>1 Fr = 0.33 mm</strong> outer circumference-based</td></tr>
+    <tr><td>2-way</td><td>Drainage + balloon</td><td>Routine catheterisation</td></tr>
+    <tr><td>3-way</td><td>Drainage + balloon + <strong>irrigation</strong></td><td>Continuous bladder irrigation, esp. <strong>post-TURP</strong></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>"Ten for two, thirty for three"</strong> — 2-way Foley balloon = 10 mL; 3-way haematuria catheter balloon = 30 mL.</div>
+
+<h3>1.2 Suprapubic Catheter (SPC)</h3>
+<div class="fact">
+  <span class="q">Route of insertion</span>
+  <span class="a">Percutaneous, through anterior abdominal wall above pubic symphysis into a DISTENDED bladder</span>
+  <span class="why">Bladder must be full — it rises out of the pelvis and displaces peritoneum, so the tract avoids bowel.</span>
+</div>
+<p><strong>Indications</strong> (= reason the urethral route is bypassed): urethral trauma/rupture • tight urethral stricture • prostatic obstruction where urethral catheterisation fails or is contraindicated.</p>
+
+<h3>1.3 Urinary Drainage vs Pleural Drainage — Don't Confuse</h3>
+<div class="key"><strong>Underwater seal drainage (UWSD)</strong> = <strong>pleural</strong> cavity only (air/fluid). It is NOT for bladder, peritoneum, or pericardium. Bladder drainage = catheter; pericardium = pericardiocentesis/drain.</div>
+
+<h2>2. Urethral Dilators &amp; Bladder Stone Instruments</h2>
+
+<h3>2.1 Dilatation of Urethral Stricture</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Description</th><th>Use / Notes</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Metal sounds (bougies)</strong></td><td>Smooth curved metal, graduated sizes in <strong>Fr</strong>; curve follows male urethra</td><td>Routine dilatation of urethral stricture</td></tr>
+    <tr><td><strong>Filiform + followers</strong></td><td>Thin flexible <strong>filiform</strong> = guide/pilot; progressively larger <strong>followers screw onto</strong> its threaded end</td><td>Very tight strictures where metal sounds cannot pass; gradual dilatation. Predominantly <strong>male</strong> patients (strictures far commoner in males)</td></tr>
+  </tbody>
+</table>
+
+<h3>2.2 Bladder Stone — Lithotrite &amp; Litholapaxy</h3>
+<div class="fact">
+  <span class="q">Lithotrite — structure &amp; action</span>
+  <span class="a">Transurethral instrument with TWO blades (one fixed, one mobile) that mechanically CRUSHES a bladder stone intravesically</span>
+  <span class="why">Purely mechanical and intravesical — NOT extracorporeal shock waves (that is ESWL, a different modality).</span>
+</div>
+<table>
+  <thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Litholapaxy</strong></td><td>Crushing a bladder stone with a lithotrite <em>+ evacuating the fragments</em>. Blind or optical.</td></tr>
+    <tr><td>Lithotripsy</td><td>Fragmentation by an energy source (laser, ultrasound, pneumatic, ESWL)</td></tr>
+    <tr><td>Cystolithotomy</td><td>Open surgical removal of bladder stone</td></tr>
+    <tr><td>Nephrolithotomy</td><td>Open removal of renal stone (uses <strong>Randall stone forceps</strong>)</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>-lapaxy = "wash out"</strong> → crush <em>and</em> evacuate. <strong>-tripsy = "rub/grind"</strong> → energy-based fragmentation.</div>
+
+<h3>2.3 Randall Stone Forceps</h3>
+<div class="fact">
+  <span class="q">Randall stone forceps</span>
+  <span class="a">Grasp &amp; extract renal/ureteric stones during OPEN nephrolithotomy</span>
+  <span class="why">Come in graded angles (1st, 2nd, 3rd, 4th) to reach different calyces. NOT a nephrectomy instrument.</span>
+</div>
+
+<h2>3. Urological Endoscopes &amp; TURP</h2>
+
+<h3>3.1 Endoscope → Territory Visualised</h3>
+<table>
+  <thead><tr><th>Endoscope</th><th>Visualises</th><th>Route</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cystoscope</strong></td><td>Urinary <strong>bladder</strong></td><td>Transurethral</td></tr>
+    <tr><td><strong>Nephroscope</strong></td><td><strong>Renal pelvis &amp; calyces</strong> (collecting system)</td><td><strong>Percutaneous</strong> flank tract — <strong>PCNL</strong></td></tr>
+    <tr><td><strong>Ureterorenoscope (URS)</strong></td><td><strong>Ureter</strong> + renal pelvis</td><td>Urethra → bladder → ureter; semi-rigid or flexible; laser lithotripsy</td></tr>
+    <tr><td><strong>Resectoscope</strong></td><td>Prostate / bladder tumour</td><td>Transurethral — <strong>TURP</strong> &amp; <strong>TURBT</strong>; has a cutting loop carrying diathermy current</td></tr>
+    <tr><td><strong>Mediastinoscope</strong></td><td><strong>Superior mediastinum</strong></td><td>Small suprasternal incision; nodal biopsy for lung-cancer staging</td></tr>
+    <tr><td><strong>Thoracoscope</strong></td><td><strong>Pleural cavity</strong></td><td>Intercostal ports — VATS</td></tr>
+  </tbody>
+</table>
+
+<h3>3.2 Cystoscope — Details</h3>
+<ul>
+  <li>Available <strong>rigid</strong> and <strong>flexible</strong>.</li>
+  <li>Rigid cystoscope uses the <strong>Hopkins rod-lens system</strong> → superior image quality.</li>
+  <li>Operative cystoscopy permits <strong>biopsy and fulguration</strong> of bladder tumours.</li>
+  <li>Distension medium = <strong>sterile saline or water</strong>. <em>Not CO<sub>2</sub></em> — CO<sub>2</sub> is the laparoscopy gas.</li>
+</ul>
+
+<h3>3.3 TURP Irrigation Fluid</h3>
+<div class="key"><strong>Monopolar TURP → glycine 1.5%.</strong> Chosen because it is a <strong>non-electrolyte, non-conducting</strong> solution, so it does not disperse/short-circuit the monopolar diathermy current → effective cutting and coagulation. <strong>Bipolar TURP → normal saline</strong> is safe (current travels only between the two electrodes on the loop), which greatly reduces TUR syndrome risk.</div>
+<div class="mnem"><strong>"Mono = no ions; Bi = saline is fine."</strong></div>
+
+<h2>4. Open Urology &amp; Male Genital Instruments</h2>
+
+<h3>4.1 Instruments by Operation</h3>
+<table>
+  <thead><tr><th>Operation</th><th>Instruments</th><th>Key point</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Open nephrectomy</strong></td><td><strong>Satinsky clamp</strong> + <strong>Gil-Vernet retractor</strong></td><td>Satinsky clamps the renal pedicle vessels; Gil-Vernet is a <strong>self-retaining retractor designed for kidney surgery</strong>. Randall forceps (stones) and Finochietto (ribs) are NOT nephrectomy instruments.</td></tr>
+    <tr><td><strong>Retropubic prostatectomy</strong></td><td><strong>Millin's retractor</strong></td><td>Millin's = retropubic (Millin's) prostatectomy</td></tr>
+    <tr><td><strong>Perineal prostatectomy</strong></td><td><strong>Young's prostatic retractor</strong></td><td>Inserted <em>into the rectum</em> to push prostate anteriorly → access via perineum</td></tr>
+    <tr><td>Vasectomy</td><td><strong>Vas fixation (ring) clamp</strong></td><td>Holds/fixes the vas deferens</td></tr>
+  </tbody>
+</table>
+
+<h3>4.2 Circumcision Devices</h3>
+<table>
+  <thead><tr><th>Device</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Plastibell</strong></td><td>Disposable <strong>plastic ring</strong> over glans; foreskin tied over it with a ligature → foreskin necroses and the ring <strong>falls off in 5–7 days</strong>. Neonatal.</td></tr>
+    <tr><td><strong>Gomco clamp</strong></td><td><strong>Bell</strong> + <strong>base plate</strong> crush the foreskin → haemostasis, then excision. Neonatal.</td></tr>
+  </tbody>
+</table>
+
+<h2>5. Thoracic Access — Retractors, Saws, Haemostasis</h2>
+
+<h3>5.1 Rib &amp; Sternum Instruments</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Action</th><th>Stage of operation</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Finochietto retractor</strong></td><td><strong>Rib spreader</strong> — separates ribs</td><td>Opening a thoracotomy</td></tr>
+    <tr><td><strong>Rib approximator</strong></td><td>Brings ribs <strong>together</strong> — works in the direction <em>opposite</em> to Finochietto</td><td><strong>Closure</strong> of thoracotomy → allows secure closure and reduces post-op pain from rib separation</td></tr>
+    <tr><td><strong>Sauerbruch rib shears</strong></td><td>Heavy <strong>double-action shears</strong></td><td><strong>Cutting ribs</strong></td></tr>
+    <tr><td><strong>Oscillating (reciprocating) sternal saw</strong></td><td>Oscillating blade minimises injury to structures beneath the sternum (vs a continuously rotating saw)</td><td><strong>Median sternotomy</strong></td></tr>
+    <tr><td><strong>Bone wax</strong></td><td>Beeswax-based <strong>mechanical haemostat</strong> — plugs bleeding channels in bone</td><td>Bleeding from <strong>cut bone surfaces</strong> (sternum after sternotomy, cut ribs)</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Assertion-trap:</strong> "Rib approximator works opposite to the Finochietto spreader" is a TRUE statement but it is only a <em>description of mechanism</em> — it is NOT the <em>reason</em> the approximator is used. The reason is to achieve secure wound closure / reduce pain. So both A and R true, R not the explanation.</div>
+
+<h2>6. Thoracic Clamps, Endoscopy &amp; Pleural Biopsy</h2>
+
+<h3>6.1 Lung / Bronchus Clamps</h3>
+<table>
+  <thead><tr><th>Clamp</th><th>Design</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Duval lung clamp</strong></td><td><strong>Triangular, fenestrated, serrated</strong> jaws</td><td><strong>Atraumatic</strong> grasping of lung tissue — the triangular shape spreads pressure over a wide area so delicate parenchyma is not crushed <em>(this IS the correct explanation of its design)</em></td></tr>
+    <tr><td><strong>Price-Thomas clamp</strong></td><td>Bronchus/lung clamp</td><td><strong>Pneumonectomy / lobectomy</strong> — bronchial stump control</td></tr>
+  </tbody>
+</table>
+<p><em>Distractor to watch: the <strong>Satinsky</strong> is a vascular, not a lung, clamp (§8.1).</em></p>
+
+<h3>6.2 VATS (Video-Assisted Thoracoscopic Surgery)</h3>
+<ul>
+  <li><strong>Minimally invasive</strong> thoracic surgery via thoracoscope + specialised instruments through small <strong>port</strong> incisions.</li>
+  <li>Requires <strong>single-lung ventilation</strong> — the operative lung is collapsed to create working space.</li>
+  <li><strong>VATS lobectomy IS established</strong> for early-stage lung cancer. (The classic false statement is "VATS cannot be used for lobectomy".)</li>
+</ul>
+
+<h3>6.3 Abrams Needle</h3>
+<div class="fact">
+  <span class="q">Abrams needle</span>
+  <span class="a">Closed PLEURAL biopsy — obtains parietal pleural tissue</span>
+  <span class="why">High yield in tuberculous pleurisy and mesothelioma. Not a lung-parenchymal or bone biopsy needle.</span>
+</div>
+
+<h2>7. Chest Drain (UWSD) &amp; Pericardiocentesis</h2>
+
+<h3>7.1 Intercostal Drain — Technique Rules</h3>
+<table>
+  <thead><tr><th>Rule</th><th>Detail</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Site</td><td><strong>"Triangle of safety"</strong>, <strong>5th intercostal space</strong></td><td>Borders: ant. border of <strong>latissimus dorsi</strong> • lat. border of <strong>pectoralis major</strong> • base = horizontal line at the level of the nipple / 5th ICS</td></tr>
+    <tr><td>Level within the space</td><td>Insert <strong>just above the UPPER border of the rib</strong></td><td>Avoids the <strong>neurovascular bundle</strong> which runs in the groove along the <strong>lower</strong> border of the rib above</td></tr>
+    <tr><td>Bottle position</td><td>Underwater seal bottle kept <strong>BELOW chest level</strong></td><td>Gravity drainage; prevents fluid siphoning back into the pleural space. <em>(The classic false statement says "above chest level".)</em></td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>"Above the rib, below the chest"</strong> — needle/drain passes above the rib's upper border; the bottle stays below the patient's chest.</div>
+
+<h3>7.2 UWSD — Purpose, Components, Indications</h3>
+<table>
+  <thead><tr><th>Aspect</th><th>Content</th></tr></thead>
+  <tbody>
+    <tr><td>Purpose</td><td>Drain <strong>air or fluid from the pleural cavity</strong> (pneumothorax, haemothorax, empyema). The water seal is a <strong>one-way valve</strong> preventing air re-entry.</td></tr>
+    <tr><td>Components (modern 3-chamber unit)</td><td><strong>1</strong> Collection chamber • <strong>2</strong> Water-seal chamber (one-way valve) • <strong>3</strong> Suction-control chamber (regulates negative pressure) • <strong>4</strong> Pressure-relief valve (safety). <em>All four are present.</em></td></tr>
+    <tr><td>Indications</td><td>Tension pneumothorax <em>(after needle decompression)</em> • massive haemothorax • empyema thoracis</td></tr>
+    <tr><td>NOT an indication</td><td><strong>Simple rib fracture without pneumo/haemothorax</strong> → conservative: analgesia</td></tr>
+  </tbody>
+</table>
+
+<h3>7.3 Pericardiocentesis</h3>
+<table>
+  <thead><tr><th>Item</th><th>Correct detail</th></tr></thead>
+  <tbody>
+    <tr><td>Indication</td><td>Drain pericardial effusion / <strong>cardiac tamponade</strong></td></tr>
+    <tr><td>Standard approach</td><td><strong>Subxiphoid (Marfan's)</strong> — needle between <strong>xiphoid process and left costal margin</strong>, directed towards the <strong>left shoulder</strong></td></tr>
+    <tr><td>Monitoring</td><td><strong>ECG</strong> — <strong>ST elevation</strong> appears if the needle touches myocardium (withdraw slightly)</td></tr>
+    <tr><td>Distractor</td><td>Apical / 5th-ICS approach exists but is <strong>not</strong> the standard/most common route</td></tr>
+  </tbody>
+</table>
+
+<h2>8. Vascular &amp; Cardiac Instruments</h2>
+
+<h3>8.1 Vascular Clamps &amp; Forceps</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Type / design</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Satinsky</strong></td><td><strong>Partial-occlusion (side-biting)</strong> vascular clamp</td><td>Occludes only part of the vessel wall → <strong>flow continues</strong> while side repair/anastomosis is done. Renal &amp; vascular surgery.</td></tr>
+    <tr><td><strong>DeBakey forceps</strong></td><td><strong>Atraumatic</strong> forceps with fine multiple-row serrations</td><td>Handling vascular/delicate tissue without intimal injury</td></tr>
+    <tr><td><strong>Bulldog clamp</strong></td><td>Small, <strong>spring-loaded</strong></td><td><strong>Temporary occlusion of small–medium vessels</strong>; the spring gives controlled, atraumatic compression that occludes flow without damaging intima <em>(R correctly explains A)</em></td></tr>
+  </tbody>
+</table>
+<p><em>Distractor to watch: <strong>Wertheim's</strong> is routinely offered in vascular-clamp matching lists — it is gynaecological (§15.3).</em></p>
+
+<h3>8.2 Cutting, Anastomosis &amp; Adjuncts</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Potts (Potts-Smith) scissors</strong></td><td><strong>Angled blades — 25°, 45°, 60°</strong> — to extend an <strong>arteriotomy</strong> and make precise angled cuts in vessel wall</td></tr>
+    <tr><td><strong>Aortic punch</strong></td><td>Creates a precise <strong>circular arteriotomy</strong> in the aortic wall for <strong>proximal anastomosis of vein grafts</strong> (CABG)</td></tr>
+    <tr><td><strong>Fogarty catheter</strong></td><td><strong>Balloon-tipped embolectomy catheter</strong>: pass <em>beyond</em> the embolus → inflate balloon with saline → <strong>withdraw</strong>, dragging the embolus out</td></tr>
+    <tr><td><strong>Vessel loops</strong></td><td>Thin <strong>silicone</strong> colour-coded strips to encircle, identify and gently retract vessels; <strong>doubled over + clamped with a haemostat = temporary occlusion</strong>; <strong>single-use disposable</strong> <em>(all four statements true)</em></td></tr>
+    <tr><td><strong>Tunneller</strong></td><td>Long rigid instrument with a <strong>bullet-shaped tip</strong> → creates a <strong>subcutaneous tunnel</strong> for vascular grafts (extra-anatomic bypass, e.g. axillo-femoral)</td></tr>
+    <tr><td><strong>Vein stripper</strong></td><td><strong>Varicose vein</strong> surgery — passed along the incompetent great/small saphenous vein, which is then stripped (avulsed) out</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>Fogarty = "go past, blow up, pull back."</strong> Balloon is inflated <em>distal</em> to the embolus, then withdrawn.</div>
+
+<h2>9. Orthopaedics — Pins, Wires, Nails &amp; Fixators</h2>
+
+<h3>9.1 Percutaneous Pins &amp; Wires</h3>
+<table>
+  <thead><tr><th>Device</th><th>Diameter</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Steinmann pin</strong></td><td><strong>3–6 mm</strong> (thick)</td><td><strong>Skeletal traction</strong> — inserted through bone: tibial tuberosity, calcaneum, olecranon</td></tr>
+    <tr><td><strong>Kirschner wire (K-wire)</strong></td><td><strong>0.7–1.5 mm</strong> (thin)</td><td><strong>Temporary fixation of small fragments</strong></td></tr>
+    <tr><td><strong>External fixator</strong></td><td>—</td><td><strong>Percutaneous pins connected by external bars/frame</strong></td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>External fixator in Grade IIIB open fracture (A + R both true, R explains A):</strong> preferred over internal fixation because it stabilises the fracture <strong>without placing implants in a contaminated wound</strong>, minimises further soft-tissue/periosteal stripping, preserves remaining blood supply, and leaves the wound accessible for dressings and flap coverage.</div>
+
+<h3>9.2 Intramedullary Nails — Küntscher vs Interlocking</h3>
+<table>
+  <thead><tr><th>Feature</th><th>Küntscher (K) nail</th><th>Interlocking nail</th></tr></thead>
+  <tbody>
+    <tr><td>Cross-section</td><td><strong>Solid, cloverleaf</strong> (triflange / V-shaped)</td><td>Cannulated or solid, with locking holes</td></tr>
+    <tr><td>Locking bolts</td><td><strong>None</strong></td><td><strong>Proximal + distal locking screws</strong></td></tr>
+    <tr><td>Stability</td><td><strong>Axial only</strong> — no rotational control</td><td><strong>Rotational AND axial</strong></td></tr>
+    <tr><td>Comminuted / segmental fx</td><td>Not suitable</td><td><strong>Suitable</strong> — maintains length &amp; rotation</td></tr>
+    <tr><td>Femoral shaft fracture</td><td>Historic use</td><td><strong>Yes — femur is a commonest indication</strong> <em>(the classic false statement claims it cannot be used in the femur)</em></td></tr>
+  </tbody>
+</table>
+
+<h2>10. Orthopaedics — Plates: DCP / LC-DCP / LCP</h2>
+<table>
+  <thead><tr><th>Plate</th><th>Defining feature</th><th>Biology / mechanics</th></tr></thead>
+  <tbody>
+    <tr><td><strong>DCP</strong> (Dynamic Compression Plate)</td><td><strong>Oval/oblong holes</strong>; eccentrically tightened screw <strong>slides</strong> → <strong>axial compression</strong> at fracture site</td><td>Full plate-bone contact. <strong>No screw-head–plate locking mechanism</strong> — that is the LCP feature (classic "NOT a feature of DCP" answer).</td></tr>
+    <tr><td><strong>LC-DCP</strong> (<strong>L</strong>imited <strong>C</strong>ontact DCP)</td><td><strong>Undercuts on the undersurface</strong> reduce bone–plate contact area</td><td><strong>Preserves periosteal blood supply</strong>, reduces cortical porosis. Provides the <strong>SAME compression as DCP</strong> — <em>not less</em>.</td></tr>
+    <tr><td><strong>LCP</strong> (Locking Compression Plate)</td><td><strong>Threaded holes — screw head locks into the plate</strong></td><td>Acts as an internal fixator / fixed-angle construct; no need to press plate onto bone</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>"LC = Less Contact, same Compression. Locking head = LCP, not DCP."</strong></div>
+
+<h2>11. Bone-Cutting, Holding &amp; Periosteal Instruments</h2>
+
+<h3>11.1 Cutting Instruments — Mechanism of Action</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Mechanism</th><th>Typical use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Liston's bone cutting forceps</strong></td><td><strong>Guillotine / shearing</strong> action</td><td>Cutting <strong>ribs, small bones, bone edges</strong></td></tr>
+    <tr><td><strong>Osteotome</strong></td><td>Driven with a <strong>mallet</strong>; <strong>bevel on BOTH sides</strong> → cuts <strong>straight</strong></td><td>Osteotomy, straight bone cuts</td></tr>
+    <tr><td><strong>Chisel</strong></td><td>Driven with a mallet; <strong>bevel on ONE side</strong> → <strong>deviates toward the unbevelled side</strong></td><td>Shaving cortical bone</td></tr>
+    <tr><td><strong>Gigli saw</strong></td><td><strong>Flexible twisted wire</strong> saw; cuts by <strong>to-and-fro</strong> motion with handles at both ends</td><td><strong>Craniotomy</strong> (connecting burr holes) and <strong>amputation</strong>. Does <em>not</em> require a Hudson brace to operate — Hudson brace is a separate burr-hole instrument.</td></tr>
+    <tr><td><strong>Bone nibbler / rongeur</strong></td><td><strong>Bites</strong> small pieces of bone</td><td>Trimming bone edges</td></tr>
+    <tr><td><strong>Bone curette</strong></td><td><strong>Cup-/spoon-shaped tip</strong>, sharp or blunt, various sizes</td><td><strong>Scraping bone cavity contents</strong> — tumour, infected material, sequestra</td></tr>
+  </tbody>
+</table>
+
+<h3>11.2 Bone-Holding Forceps &amp; Reduction</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Jaws</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Lane's bone holding forceps</strong></td><td><strong>Sharp pointed tips</strong></td><td>Tips dig into the cortex → very firm grip</td></tr>
+    <tr><td><strong>Lowman's bone holding forceps</strong></td><td><strong>Broad serrated jaws</strong></td><td>Grips without penetrating; pressure distributed evenly</td></tr>
+    <tr><td><strong>Reduction clamp</strong></td><td>—</td><td>Holds fracture fragments in alignment during fixation</td></tr>
+  </tbody>
+</table>
+
+<h3>11.3 Periosteal Elevators</h3>
+<div class="fact">
+  <span class="q">Which instruments are periosteal elevators?</span>
+  <span class="a">Howarth elevator • Mitchell trimmer • Cobb elevator — ALL THREE</span>
+  <span class="why">All strip periosteum from bone. <strong>Langenbeck</strong> is a hand-held wound retractor, NOT a periosteal elevator. Cobb also serves as a laminectomy retractor/stripper.</span>
+</div>
+
+<h2>12. Arthroplasty &amp; Theatre Tables</h2>
+<table>
+  <thead><tr><th>Item</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Acetabular reamer</strong></td><td>Hemispherical reamer that <strong>prepares/shapes the acetabulum</strong> to correct size &amp; depth to receive the <strong>cup</strong>. Progressive reaming with incrementally larger reamers creates a hemisphere for press-fit or cemented cup.</td></tr>
+    <tr><td><strong>Femoral broach</strong></td><td><strong>Rasps the femoral canal</strong> to the shape of the prosthetic <strong>stem</strong></td></tr>
+    <tr><td><strong>Thomas splint</strong></td><td>Padded <strong>ring around upper thigh</strong> + two side bars extending beyond the foot → <strong>temporary immobilisation &amp; skin traction for femoral shaft fracture</strong> (first-aid / transport)</td></tr>
+    <tr><td><strong>Fracture (orthopaedic) table</strong></td><td>Provides: <strong>traction</strong> via boot/stirrup • <strong>counter-traction</strong> against the perineal post • <strong>C-arm / fluoroscopic access</strong>. <br><strong>Does NOT</strong> automatically reduce the fracture — the surgeon still performs closed/open reduction manually, using table traction as an aid.</td></tr>
+  </tbody>
+</table>
+
+<h2>13. Neurosurgical Instruments</h2>
+
+<h3>13.1 Retraction, Coagulation &amp; Tissue Removal</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Key feature</th><th>Use / caution</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cushing brain retractor / brain spatula</strong></td><td><strong>Malleable blade</strong>; <strong>hand-held — NOT self-retaining</strong>, not fixed to the skull clamp</td><td>Gentle retraction of brain tissue; needs an assistant to hold</td></tr>
+    <tr><td><strong>Leyla retractor</strong></td><td><strong>Self-retaining</strong> brain retractor (flexible arm on a fixed base)</td><td>Hands-free brain retraction — the "self-retaining" answer</td></tr>
+    <tr><td><strong>Bipolar coagulation forceps</strong></td><td>Current passes <strong>only between the two forceps tips</strong></td><td>Preferred over monopolar in neurosurgery: precise coagulation, <strong>minimal lateral thermal spread</strong> near delicate neural tissue <em>(R explains A)</em></td></tr>
+    <tr><td><strong>CUSA</strong> (Cavitron Ultrasonic Surgical Aspirator)</td><td>Ultrasonic vibration fragments + aspirates <strong>high-water-content</strong> tissue; spares <strong>high-collagen/elastin</strong> structures</td><td><strong>Selective tumour removal preserving vessels and nerves</strong></td></tr>
+    <tr><td><strong>Kerrison rongeur</strong></td><td>Up-biting, footplate design</td><td><strong>Laminectomy</strong> — bites away lamina bone</td></tr>
+  </tbody>
+</table>
+
+<h3>13.2 Craniotomy — Instruments &amp; Sequence</h3>
+<div class="key"><strong>Bone-flap sequence:</strong> <strong>1</strong> Make burr holes with <strong>Hudson brace + perforator</strong> → <strong>2</strong> Strip dura off the inner table between holes with a <strong>dural separator</strong> → <strong>3</strong> Connect burr holes with <strong>Gigli saw / craniotome</strong> → <strong>4</strong> <strong>Elevate the bone flap</strong>.</div>
+<div class="mnem"><strong>"Bore → Separate → Connect → Lift"</strong> — dura must be freed <em>before</em> the saw passes, or you tear it.</div>
+
+<h3>13.3 CSF Diversion</h3>
+<table>
+  <thead><tr><th>System</th><th>Components / target</th></tr></thead>
+  <tbody>
+    <tr><td><strong>VP shunt</strong></td><td><strong>3 parts:</strong> ventricular (proximal) catheter in lateral ventricle • <strong>reservoir/valve</strong> (Pudenz, Hakim) regulating CSF flow • peritoneal (distal) catheter. <br><em>A Fogarty balloon is NOT a shunt component</em> — it is an embolectomy catheter.</td></tr>
+    <tr><td><strong>EVD</strong> (external ventricular drain)</td><td>Tip in the <strong>frontal horn of the lateral ventricle</strong> — relatively avascular, reliable drainage. Entry at <strong>Kocher's point: 11 cm posterior to nasion, 3 cm lateral to midline</strong>.</td></tr>
+  </tbody>
+</table>
+
+<h2>14. Gynaecology — Speculae, Dilators, Sounds &amp; Curettes</h2>
+
+<h3>14.1 Vaginal Speculae — The Classic Contrast</h3>
+<table>
+  <thead><tr><th>Feature</th><th>Sims' speculum</th><th>Cusco's speculum</th></tr></thead>
+  <tbody>
+    <tr><td>Blades</td><td><strong>Single-bladed</strong> (double-ended, but one blade in use)</td><td><strong>Bivalve</strong> (two blades)</td></tr>
+    <tr><td>Retention</td><td><strong>NOT self-retaining</strong> — assistant must hold it</td><td><strong>Self-retaining</strong> → hands-free</td></tr>
+    <tr><td>Position</td><td><strong>Left lateral (Sims') position</strong></td><td>Lithotomy / dorsal</td></tr>
+    <tr><td>Use</td><td>Vaginal wall retraction, fistula/prolapse exam</td><td><strong>Visualising the cervix</strong>, Pap smear, IUCD insertion</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Assertion-trap:</strong> "Sims' needs left lateral position" = TRUE, but "Sims' is a double-bladed self-retaining instrument" = FALSE (that describes Cusco's). → <strong>A true, R false</strong>.</div>
+
+<h3>14.2 Cervical Dilatation, Sounding &amp; Grasping</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hegar's dilators</strong></td><td>Graduated metal cervical dilators, set numbered <strong>1–16</strong>, number = <strong>diameter in mm</strong>, <strong>0.5 mm</strong> increments/half sizes. Progressive dilatation before D&amp;C.</td></tr>
+    <tr><td><strong>Uterine sound</strong></td><td>Thin, graduated, slightly curved metal probe → measures <strong>length and direction of the uterine cavity</strong>. Essential before IUCD insertion and dilatation.</td></tr>
+    <tr><td><strong>Vulsellum (tenaculum) forceps</strong></td><td><strong>Sharp teeth/hooks</strong> to <strong>grasp and steady the cervix</strong>, giving traction during D&amp;C, IUCD insertion, endometrial biopsy</td></tr>
+  </tbody>
+</table>
+<div class="formula">Normal uterine cavity length = <strong>6–8 cm</strong> &nbsp;|&nbsp; ~6 cm nulliparous → up to 8 cm multiparous
+</div>
+<p><em>Markedly longer or shorter suggests pathology — fibroids (longer) or hypoplastic uterus (shorter).</em></p>
+
+<h3>14.3 Curettes</h3>
+<table>
+  <thead><tr><th>Type</th><th>Feature</th><th>Use / risk</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Sharp curette</strong></td><td>Defined <strong>cutting edge</strong></td><td>Scrapes/shaves <strong>adherent</strong> tissue (retained products, polyps); used <strong>both diagnostically and therapeutically</strong>; <strong>HIGHER perforation risk</strong></td></tr>
+    <tr><td><strong>Blunt curette</strong></td><td>No cutting edge</td><td>Removes <strong>loose</strong> tissue; safer</td></tr>
+    <tr><td><strong>Suction curette / cannula</strong></td><td><strong>Karman's cannula = flexible PLASTIC</strong> (so "all are rigid metal" is false)</td><td><strong>Suction evacuation of uterus</strong>. Cervical dilatation needed depends on <strong>cannula size</strong> — rule of thumb: <strong>cannula diameter in mm ≈ gestational age in weeks</strong></td></tr>
+  </tbody>
+</table>
+
+<h2>15. Obstetrics — Forceps, Ventouse &amp; Caesarean Section</h2>
+
+<h3>15.1 Obstetric Forceps — Which, When, Why</h3>
+<table>
+  <thead><tr><th>Forceps</th><th>Distinguishing design</th><th>Indication</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Wrigley's</strong></td><td><strong>Short shank</strong> (and short handles)</td><td><strong>Outlet / lift-out</strong> delivery — head already visible at the perineum, so less force is applied; also for the head at LSCS <em>(R explains A)</em></td></tr>
+    <tr><td><strong>Kielland's</strong></td><td><strong>Sliding lock</strong> (not the fixed English lock) + <strong>minimal pelvic curve</strong></td><td><strong>Rotation</strong> of the fetal head in occipito-posterior/transverse malpositions; the sliding lock lets one blade sit higher than the other to accommodate <strong>asynclitism</strong> <em>(R explains A)</em></td></tr>
+    <tr><td><strong>Neville-Barnes / Simpson's</strong></td><td>Standard cephalic + pelvic curve, English lock</td><td><strong>Mid-cavity</strong> delivery <strong>without</strong> rotation</td></tr>
+  </tbody>
+</table>
+
+<h3>15.2 Ventouse (Vacuum Extractor)</h3>
+<ul>
+  <li>Applies traction by creating <strong>negative pressure on the fetal scalp</strong>.</li>
+  <li>Complications: <strong>chignon</strong> (artificial caput, resolves) and <strong>cephalhaematoma</strong>.</li>
+  <li><strong>Kiwi OmniCup</strong> = handheld, single-use vacuum device.</li>
+  <li><strong>Contraindicated before full dilatation (10 cm)</strong> — risks cervical injury/annular detachment. <em>(This is the classic false statement.)</em></li>
+</ul>
+<div class="mnem"><strong>Ventouse = "full dilatation only."</strong> Forceps ± ventouse both need a fully dilated cervix; only Wrigley's at LSCS escapes the rule.</div>
+
+<h3>15.3 Caesarean Section vs Hysterectomy Instruments</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Belongs to</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Green-Armytage clamp</strong></td><td><strong>LSCS</strong></td><td><strong>Haemostasis of the uterine incision edges</strong></td></tr>
+    <tr><td><strong>DeLee retractor</strong></td><td><strong>LSCS</strong></td><td><strong>Bladder retraction</strong></td></tr>
+    <tr><td><strong>Doyen retractor</strong></td><td><strong>LSCS</strong></td><td>Large curved retractor — <strong>suprapubic/inferior bladder retraction</strong></td></tr>
+    <tr><td><strong>Wertheim's clamp</strong></td><td><strong>Radical hysterectomy</strong> — NOT LSCS</td><td>Clamps <strong>parametrial</strong> tissue</td></tr>
+    <tr><td><strong>Zeppelin clamp</strong></td><td><strong>Hysterectomy</strong></td><td><strong>Curved</strong> (not straight) clamp for <strong>uterine artery pedicles</strong> and parametrium — similar to Wertheim's; the curve allows safe clamping close to the uterus</td></tr>
+  </tbody>
+</table>
+
+<h3>15.4 The Retractor Axis Most Often Examined</h3>
+<div class="key"><strong>Self-retaining</strong> (holds itself, no assistant): Finochietto · Gil-Vernet · <strong>Leyla</strong> · Cusco's speculum · Millin's.<br>
+<strong>Hand-held</strong> (needs an assistant): <strong>Cushing</strong> brain spatula · Langenbeck · DeLee · Doyen · Sims' speculum.<br>
+The two classic swaps: <strong>Leyla vs Cushing</strong> (neuro) and <strong>Cusco's vs Sims'</strong> (gynae) — in each pair the first is self-retaining, the second is not.</div>
+
+<h2>16. Clinical Scenarios &amp; Troubleshooting</h2>
+
+<h3>16.1 Post-TURP Clot Retention</h3>
+<div class="key"><strong>Scenario:</strong> 65 y male, post-TURP, 3-way catheter on continuous irrigation; drainage stops / output falls, bladder distends. → <strong>Immediate manual bladder washout with a catheter-tip (Toomey) syringe</strong> to aspirate and flush out the clots.<br>
+<strong>Why not the others:</strong> increasing the irrigation rate will not clear <em>existing</em> clots and worsens bladder distension • removing the catheter is wrong (the problem is clot obstruction, not malposition) • return to theatre is reserved for uncontrollable bleeding <em>after</em> washout fails.</div>
+
+<h3>16.2 Chest Drain — Continuous Bubbling</h3>
+<div class="key"><strong>Scenario:</strong> Bubbling in the underwater seal during <em>both</em> inspiration and expiration, no fluid drainage, ongoing dyspnoea and reduced air entry. → <strong>Persistent air leak</strong>: either a <strong>bronchopleural fistula</strong> or a <strong>drain side-hole lying outside the pleural cavity</strong> sucking in atmospheric air. Continuous (not swinging/intermittent) bubbling with a non-resolving pneumothorax is the giveaway.</div>
+<div class="mnem"><strong>Swinging = good, bubbling on cough = normal air leak, CONTINUOUS bubbling = pathological leak or a mispositioned drain.</strong></div>
+
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">Foley balloon volume, adult</span><span class="a">10 mL sterile water (30 mL for 3-way)</span></div>
+  <div class="fact"><span class="q">French gauge</span><span class="a">1 Fr = 0.33 mm</span></div>
+  <div class="fact"><span class="q">TURP irrigant</span><span class="a">Monopolar → glycine 1.5%; bipolar → normal saline</span></div>
+  <div class="fact"><span class="q">Crush bladder stone + evacuate</span><span class="a">Litholapaxy, using a lithotrite (2 blades: 1 fixed, 1 mobile)</span></div>
+  <div class="fact"><span class="q">Scope for PCNL / for TURP</span><span class="a">Nephroscope / Resectoscope</span></div>
+  <div class="fact"><span class="q">Open nephrectomy pair</span><span class="a">Satinsky clamp + Gil-Vernet retractor</span></div>
+  <div class="fact"><span class="q">Prostatectomy retractors</span><span class="a">Millin's = retropubic; Young's = perineal (per rectum)</span></div>
+  <div class="fact"><span class="q">Neonatal circumcision devices</span><span class="a">Plastibell (ring falls off 5–7 d) &amp; Gomco clamp</span></div>
+  <div class="fact"><span class="q">Rib instruments</span><span class="a">Finochietto spreads · Sauerbruch cuts · approximator closes</span></div>
+  <div class="fact"><span class="q">Sternotomy tools</span><span class="a">Oscillating sternal saw; bone wax for cut-bone bleeding</span></div>
+  <div class="fact"><span class="q">Lung/bronchus clamps</span><span class="a">Duval = triangular fenestrated jaws; Price-Thomas = bronchus</span></div>
+  <div class="fact"><span class="q">VATS requirement</span><span class="a">Single-lung ventilation</span></div>
+  <div class="fact"><span class="q">Pleural biopsy needle</span><span class="a">Abrams</span></div>
+  <div class="fact"><span class="q">Chest drain rules</span><span class="a">Triangle of safety, 5th ICS, above the rib; bottle BELOW chest</span></div>
+  <div class="fact"><span class="q">Pericardiocentesis</span><span class="a">Subxiphoid (Marfan's) → aim left shoulder; ECG ST↑ = myocardium</span></div>
+  <div class="fact"><span class="q">Vascular clamps</span><span class="a">Satinsky = partial occlusion; Bulldog = spring, temporary</span></div>
+  <div class="fact"><span class="q">Potts scissors / aortic punch</span><span class="a">Angled 25–45–60° arteriotomy / circular arteriotomy for graft</span></div>
+  <div class="fact"><span class="q">Fogarty catheter principle</span><span class="a">Inflate balloon DISTAL to embolus, then withdraw</span></div>
+  <div class="fact"><span class="q">Pin diameters</span><span class="a">Steinmann 3–6 mm (traction); K-wire 0.7–1.5 mm</span></div>
+  <div class="fact"><span class="q">Küntscher vs interlocking nail</span><span class="a">Solid cloverleaf, axial only vs locked, axial + rotational</span></div>
+  <div class="fact"><span class="q">Grade IIIB open fracture</span><span class="a">External fixator — no implant in contaminated wound</span></div>
+  <div class="fact"><span class="q">Plates</span><span class="a">LCP = screw head locks; LC-DCP = same compression, less contact</span></div>
+  <div class="fact"><span class="q">Bone cutting</span><span class="a">Osteotome bevel ×2 · chisel ×1 · Liston = guillotine · Gigli = wire</span></div>
+  <div class="fact"><span class="q">Arthroplasty preparation</span><span class="a">Acetabular reamer → cup; femoral broach → stem</span></div>
+  <div class="fact"><span class="q">Craniotomy sequence</span><span class="a">Hudson brace burr holes → dural separator → Gigli → lift flap</span></div>
+  <div class="fact"><span class="q">Brain retractors</span><span class="a">Leyla = self-retaining; Cushing = hand-held malleable</span></div>
+  <div class="fact"><span class="q">CUSA / Kerrison rongeur</span><span class="a">Selective tumour aspiration sparing vessels / laminectomy</span></div>
+  <div class="fact"><span class="q">EVD placement</span><span class="a">Frontal horn via Kocher's point — 11 cm behind nasion, 3 cm lateral</span></div>
+  <div class="fact"><span class="q">Hegar's dilators / uterine sound</span><span class="a">Sizes 1–16 mm, 0.5 mm steps / cavity 6–8 cm</span></div>
+  <div class="fact"><span class="q">Speculae</span><span class="a">Cusco's = bivalve self-retaining; Sims' = single blade, left lateral</span></div>
+  <div class="fact"><span class="q">Obstetric forceps</span><span class="a">Kielland's sliding lock = rotation; Wrigley's short shank = outlet</span></div>
+  <div class="fact"><span class="q">Ventouse</span><span class="a">Only at full dilatation; chignon &amp; cephalhaematoma</span></div>
+  <div class="fact"><span class="q">Uterine clamps</span><span class="a">Green-Armytage = LSCS edges; Wertheim's/Zeppelin = hysterectomy</span></div>
+  <div class="fact"><span class="q">Blocked drainage post-TURP</span><span class="a">Manual bladder washout with catheter-tip (Toomey) syringe</span></div>
+  <div class="fact"><span class="q">Continuous UWSD bubbling</span><span class="a">Persistent air leak — BPF or drain hole outside pleura</span></div>
+</div>
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>
