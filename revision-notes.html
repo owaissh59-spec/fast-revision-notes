@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  FAST REVISION NOTES — INDIAN PUBLIC HEALTH & EPIDEMIOLOGY
+  ================================================================
+  Self-contained A4 revision sheet reorganized from 127 supplied
+  MCQs. Source stems that were truncated have been converted only
+  from recoverable facts; no missing wording has been invented.
+  ================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indian Public Health &amp; Epidemiology — Fast Revision Notes</title>
+<style>
+  /* ============ PRINT-OPTIMIZED, MONOCHROME, COMPACT ============ */
+  @page { size: A4; margin: 12mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 8.5pt;
+    line-height: 1.22;
+    color: #000; background: #fff;
+    margin: 0; padding: 0;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 15pt; text-align: center;
+    margin: 0 0 2px 0; letter-spacing: 0.4px; text-transform: uppercase;
+    page-break-after: avoid; break-after: avoid-page;
+  }
+  h1 + .subtitle {
+    text-align: center; font-style: italic; font-size: 8pt;
+    margin: 0 0 6px 0; border-bottom: 1.5px solid #000; padding-bottom: 3px;
+  }
+  h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.8px;
+    background: #000; color: #fff;
+    padding: 3px 6px; margin: 10px 0 5px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9pt; margin: 6px 0 3px 0;
+    padding: 2px 5px; background: #e2e2e2;
+    border-left: 3px solid #000; page-break-after: avoid;
+  }
+  h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 8.5pt; margin: 4px 0 2px 0;
+    text-decoration: underline; page-break-after: avoid;
+  }
+
+  /* TEXT */
+  p { margin: 2px 0; }
+  ul, ol { margin: 2px 0 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+
+  /* FACT card */
+  .fact {
+    border: 1px solid #000;
+    padding: 3px 6px; margin: 3px 0;
+    page-break-inside: avoid;
+  }
+  .fact .q { font-weight: bold; display: block; margin-bottom: 1px; }
+  .fact .a {
+    display: inline-block; background: #000; color: #fff;
+    padding: 0 5px; font-weight: bold; margin: 1px 0;
+    font-family: "Helvetica", "Arial", sans-serif; font-size: 8pt;
+  }
+  .fact .why {
+    display: block; margin-top: 1px; font-size: 7.8pt; font-style: italic;
+  }
+
+  /* KEY highlight */
+  .key {
+    background: #efefef; border-left: 2.5px solid #000;
+    padding: 2px 6px; margin: 3px 0; page-break-inside: avoid;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 3px 0 5px 0; font-size: 8pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #000; padding: 2px 4px;
+    text-align: left; vertical-align: top;
+  }
+  th {
+    background: #000; color: #fff;
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+  tr { page-break-inside: avoid; break-inside: avoid-page; }
+  tr:nth-child(even) td { background: #f2f2f2; }
+
+  /* MNEMONIC */
+  .mnem {
+    border: 1.5px dashed #000; padding: 2px 6px; margin: 3px 0;
+    background: #f6f6f6; font-size: 8pt; page-break-inside: avoid;
+  }
+  .mnem::before {
+    content: "★ TIP: ";
+    font-family: "Helvetica", "Arial", sans-serif; font-weight: bold;
+  }
+
+  /* FORMULA */
+  .formula {
+    border: 1px solid #000; background: #efefef;
+    padding: 2px 6px; margin: 3px 0;
+    font-family: "Courier New", monospace; font-size: 8pt;
+    text-align: center; page-break-inside: avoid;
+  }
+
+  /* MULTI-COLUMN */
+  .two-col {
+    column-count: 2; column-gap: 8px; column-rule: 1px solid #e2e2e2;
+  }
+  .three-col {
+    column-count: 3; column-gap: 8px; column-rule: 1px solid #e2e2e2;
+  }
+  .two-col .fact, .two-col .key, .two-col ul, .two-col ol,
+  .three-col .fact, .three-col .key { break-inside: avoid; }
+
+  /* TOC */
+  .toc {
+    border: 1.5px solid #000; padding: 4px 8px; margin: 4px 0 8px 0;
+    background: #f6f6f6; font-size: 8pt;
+    page-break-inside: avoid; break-inside: avoid-page;
+  }
+  .toc h3 {
+    margin: 0 0 2px 0; background: none; border: none;
+    padding: 0; font-size: 9pt; text-transform: uppercase;
+  }
+  .toc ol { columns: 3; column-gap: 14px; margin: 0; padding-left: 18px; }
+  .toc li { margin: 1px 0; }
+
+  .footer-note {
+    text-align: center; font-size: 7pt; margin-top: 3px; color: #000;
+  }
+
+  /* Inline stacking to save space */
+  .inline-list li { display: inline; }
+  .inline-list li:not(:last-child)::after { content: " • "; }
+  .inline-list { padding-left: 0; list-style: none; }
+
+  @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Indian Public Health &amp; Epidemiology</h1>
+<p class="subtitle">National Programmes · Health Systems · RMNCH+A · Epidemiology · Screening · Environment</p>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <ol>
+    <li>Policy, Financing &amp; Digital Health</li>
+    <li>NHM &amp; Primary-Care Delivery</li>
+    <li>RMNCH+A, Nutrition &amp; Family Planning</li>
+    <li>Communicable-Disease Programmes</li>
+    <li>NCD &amp; Specialty Programmes</li>
+    <li>Epidemiologic Measures</li>
+    <li>Screening &amp; Study Designs</li>
+    <li>Surveillance &amp; Outbreaks</li>
+    <li>Vectors, Environment &amp; Sterilization</li>
+    <li>Committees, Plans &amp; Milestones</li>
+    <li>Last-Minute Fact Dump</li>
+  </ol>
+</div>
+
+<!-- Coverage: Q1,Q4,Q7,Q9,Q17,Q21,Q28,Q29,Q36,Q38,Q40,Q43,Q45,Q46,Q50,Q51,Q55,Q56,Q69,Q79,Q127 -->
+<h2>1. Policy, Financing &amp; Digital Health</h2>
+<h3>1.1 Policy architecture and major Ayushman Bharat arms</h3>
+<table>
+  <thead><tr><th>Initiative</th><th>Core purpose / exam distinction</th></tr></thead>
+  <tbody>
+    <tr><td><strong>National Digital Health Blueprint (2019)</strong></td><td>Recommended a <strong>National Digital Health Mission</strong> using federated architecture, unique health IDs, registries, consent and interoperability—not one centralized patient-record warehouse. It evolved into <strong>ABDM</strong>.</td></tr>
+    <tr><td><strong>Ayushman Bharat Digital Mission</strong></td><td>Digital identity, registries and interoperable digital-health ecosystem; it is not a hospital-infrastructure scheme.</td></tr>
+    <tr><td><strong>PM-ABHIM (2021)</strong></td><td>Strengthens infrastructure and surveillance to village level: block public-health units, integrated public-health laboratories, critical-care blocks, NCDC and virology capacity.</td></tr>
+    <tr><td><strong>PM-JAY</strong></td><td>Cashless defined packages for <strong>secondary and tertiary hospitalization</strong>; pre-existing disease covered from day 1; includes pre-hospitalization and 15-day post-hospitalization expenses. Preventive/outpatient wellness care belongs to Arogya Mandirs.</td></tr>
+    <tr><td><strong>eSanjeevani AB-HWC</strong></td><td><strong>Doctor-to-doctor</strong> hub-and-spoke consultation: CHO/worker at spoke HWC connects the patient to a medical officer/specialist hub. <strong>eSanjeevani OPD</strong> is patient-to-doctor from home.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>PM-JAY portability:</strong> An eligible beneficiary may receive cashless care at any empanelled hospital across India through the common NHA platform. The supplied exam key associates original beneficiary identification with <strong>SECC 2011</strong>, not Census house-listing data.</div>
+
+<h3>1.2 National Health Policy, population policy and SDGs</h3>
+<table>
+  <thead><tr><th>Policy</th><th>High-yield targets / principles</th></tr></thead>
+  <tbody>
+    <tr><td><strong>NHP 2017</strong></td><td>Life expectancy at birth from a <strong>67.5-year baseline</strong> to <strong>70 years by 2025</strong>; public health expenditure target <strong>2.5% of GDP</strong>; transform sub-centres/PHCs into Health and Wellness Centres. Mortality targets had different dates: <strong>IMR 28 by 2019</strong>, <strong>U5MR 23 and NMR 16 by 2025</strong>. It supports comprehensive public systems and strategic purchasing rather than prescribing a single-payer-only model.</td></tr>
+    <tr><td><strong>National Population Policy 2000</strong></td><td>Voluntary, informed choice; target TFR 2.1 by 2010 and stable population by 2045. Rapid population growth threatening development was the rationale; targets are the policy content, not that rationale.</td></tr>
+    <tr><td><strong>SDGs</strong></td><td>Adopted in 2015 for 2016–2030: <strong>17 goals, 169 targets</strong>. Unlike MDGs, they are universal and apply to all countries.</td></tr>
+  </tbody>
+</table>
+
+<h3>1.3 Planning, grants and Centre–State financing</h3>
+<table>
+  <thead><tr><th>Instrument</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Programme Implementation Plan (PIP)</strong></td><td>Annual State proposal of activities and budget lines sent to the Centre.</td></tr>
+    <tr><td><strong>Record of Proceedings (RoP)</strong></td><td>Centre’s response communicating appraised and sanctioned items; it is the outcome, not the proposal.</td></tr>
+    <tr><td><strong>NHM sharing</strong></td><td>Since <strong>2015–16</strong>: <strong>60:40</strong> for general States; <strong>90:10</strong> for eight North-Eastern and three Himalayan States; <strong>100% Centre</strong> for Union Territories without legislature. There is no uniform 50% State share.</td></tr>
+    <tr><td><strong>Untied grants</strong></td><td>Local flexibility at SHC, PHC, CHC and VHSNC level for small unforeseen needs—minor repair, cleanliness, emergency supply or patient transport; <strong>not regular salaries</strong>.</td></tr>
+  </tbody>
+</table>
+
+<h3>1.4 Financial protection, medicines and AMR</h3>
+<table>
+  <thead><tr><th>Scheme / strategy</th><th>Agency and function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Rashtriya Arogya Nidhi (1997)</strong></td><td>Grants-in-aid for BPL patients with major life-threatening diseases at designated super-specialty government hospitals; uses revolving funds and State Illness Assistance Funds. Distinguish the smaller case-wise Health Minister’s Discretionary Grant and the general PM National Relief Fund; no “Ayushman Bharat Corpus Fund” exists.</td></tr>
+    <tr><td><strong>Free Drugs Service Initiative</strong></td><td>State drug policy, displayed essential-drug list, generic prescribing, prescription audit, robust procurement/logistics and free medicines for all patients at public facilities—not BPL-only supply or user-fee recovery.</td></tr>
+    <tr><td><strong>PMBJP</strong></td><td>Department of Pharmaceuticals through <strong>PMBI</strong> (formerly BPPI); quality generic medicines commonly priced 50–90% below branded products; also sells low-cost <strong>Jan Aushadhi Suvidha</strong> oxo-biodegradable sanitary napkins. Kendras are not AYUSH-only.</td></tr>
+    <tr><td><strong>AMRIT pharmacies</strong></td><td>Operated by public-sector <strong>HLL Lifecare Ltd</strong>.</td></tr>
+    <tr><td><strong>PM-JAY</strong></td><td>Implemented by the <strong>National Health Authority</strong>.</td></tr>
+    <tr><td><strong>Jal Jeevan Mission</strong></td><td>Under the <strong>Ministry of Jal Shakti</strong>.</td></tr>
+  </tbody>
+</table>
+<div class="two-col">
+  <div class="fact"><span class="q">Red Line campaign</span><span class="a">Red vertical line on prescription-only antimicrobial packs</span><span class="why">Signals: do not self-medicate or stop the course midway.</span></div>
+  <div class="fact"><span class="q">AMR containment pillars</span><span class="a">Surveillance + stewardship + infection prevention + regulation</span><span class="why">Includes a laboratory network and Schedule H1 records for listed drugs such as third-generation cephalosporins, carbapenems and anti-TB medicines; mass antibiotic use promotes resistance.</span></div>
+</div>
+<h3>1.5 Health financing and economic evaluation</h3>
+<ul>
+  <li><strong>Out-of-pocket expenditure (OOPE)</strong> is household private spending, separate from government health expenditure. Its share of total health expenditure has fallen over successive National Health Accounts rounds, but medicines and diagnostics remain major household costs.</li>
+  <li><strong>Question-bank context:</strong> historical estimates describe OOPE around 55–60%, government health spending around 1.2–1.5% of GDP and 6–7 crore people pushed below the poverty line annually. This is low compared with many developed systems spending 6–10%+ of GDP publicly; use the latest NHA for current Indian values.</li>
+  <li><strong>Cost-effectiveness analysis (CEA)</strong> compares alternatives by cost per common natural outcome (e.g., cost per case prevented or life-year gained) to maximize outcome per rupee—not to select the most expensive intervention.</li>
+</ul>
+<div class="formula">CEA ratio = Cost ÷ Natural health outcome &nbsp;|&nbsp; Prefer efficient incremental benefit, not lowest cost alone</div>
+
+<!-- Coverage: Q15,Q32,Q37,Q40,Q42,Q43,Q46,Q49,Q53,Q64,Q78,Q121 -->
+<h2>2. NHM &amp; Primary-Care Delivery</h2>
+<h3>2.1 Mission structure and community workforce</h3>
+<table>
+  <thead><tr><th>Element</th><th>Exam-ready point</th></tr></thead>
+  <tbody>
+    <tr><td><strong>NRHM (2005)</strong></td><td>Focused initially on rural systems and 18 high-focus States; introduced ASHAs and IPHS.</td></tr>
+    <tr><td><strong>NHM (2013)</strong></td><td>Umbrella under which <strong>NRHM and NUHM</strong> were subsumed; NRHM was not merged into NUHM.</td></tr>
+    <tr><td><strong>ASHA</strong></td><td>Honorary community volunteer—not a regular government employee. General norm: about <strong>1 per 1,000 population</strong>, relaxed to one per habitation in difficult terrain. One ASHA facilitator supports roughly <strong>20 ASHAs</strong>. Since <strong>2018–19</strong>, fixed routine/recurring incentives supplement activity-based payments.</td></tr>
+    <tr><td><strong>SHC–Ayushman Arogya Mandir team</strong></td><td><strong>1 Community Health Officer + 2 multipurpose workers</strong> (ANM/female MPW and male MPW) + about <strong>5 ASHAs</strong> for covered villages. Medical officer/pharmacist/lab technician belong at PHC level and specialists at CHC level; this team model supersedes the image of a lone-ANM subcentre.</td></tr>
+    <tr><td><strong>Anganwadi Worker</strong></td><td>Belongs to <strong>ICDS</strong>, Ministry of Women and Child Development—not NHM.</td></tr>
+    <tr><td><strong>Mahila Arogya Samiti</strong></td><td>NUHM slum-level women’s group.</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>SHC team = C–2M–A</strong> — CHO, two MPWs, ASHAs.</div>
+
+<h3>2.2 Facility and outreach norms</h3>
+<table>
+  <thead><tr><th>Platform</th><th>Population / service norm</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Urban PHC</strong></td><td>Common NUHM planning norm: <strong>1 per 50,000 urban population</strong>.</td></tr>
+    <tr><td><strong>Rural PHC—classic exam norm</strong></td><td><strong>30,000</strong> population in plains and <strong>20,000</strong> in hilly/tribal areas; traditionally 6 beds and at least one medical officer (two often recommended). Provides preventive, promotive and basic curative care and refers complications to CHC. Check current staffing/service standards against the applicable IPHS edition.</td></tr>
+    <tr><td><strong>CHC—classic comparison</strong></td><td>Traditionally 30 beds and four core specialists; referral level above PHC.</td></tr>
+    <tr><td><strong>VHSND</strong></td><td>Held <strong>monthly at the Anganwadi Centre</strong>; ANM, ASHA and AWW jointly deliver immunization, ANC, nutrition counselling and health education. The village venue—not SHC/PHC/CHC—brings outreach closer to households.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q15):</strong> Required U-PHCs = 4,50,000 ÷ 50,000 = <strong>9 U-PHCs</strong>. Do not apply the rural PHC denominator.</div>
+<div class="key"><strong>Worked interpretation (Q78):</strong> PHCs A, B and C each had at least one medical officer, so all met the <strong>minimum MO count used in the stem</strong>; this does not prove compliance with every other current IPHS staffing and service criterion.</div>
+
+<!-- Coverage: Q3,Q6,Q13,Q18,Q22,Q27,Q31,Q35,Q37,Q47,Q48,Q49,Q52,Q104,Q115,Q124 -->
+<h2>3. RMNCH+A, Nutrition &amp; Family Planning</h2>
+<h3>3.1 Maternal and newborn initiatives</h3>
+<table>
+  <thead><tr><th>Initiative</th><th>Defining feature</th></tr></thead>
+  <tbody>
+    <tr><td><strong>PMSMA</strong></td><td>Assured, free quality ANC for women in the <strong>2nd and 3rd trimesters on the 9th of every month</strong>, including voluntary participation by private practitioners. Free ANC does not explain why the calendar date “9th” was selected.</td></tr>
+    <tr><td><strong>SUMAN (2019)</strong></td><td>Dignified, respectful, zero-cost maternity and newborn care with <strong>zero denial</strong> of services.</td></tr>
+    <tr><td><strong>LaQshya (2017)</strong></td><td>Quality improvement and State/national certification for <strong>labour rooms and maternity operation theatres</strong> in district hospitals, FRUs and high-caseload CHCs. Distinct from whole-facility NQAS, vaccine cold-chain work and free-drug/diagnostic initiatives.</td></tr>
+    <tr><td><strong>HBNC after institutional delivery</strong></td><td>ASHA makes <strong>6 visits</strong>: days 3, 7, 14, 21, 28 and 42. Home delivery adds day 1 = 7 visits.</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>HBNC institutional: “3–7, then weekly to 28, finish 42.”</strong></div>
+
+<h3>3.2 Child screening and severe acute malnutrition</h3>
+<div class="two-col">
+  <div class="fact"><span class="q">RBSK “4 Ds”</span><span class="a">Defects, Deficiencies, Diseases, Developmental delays</span><span class="why">Includes disability; 30 identified conditions refer onward, often to a DEIC.</span></div>
+  <div class="fact"><span class="q">SAM + medical complication / poor appetite</span><span class="a">Nutrition Rehabilitation Centre</span><span class="why">Usually linked to a district hospital/CHC for inpatient therapeutic feeding, medical management and follow-up. DEIC handles RBSK referrals; some States use VCDCs for uncomplicated SAM; “Child-Friendly Anganwadi Centre” is not the designated inpatient unit.</span></div>
+</div>
+
+<h3>3.3 Family planning and anaemia</h3>
+<table>
+  <thead><tr><th>Programme</th><th>Core facts</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Antara</strong></td><td><strong>Depot medroxyprogesterone acetate (DMPA) 150 mg IM every 3 months</strong>. Norethisterone enanthate is a two-monthly injectable not used under Antara; levonorgestrel butanoate is investigational; centchroman/ormeloxifene is the weekly oral pill <strong>Chhaya</strong>.</td></tr>
+    <tr><td><strong>Mission Parivar Vikas (2016)</strong></td><td>Originally targeted 146 high-fertility districts (TFR ≥3) across seven States. Demand generation: <strong>Nayi Pahel</strong> kits, <strong>Saas Bahu Sammelan</strong> and <strong>Saarthi</strong> awareness vehicles. National programme remains voluntary; no compulsory two-child rule for government employees.</td></tr>
+    <tr><td><strong>Anaemia Mukt Bharat</strong></td><td>Nationwide <strong>6×6×6</strong> = six beneficiary groups, six interventions, six institutional mechanisms—not six drug regimens, tests, or selected geographies.</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>Six beneficiary groups:</strong> children 6–59 months; children 5–9 years; adolescents; women of reproductive age; pregnant women; lactating women.</li>
+  <li><strong>Six interventions:</strong> prophylactic IFA; deworming; year-round behaviour change; point-of-care Hb testing with a digital haemoglobinometer and treatment; iron-fortified/iodized salt provision; action on non-nutritional causes in endemic areas. Transfusion is reserved for clinically severe/decompensated anaemia, not routine moderate anaemia.</li>
+</ul>
+
+<h3>3.4 Immunization essentials</h3>
+<table>
+  <thead><tr><th>Item</th><th>Recall</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Intensified Mission Indradhanush</strong></td><td>Launched October 2017 to catch up left-out/drop-out children and push full immunization above 90%; it delivers UIP vaccines, not a replacement schedule. <strong>IMI 5.0 (2023)</strong> emphasized measles–rubella elimination in children up to 5 years.</td></tr>
+    <tr><td><strong>Hepatitis B vaccine</strong></td><td>Recombinant subunit vaccine. By contrast: tetanus is toxoid; BCG is live attenuated and given <strong>intradermally at birth/earliest opportunity</strong>, not IM at 9 months; Salk IPV is inactivated.</td></tr>
+    <tr><td><strong>WHO Expanded Programme on Immunization</strong></td><td>Global launch <strong>1974</strong>; India adopted EPI in 1978 and launched UIP in 1985.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q104):</strong> Institutional delivery rate against registered pregnancies = 500 ÷ 2,000 × 100 = <strong>25.0%</strong>. Using 900 women with full ANC as denominator would incorrectly produce 55.6%.</div>
+
+<!-- Coverage: Q2,Q5,Q8,Q10,Q11,Q12,Q14,Q26,Q30,Q34,Q41,Q54,Q59,Q92,Q102 -->
+<h2>4. Communicable-Disease Programmes</h2>
+<h3>4.1 HIV/AIDS programme</h3>
+<table>
+  <thead><tr><th>Component</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td><strong>ICTC</strong></td><td>Counselling and HIV testing; entry point to prevention, treatment and care.</td></tr>
+    <tr><td><strong>PPTCT</strong></td><td>Prevents mother-to-child transmission through maternal ART and infant prophylaxis.</td></tr>
+    <tr><td><strong>Targeted Interventions</strong></td><td>Focused prevention for key/high-risk groups: FSW, MSM, injecting-drug users, transgender persons and others.</td></tr>
+    <tr><td><strong>ART Centre</strong></td><td>Dispenses lifelong antiretroviral therapy and provides follow-up monitoring.</td></tr>
+    <tr><td><strong>HIV Sentinel Surveillance</strong></td><td>Tracks prevalence trends using antenatal-clinic attendees as a proxy for the general population plus key/high-risk groups at selected sites; blood donors are selection-biased.</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>I–P–T–A:</strong> ICTC tests; PPTCT protects the baby; TI targets risk; ART treats.</div>
+
+<h3>4.2 Tuberculosis</h3>
+<table>
+  <thead><tr><th>Element</th><th>Core fact</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Ni-kshay</strong></td><td>Online, case-based notification and management platform for all public- and private-sector TB patients: diagnosis, treatment, outcome and DBT tracking; not limited to drug-resistant TB. Vaccine cold-chain temperatures are tracked through <strong>eVIN</strong>; drug procurement belongs to the supply chain.</td></tr>
+    <tr><td><strong>Ni-kshay Mitra</strong></td><td>Consenting volunteer/donor—individual, elected representative, corporate, cooperative or institution—who adopts TB patients for nutritional, diagnostic, vocational and social support. Not a DOT provider or laboratory technician; private-sector TB notification is a legal/programmatic duty, not the Mitra role.</td></tr>
+    <tr><td><strong>Ni-kshay Poshan Yojana</strong></td><td>Monthly nutritional DBT for every notified TB patient, not only BPL or drug-resistant cases. The supplied material notes the benefit was originally ₹500 and revised upward to ₹1,000 per month; undernutrition raises TB risk and worsens outcomes.</td></tr>
+    <tr><td><strong>NTEP monitoring</strong></td><td>Case notification rate per lakh population.</td></tr>
+  </tbody>
+</table>
+
+<h3>4.3 Leprosy</h3>
+<table>
+  <thead><tr><th>Situation</th><th>Regimen / indicator</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Paucibacillary (PB)</strong></td><td>6 monthly supervised rifampicin doses + daily self-administered dapsone.</td></tr>
+    <tr><td><strong>Multibacillary (MB)</strong></td><td>12 months of rifampicin, clofazimine and dapsone: rifampicin plus the larger clofazimine dose are <strong>monthly supervised pulses</strong>; dapsone and the smaller clofazimine dose are self-administered daily. Rifampicin is not daily home medication.</td></tr>
+    <tr><td><strong>Contacts</strong></td><td>Single-dose rifampicin post-exposure prophylaxis is an accepted NLEP strategy for eligible contacts.</td></tr>
+    <tr><td><strong>Programme history</strong></td><td>NLCP began in 1955; WHO recommended MDT in <strong>1981</strong>, replacing dapsone monotherapy amid resistance concerns. Availability of curative MDT prompted the 1983 NLEP name. National elimination as a public-health problem was reached in 2005, not 1983.</td></tr>
+    <tr><td><strong>Monitoring</strong></td><td>Annual New Case Detection Rate per lakh; <strong>elimination as a public-health problem</strong> is prevalence <strong>&lt;1 per 10,000</strong>—not zero transmission.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q10):</strong> Leprosy prevalence = 96 ÷ 8,00,000 × 10,000 = <strong>1.2 per 10,000</strong>. Because elimination requires &lt;1 per 10,000, the district has <strong>not</strong> achieved elimination.</div>
+
+<h3>4.4 Filariasis, malaria and rabies</h3>
+<table>
+  <thead><tr><th>Programme</th><th>High-yield facts</th></tr></thead>
+  <tbody>
+    <tr><td><strong>LF mass drug administration</strong></td><td>Annual community-wide round in endemic districts, including asymptomatic carriers; excludes children &lt;2 years, pregnant women and severely ill persons. Selective night-blood testing would miss many carriers, so MDA is population based. <strong>Directly observed swallowing</strong> improves effective coverage. Monitoring includes night-blood-survey microfilaria rate, target &lt;1%.</td></tr>
+    <tr><td><strong>Malaria</strong></td><td>Annual Parasite Incidence (API) monitors endemicity. <em>P. vivax</em> relapse prevention requires <strong>primaquine</strong> against hepatic hypnozoites, generally as a 14-day radical course after assessing G6PD-related safety; chloroquine clears blood stages but not hypnozoites. Artesunate is used in falciparum ACT; pyrimethamine is an antifolate partner, not radical cure.</td></tr>
+    <tr><td><strong>National Rabies Control Programme</strong></td><td>Free post-exposure prophylaxis, cost-saving intradermal vaccination at designated centres and intersectoral dog vaccination/sterilization. Pre-exposure prophylaxis is for high-risk groups, not every schoolchild.</td></tr>
+  </tbody>
+</table>
+<div class="formula">API = Confirmed malaria cases during year ÷ Population at risk × 1,000</div>
+<div class="key"><strong>Worked example (Q59):</strong> API = 2,500 ÷ 5,00,000 × 1,000 = <strong>5.0 per 1,000</strong>. Under the categories supplied in the question (&lt;1 low, 1–5 moderate, &gt;5 high), exactly 5.0 lies at the <strong>upper boundary of moderate</strong>, not mathematically “&gt;5.” Programme stratification cut-offs can differ, so follow the framework stated in the exam.</div>
+<div class="key"><strong>Eradication recall:</strong> Smallpox remains the only human disease eradicated worldwide. Do not join this fact to an unrelated measles herd-immunity reason.</div>
+
+<!-- Coverage: Q16,Q24,Q25,Q33,Q39,Q44,Q47,Q53 -->
+<h2>5. NCD &amp; Specialty Programmes</h2>
+<h3>5.1 Mental health and common NCD care</h3>
+<table>
+  <thead><tr><th>Programme</th><th>Service design</th></tr></thead>
+  <tbody>
+    <tr><td><strong>NMHP (1982)</strong></td><td>Integrates mental-health care into general health services close to the community; care is not confined to mental hospitals.</td></tr>
+    <tr><td><strong>DMHP (1996)</strong></td><td>District arm based on the <strong>Bellary model</strong>: outreach/satellite clinics, training of medical officers and workers, referral and IEC.</td></tr>
+    <tr><td><strong>National NCD programme</strong></td><td>Dedicated NCD clinics at <strong>district hospital and CHC</strong> levels, supported by programme cells at State, district and CHC levels; screening, follow-up and refills extend to Ayushman Arogya Mandirs. A subcentre offers screening/refills rather than a full specialist NCD clinic.</td></tr>
+    <tr><td><strong>CBAC</strong></td><td>ASHA fills the Community Based Assessment Checklist during household visits for apparently healthy persons aged <strong>30 years and above</strong>. A score <strong>&gt;4</strong> marks high risk requiring confirmatory screening at the HWC; it is not itself a diagnosis.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q33):</strong> CBAC total = 1 + 1 + 2 + 1 + 2 = <strong>7</strong>. As 7 is above the cut-off of 4, refer for blood-pressure and blood-glucose screening; do not start treatment from the risk score alone.</div>
+
+<h3>5.2 Eye, ear, elderly and fluorosis programmes</h3>
+<table>
+  <thead><tr><th>Programme</th><th>Characteristic activity</th></tr></thead>
+  <tbody>
+    <tr><td><strong>NPCB&amp;VI</strong></td><td>District Blindness Control Societies, cataract services, eye banks, refractive services and free spectacles. Avoidable/treatable targets include <strong>cataract, uncorrected refractive error, diabetic retinopathy, glaucoma and childhood blindness</strong>; retinitis pigmentosa is hereditary degeneration and not classed as avoidable blindness.</td></tr>
+    <tr><td><strong>NPPCD</strong></td><td>Prevention/control of deafness; capacity-building of ENT surgeons, audiologists and primary-care staff.</td></tr>
+    <tr><td><strong>NPHCE</strong></td><td>Regional Geriatric Centres plus geriatric OPD and ward services.</td></tr>
+    <tr><td><strong>NPPCF</strong></td><td>Fluorosis prevention/control beginning with mapping and testing drinking-water fluoride.</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>B–D–E–F:</strong> Blindness–District societies; Deafness–staff Development; Elderly–Regional geriatrics; Fluorosis–water Fluoride.</div>
+
+<!-- Coverage: Q19,Q20,Q23,Q51,Q57,Q60,Q63,Q65,Q66,Q67,Q74,Q82,Q95,Q101,Q102,Q104,Q105,Q106,Q108,Q113,Q114,Q116,Q119,Q120 -->
+<h2>6. Epidemiologic Measures</h2>
+<h3>6.1 Incidence, prevalence and outbreak measures</h3>
+<table>
+  <thead><tr><th>Measure</th><th>Definition / denominator</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Incidence</strong></td><td>New cases arising in a defined period ÷ population at risk; measures risk. Do not add pre-existing cases.</td></tr>
+    <tr><td><strong>Prevalence</strong></td><td>All existing cases at a point/period ÷ population; reflects disease burden.</td></tr>
+    <tr><td><strong>Attack rate</strong></td><td>New cases among an exposed/at-risk group during a time-limited outbreak ÷ total exposed/at risk × 100; operationally a cumulative incidence proportion.</td></tr>
+    <tr><td><strong>Case fatality proportion</strong></td><td>Deaths due to disease ÷ diagnosed cases of that disease × 100; measures severity, not population mortality.</td></tr>
+    <tr><td><strong>API</strong></td><td>Confirmed malaria cases in a year per 1,000 population at risk.</td></tr>
+  </tbody>
+</table>
+<div class="formula">Attack rate = Ill ÷ Exposed × 100 &nbsp;|&nbsp; CFR = Deaths among cases ÷ Cases × 100</div>
+<div class="two-col">
+  <div class="key"><strong>Worked example (Q19):</strong> Wedding attack rate = 50 ÷ 400 × 100 = <strong>12.5%</strong>. The source also implies 4 deaths: CFR = 4 ÷ 50 × 100 = <strong>8.0%</strong>.</div>
+  <div class="key"><strong>Worked example (Q23):</strong> CFR = 3 deaths ÷ 75 cases × 100 = <strong>4.0%</strong>. Attack rate = 75 ÷ 500 × 100 = <strong>15.0%</strong>; deaths ÷ exposed = 0.6% is neither of these.</div>
+  <div class="key"><strong>Worked example (Q67):</strong> Hostel attack rate = 50 ÷ 250 × 100 = <strong>20.0%</strong>. The source’s alternate deaths/cases calculation gives CFR = <strong>8.0%</strong>.</div>
+  <div class="key"><strong>Worked example (Q82):</strong> Chicken-specific attack rate = 80 ÷ 200 × 100 = <strong>40%</strong>; non-eaters = 10 ÷ 100 = <strong>10%</strong>. The 30-point difference implicates chicken curry.</div>
+</div>
+
+<h3>6.2 Vital statistics and programme rates</h3>
+<table>
+  <thead><tr><th>Indicator</th><th>Formula / conventional unit</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Infant Mortality Rate</strong></td><td>Deaths under age 1 during year ÷ live births during year × <strong>1,000</strong>. Denominator is live births, not total population.</td></tr>
+    <tr><td><strong>Maternal Mortality Ratio</strong></td><td>Maternal deaths ÷ live births × <strong>100,000</strong>. Maternal mortality <em>rate</em> instead uses women of reproductive age.</td></tr>
+    <tr><td><strong>Leprosy prevalence</strong></td><td>Registered cases ÷ population × <strong>10,000</strong>.</td></tr>
+    <tr><td><strong>ANCDR</strong></td><td>New leprosy cases detected annually per <strong>lakh</strong> population.</td></tr>
+    <tr><td><strong>TB case notification</strong></td><td>Notified TB cases per <strong>lakh</strong> population.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q66):</strong> IMR = 12 infant deaths ÷ 180 live births × 1,000 = <strong>66.7 per 1,000 live births</strong>.</div>
+<div class="key"><strong>Worked example (Q114):</strong> Using the total mid-year population as the exam denominator: 24 ÷ 5,000 × 1,000 = <strong>4.80 per 1,000</strong>. If the question strictly requires a disease-free population at risk, exclude 25 prevalent cases: 24 ÷ 4,975 × 1,000 ≈ <strong>4.82 per 1,000</strong>. The source’s burden approximation is (25 existing + 24 new) ÷ 5,000 × 1,000 = <strong>9.80 per 1,000</strong>; exact point prevalence requires knowing which cases remain active at the chosen time.</div>
+<div class="key"><strong>Approximate indicator context from the supplied bank:</strong> IMR roughly high-20s/low-30s per 1,000; MMR roughly 97–103 per 100,000; TFR about 2.0; life expectancy about 69–70 years. These are time-sensitive and State-variable—use the latest SRS/NFHS release when a question asks “current.” The original matching labels were garbled, so values are shown directly.</div>
+
+<h3>6.3 Natural history, prevention and disease status</h3>
+<table>
+  <thead><tr><th>Stage / level</th><th>Meaning and example</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Stage of susceptibility</strong></td><td>No pathological change yet. <strong>Primordial prevention</strong> acts before risk factors emerge; once modifiable risk factors are present, <strong>primary prevention</strong> acts before disease develops.</td></tr>
+    <tr><td><strong>Subclinical stage</strong></td><td>Pathological process has begun without symptoms; screening enables secondary prevention.</td></tr>
+    <tr><td><strong>Clinical stage</strong></td><td>Signs/symptoms appear; prompt treatment limits progression.</td></tr>
+    <tr><td><strong>Primary prevention</strong></td><td>Prevent disease occurrence: vaccination, health education, specific protection.</td></tr>
+    <tr><td><strong>Secondary prevention</strong></td><td>Early detection and treatment: screening/case finding.</td></tr>
+    <tr><td><strong>Tertiary prevention</strong></td><td>Disability limitation and rehabilitation.</td></tr>
+    <tr><td><strong>Primordial prevention</strong></td><td>Prevent emergence of risk factors through population/environmental policy.</td></tr>
+    <tr><td><strong>Elimination</strong></td><td>Zero incidence in a defined geographic area; continued measures needed because reintroduction is possible.</td></tr>
+    <tr><td><strong>Eradication</strong></td><td>Permanent zero worldwide; routine intervention no longer needed.</td></tr>
+    <tr><td><strong>Incubation period</strong></td><td>Time from infection/entry of agent to first clinical symptoms; helps trace exposure and forecast outbreak timing. Typical examples: cholera often 2–5 days, measles roughly 10–14 days, rabies weeks to months.</td></tr>
+  </tbody>
+</table>
+
+<!-- Coverage: Q57,Q61,Q69,Q84,Q85,Q90,Q91,Q93,Q94,Q96,Q98,Q101,Q111,Q117,Q122 -->
+<h2>7. Screening &amp; Study Designs</h2>
+<h3>7.1 Test validity and predictive value</h3>
+<table>
+  <thead><tr><th>Measure</th><th>Formula</th><th>Interpretation</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Sensitivity</strong></td><td>TP ÷ (TP + FN)</td><td>Proportion of truly diseased correctly positive; high sensitivity means few false negatives. <strong>SnNOut</strong>: a negative result on a very sensitive test helps rule out.</td></tr>
+    <tr><td><strong>Specificity</strong></td><td>TN ÷ (TN + FP)</td><td>Proportion of truly non-diseased correctly negative; high specificity means few false positives and matters when false-positive consequences are serious. <strong>SpPIn</strong>: a positive result on a very specific test helps rule in.</td></tr>
+    <tr><td><strong>PPV</strong></td><td>TP ÷ (TP + FP)</td><td>Probability disease is present given a positive result; <strong>increases as prevalence rises</strong>.</td></tr>
+    <tr><td><strong>NPV</strong></td><td>TN ÷ (TN + FN)</td><td>Probability disease is absent given a negative result; generally rises as prevalence falls.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Worked example (Q122):</strong> In 100,000 people at 0.1% prevalence: diseased = 100 and non-diseased = 99,900. At 99% sensitivity, TP = 99; at 99% specificity, FP = 999. PPV = 99 ÷ 1,098 ≈ <strong>9%</strong>, so about <strong>91% of positive results are false positives</strong>. Low prevalence can overwhelm excellent sensitivity/specificity.</div>
+<div class="mnem"><strong>Validity looks inward; prediction looks outward:</strong> sensitivity/specificity condition on true disease status, while PPV/NPV condition on the observed test result and depend strongly on prevalence.</div>
+
+<h3>7.2 Wilson–Jungner screening criteria</h3>
+<ul class="inline-list">
+  <li><strong>Important health problem</strong></li><li><strong>Recognizable latent/early stage</strong></li><li><strong>Suitable, acceptable test</strong></li><li><strong>Accepted treatment available</strong></li><li><strong>Facilities for diagnosis/treatment</strong></li><li><strong>Agreed treatment policy</strong></li><li><strong>Natural history understood</strong></li><li><strong>Cost balanced</strong></li><li><strong>Continuing process</strong></li>
+</ul>
+<div class="key"><strong>Ethical trap:</strong> Screening without an accepted beneficial treatment pathway can create anxiety and harm; test availability alone is insufficient.</div>
+
+<h3>7.3 Study designs</h3>
+<table>
+  <thead><tr><th>Design</th><th>Direction / use</th><th>Main measure</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cross-sectional</strong></td><td>Exposure and outcome measured at the same time; estimates prevalence.</td><td>Prevalence / prevalence ratio</td></tr>
+    <tr><td><strong>Case-control</strong></td><td>Start with cases and controls, then look back for exposure; design of choice for <strong>rare disease</strong> because it needs fewer participants.</td><td>Odds ratio</td></tr>
+    <tr><td><strong>Cohort</strong></td><td>Start with exposed and unexposed, then compare incidence through follow-up; useful for rare exposures.</td><td>RR, AR, incidence</td></tr>
+    <tr><td><strong>Randomized controlled trial</strong></td><td><strong>Randomly allocates</strong> intervention/control and follows outcomes; randomization balances known and unknown confounders on average and limits selection bias.</td><td>RR, ARR, NNT</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Assertion–reason caution:</strong> Two true statements do not automatically form an explanation. A reason must state the causal/logical basis of the assertion; randomization’s key explanatory role is allocation that reduces systematic baseline differences.</div>
+
+<h3>7.4 Association and treatment-effect measures</h3>
+<div class="formula">OR = (a × d) ÷ (b × c) &nbsp;|&nbsp; RR = I<sub>E</sub> ÷ I<sub>U</sub> &nbsp;|&nbsp; AR = I<sub>E</sub> − I<sub>U</sub> &nbsp;|&nbsp; NNT = 1 ÷ ARR</div>
+<ul>
+  <li><strong>2×2 case-control layout:</strong> a = exposed cases; b = exposed controls; c = unexposed cases; d = unexposed controls. OR &gt;1 suggests increased odds, OR =1 no association and OR &lt;1 protection. OR approximates RR when disease is rare (often taught as &lt;10% incidence).</li>
+  <li><strong>RR interpretation:</strong> RR &gt;1 harmful/positive association; RR =1 no association; RR &lt;1 protective. RR requires measurable incidence, as in cohort studies and RCTs—not ordinary case-control sampling.</li>
+  <li><strong>Attributable risk:</strong> excess absolute risk among exposed that could be prevented if the causal exposure were removed.</li>
+  <li><strong>NNT:</strong> NNT = 1/(CER − EER) for a beneficial event reduction; it is the patients to treat to prevent one additional adverse event. <strong>NNT=1</strong> is ideal; very large NNT indicates small absolute benefit, but no fixed cut-off replaces clinical context and confidence intervals.</li>
+</ul>
+<div class="key"><strong>Worked example (Q91):</strong> Smokers: 20/100 = 20%; non-smokers: 4/200 = 2%. RR = 0.20 ÷ 0.02 = <strong>10.0</strong>: smokers had ten times the risk in this cohort.</div>
+<div class="key"><strong>Worked interpretation (Q117):</strong> OR 1.5 with 95% CI <strong>0.8–3.2</strong> is not statistically significant at α=0.05 because the interval includes the null value <strong>1.0</strong>.</div>
+
+<!-- Coverage: Q20,Q26,Q57,Q60,Q82,Q86,Q87,Q88,Q89,Q95,Q100,Q103,Q110 -->
+<h2>8. Surveillance &amp; Outbreaks</h2>
+<h3>8.1 Surveillance systems</h3>
+<table>
+  <thead><tr><th>Type</th><th>Definition / use</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Passive</strong></td><td>Routine reports submitted by facilities; inexpensive but under-reporting may occur.</td></tr>
+    <tr><td><strong>Active</strong></td><td>Health authority regularly contacts facilities/communities and actively searches for cases; more complete, more resource intensive.</td></tr>
+    <tr><td><strong>Sentinel</strong></td><td>Selected reporting sites or groups provide high-quality trend data; not intended to count every case.</td></tr>
+    <tr><td><strong>SRS</strong></td><td>Registrar General of India’s continuous representative sample using <strong>dual records</strong>: continuous enumeration plus independent periodic survey, then matching/verification. Produces official CBR, CDR and IMR estimates; it is not an NSO decennial exercise.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Purpose:</strong> Surveillance is continuous systematic collection, analysis, interpretation and dissemination of health data for planning, implementing and evaluating public-health action.</div>
+
+<h3>8.2 Outbreak terms and epidemic curves</h3>
+<table>
+  <thead><tr><th>Term / curve</th><th>Recall</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Index case</strong></td><td>First case noticed by the investigator.</td></tr>
+    <tr><td><strong>Primary case</strong></td><td>Person who first introduces infection into the group; may differ from index case.</td></tr>
+    <tr><td><strong>Secondary case</strong></td><td>Person infected from the primary case.</td></tr>
+    <tr><td><strong>Carrier</strong></td><td>Harbours and can transmit the organism without apparent symptoms.</td></tr>
+    <tr><td><strong>Point-source curve</strong></td><td>Sharp rise and fall, cases usually clustered within one incubation period.</td></tr>
+    <tr><td><strong>Continuous common source</strong></td><td>Plateau or prolonged curve while exposure continues.</td></tr>
+    <tr><td><strong>Propagated outbreak</strong></td><td>Successive peaks separated by about one incubation period.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Curve use:</strong> Epidemic curves help infer source pattern, likely exposure window, incubation period and mode of spread; they are not merely descriptive.</div>
+<div class="mnem"><strong>Index is Identified; Primary introduces; Secondary spreads next.</strong></div>
+
+<h3>8.3 Transmission dynamics</h3>
+<div class="formula">R₀ = Average secondary cases from one case in a fully susceptible population &nbsp;|&nbsp; Herd-immunity threshold = 1 − (1 ÷ R₀)</div>
+<div class="key"><strong>Worked interpretation (Q87):</strong> Measles R₀ ≈ <strong>12–18</strong> means one infectious person generates, on average, 12–18 secondary infections in a fully susceptible population—not that every patient always infects exactly that number.</div>
+<div class="key"><strong>Worked example (Q89):</strong> If measles R₀ = 15, threshold = 1 − 1/15 = 0.933 = <strong>93.3%</strong> immune through vaccination or prior infection. Real programme coverage targets exceed <strong>95%</strong> because vaccine effectiveness and delivery are imperfect; small coverage drops can permit outbreaks.</div>
+<ul>
+  <li><strong>Endemic:</strong> constant/usual background presence in a defined area.</li>
+  <li><strong>Epidemic:</strong> cases above the expected level in a community/region.</li>
+  <li><strong>Dengue:</strong> mainly transmitted by day-biting <em>Aedes aegypti</em>, not night-biting <em>Culex</em>.</li>
+</ul>
+
+<!-- Coverage: Q28,Q29,Q34,Q41,Q58,Q74,Q81,Q83,Q88,Q97,Q99,Q103,Q107,Q109,Q112,Q119,Q120,Q123,Q125,Q126 -->
+<h2>9. Vectors, Environment &amp; Sterilization</h2>
+<h3>9.1 Vectors and personal/vector control</h3>
+<table>
+  <thead><tr><th>Vector</th><th>Disease / behaviour</th></tr></thead>
+  <tbody>
+    <tr><td><strong><em>Aedes aegypti</em></strong></td><td>Dengue, chikungunya, Zika; mainly <strong>day-biting</strong>.</td></tr>
+    <tr><td><strong><em>Anopheles</em></strong></td><td>Malaria; female mosquito transmits infection, commonly night-biting.</td></tr>
+    <tr><td><strong>Sandfly (<em>Phlebotomus</em>)</strong></td><td>Visceral leishmaniasis/kala-azar.</td></tr>
+    <tr><td><strong><em>Culex quinquefasciatus</em></strong></td><td>Lymphatic filariasis; commonly night-biting.</td></tr>
+  </tbody>
+</table>
+<div class="two-col">
+  <div class="fact"><span class="q">LLINs / ITNs</span><span class="a">Barrier + insecticidal effect</span><span class="why">LLIN activity lasts roughly 3–5 years despite multiple washes; most useful for night-biters such as Anopheles, less for day-biting Aedes.</span></div>
+  <div class="fact"><span class="q">Indoor residual spraying</span><span class="a">Kills indoor-resting adult vectors on sprayed walls</span><span class="why">A proven transmission-reduction method using approved DDT, organophosphate or pyrethroid according to policy/resistance; females often contact walls after blood feeding.</span></div>
+</div>
+
+<h3>9.2 Insecticides and rodenticides</h3>
+<table>
+  <thead><tr><th>Class</th><th>Examples</th><th>Key mechanism / note</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Synthetic pyrethroid</strong></td><td>Permethrin</td><td>Voltage-gated sodium-channel effects; “-thrin” often signals pyrethroid.</td></tr>
+    <tr><td><strong>Organophosphate</strong></td><td>Malathion, temephos (Abate), fenitrothion</td><td>Phosphorylates acetylcholinesterase → acetylcholine accumulation, continuous stimulation and paralysis. Inhibition becomes functionally irreversible after “aging”; mammalian poisoning produces cholinergic/SLUDGE features.</td></tr>
+    <tr><td><strong>Carbamate</strong></td><td>Propoxur</td><td>Reversible acetylcholinesterase inhibition.</td></tr>
+    <tr><td><strong>Organochlorine</strong></td><td>DDT, dieldrin</td><td>DDT is not an organophosphate; it prolongs voltage-gated sodium-channel opening. Agricultural use is broadly prohibited/restricted while limited disease-vector use has historically remained under public-health controls.</td></tr>
+    <tr><td><strong>Anticoagulant rodenticide</strong></td><td>Warfarin; superwarfarins brodifacoum/bromadiolone</td><td>Inhibits vitamin-K recycling → depletion of factors II, VII, IX and X → delayed internal haemorrhage, reducing bait shyness. Antidote: vitamin K<sub>1</sub>.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>WHO acute-hazard recall:</strong> DDT is commonly listed in <strong>Class II—moderately hazardous</strong>, with classic rat oral LD<sub>50</sub> estimates around <strong>87–113 mg/kg</strong>. Approximate oral-solid bands often taught are Ia ≤5, Ib 5–50, II 50–2,000, III &gt;2,000 mg/kg; “U” denotes unlikely acute hazard at very high LD<sub>50</sub> (around ≥5,000). Hazard class is distinct from persistence, chronic risk and legal-use status.</div>
+<div class="mnem"><strong>PERME-thrin = pyrethroid; mala-THION = organophosphate; PROPOXUR = carbamate; DDT/dieldrin = organochlorines.</strong></div>
+
+<h3>9.3 Drinking-water disinfection</h3>
+<div class="fact"><span class="q">Free residual chlorine after adequate chlorination</span><span class="a">At least 0.5 mg/L after 30 minutes at the treatment point</span><span class="why">The common exam condition assumes suitable pH/turbidity. Distribution-end operational residual targets may be lower; always read where and under what conditions the sample is measured.</span></div>
+
+<h3>9.4 Sterilization kinetics and biomedical waste</h3>
+<table>
+  <thead><tr><th>Concept</th><th>Correct recall</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hot-air oven</strong></td><td>Dry heat at <strong>atmospheric pressure</strong> for glassware, powders and oils. Accepted exam holding schedules after the load reaches temperature include <strong>160°C for 2 h, 170°C for 1 h, or 180°C for 30 min</strong>. The supplied “160°C for 60 min” pairing is not the standard validated schedule.</td></tr>
+    <tr><td><strong>Autoclave contrast</strong></td><td>Moist heat under pressure; classic cycle <strong>121°C, 15 psi, 15 min</strong> after target conditions are reached.</td></tr>
+    <tr><td><strong>D-value</strong></td><td>Time at a stated temperature to reduce viable organisms by 90% (1 log).</td></tr>
+    <tr><td><strong>Z-value</strong></td><td>Temperature increase needed to reduce the D-value by one log (tenfold).</td></tr>
+    <tr><td><strong>F-value</strong></td><td>Equivalent total lethality/time at a specified reference temperature.</td></tr>
+    <tr><td><strong>SAL</strong></td><td>Sterility assurance level: probability of a viable organism remaining after sterilization.</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Waste point</th><th>Rule</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cytotoxic waste</strong></td><td>High-temperature incineration/destruction in authorized facilities; source material cites &gt;1,200°C.</td></tr>
+    <tr><td><strong>Microbiology/infectious waste</strong></td><td>Yellow-category microbiology/clinical laboratory waste requires on-site pre-treatment (e.g., autoclaving or microwaving as prescribed) before final disposal through the authorized route.</td></tr>
+    <tr><td><strong>Sharps</strong></td><td><strong>White translucent, puncture-proof, leak-proof, tamper-proof container</strong>—not a yellow bag.</td></tr>
+    <tr><td><strong>Composting</strong></td><td>Controlled <strong>aerobic</strong> biological decomposition.</td></tr>
+  </tbody>
+</table>
+
+<!-- Coverage: Q55,Q62,Q64,Q68,Q70,Q71,Q72,Q73,Q75,Q76,Q77,Q78,Q79,Q80,Q118,Q121,Q124 -->
+<h2>10. Committees, Plans &amp; Milestones</h2>
+<h3>10.1 Health committees</h3>
+<table>
+  <thead><tr><th>Committee (year)</th><th>Primary recommendation / identity</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Bhore (1946)</strong></td><td>Integrated preventive and curative services; universal care regardless of ability to pay; three-tier district health system and PHC development. Common exam short-term norm: PHC for about 40,000; the source contrasts three-month—not six-month—preventive/social medicine exposure.</td></tr>
+    <tr><td><strong>Mudaliar (1962)</strong></td><td>Strengthen existing PHCs and district hospitals before expansion; improve quality and consolidate gains.</td></tr>
+    <tr><td><strong>Jungalwalla (1967)</strong></td><td>Integration of preventive, promotive and curative services at all levels; unified cadre/common seniority and no private practice among related proposals.</td></tr>
+    <tr><td><strong>Kartar Singh (1973)</strong></td><td>Multipurpose Worker scheme; convert single-purpose malaria, smallpox and family-planning workers. Classic committee recommendation: one male and one female health worker at each subcentre serving roughly <strong>3,000–3,500</strong>, with a PHC around <strong>50,000</strong> and stronger supervision.</td></tr>
+    <tr><td><strong>Srivastava (1975)</strong></td><td>Community health workers, ROME (Reorientation of Medical Education), referral service and a Medical/Health Education Commission for health-manpower and education reform.</td></tr>
+    <tr><td><strong>Hathi (1975)</strong></td><td>Drug/pharmaceutical industry, essential drugs and stronger public-sector role—not the Srivastava recommendation.</td></tr>
+    <tr><td><strong>Bajaj (1986)</strong></td><td>Health-manpower planning and development; proposed an <strong>Educational Commission for Health Sciences</strong> on UGC lines.</td></tr>
+  </tbody>
+</table>
+<div class="mnem"><strong>B–M–J–K–S–H–B:</strong> Bhore builds; Mudaliar strengthens; Jungalwalla integrates; Kartar makes MPWs; Srivastava creates community workers/ROME; Hathi handles drugs; Bajaj plans education/manpower.</div>
+
+<h3>10.2 Bhore structure and planning eras</h3>
+<div class="fact"><span class="q">Bhore three-tier sequence, peripheral → central</span><span class="a">Primary Health Unit → secondary/district level → central regional/teaching level</span><span class="why">Long-term summaries place peripheral primary units at roughly 10,000–20,000 population. Terminology varies; the enduring principle is an integrated referral pyramid linked to teaching and training.</span></div>
+<table>
+  <thead><tr><th>Plan</th><th>Health emphasis</th></tr></thead>
+  <tbody>
+    <tr><td><strong>First Plan (1951–56)</strong></td><td>Communicable-disease control, safe water/sanitation and establishment of PHCs.</td></tr>
+    <tr><td><strong>Fifth Plan (1974–79)</strong></td><td>Minimum Needs Programme and integrated basic services.</td></tr>
+    <tr><td><strong>Tenth Plan (2002–07)</strong></td><td>Health-system and outcome targets; NRHM launched in 2005 during this plan.</td></tr>
+    <tr><td><strong>Twelfth Plan (2012–17)</strong></td><td>Universal health coverage direction and NHM expansion.</td></tr>
+  </tbody>
+</table>
+
+<h3>10.3 Programme timeline</h3>
+<table>
+  <thead><tr><th>Year</th><th>Milestone</th></tr></thead>
+  <tbody>
+    <tr><td><strong>1955</strong></td><td>National Leprosy Control Programme begins.</td></tr>
+    <tr><td><strong>1958</strong></td><td>National Malaria Eradication Programme replaces NMCP.</td></tr>
+    <tr><td><strong>1974</strong></td><td>WHO launches EPI globally.</td></tr>
+    <tr><td><strong>1978</strong></td><td>Alma-Ata Declaration establishes primary health care as the route toward Health for All; India adopts EPI.</td></tr>
+    <tr><td><strong>1982</strong></td><td>National Mental Health Programme.</td></tr>
+    <tr><td><strong>1983</strong></td><td>National Leprosy Eradication Programme name adopted in MDT era.</td></tr>
+    <tr><td><strong>1985</strong></td><td>Universal Immunization Programme expands the earlier EPI approach.</td></tr>
+    <tr><td><strong>1992</strong></td><td>National AIDS Control Programme Phase I begins with World Bank support.</td></tr>
+    <tr><td><strong>1996</strong></td><td>District Mental Health Programme.</td></tr>
+    <tr><td><strong>2000</strong></td><td>National Population Policy.</td></tr>
+    <tr><td><strong>2005</strong></td><td>NRHM launched; national leprosy elimination as a public-health problem achieved.</td></tr>
+    <tr><td><strong>2013</strong></td><td>NRHM and NUHM brought under NHM.</td></tr>
+    <tr><td><strong>2015</strong></td><td>SDGs adopted.</td></tr>
+    <tr><td><strong>2017</strong></td><td>NHP 2017; LaQshya; Intensified Mission Indradhanush.</td></tr>
+    <tr><td><strong>2019</strong></td><td>National Digital Health Blueprint; SUMAN.</td></tr>
+    <tr><td><strong>2021</strong></td><td>PM-ABHIM launched.</td></tr>
+  </tbody>
+</table>
+<div class="key"><strong>Assertion–reason rule:</strong> “Both true” is not enough. The reason must explain why the assertion follows. Alma-Ata’s milestone status comes from its comprehensive primary-health-care principles, equity, community participation, intersectoral action and appropriate technology—not merely from an unrelated true date/fact.</div>
+
+<h2>Last-Minute Fact Dump</h2>
+<div class="three-col">
+  <div class="fact"><span class="q">2019 Digital Health Blueprint</span><span class="a">Federated NDHM architecture</span></div>
+  <div class="fact"><span class="q">NHP 2017 life expectancy target</span><span class="a">70 years by 2025</span></div>
+  <div class="fact"><span class="q">PM-ABHIM</span><span class="a">Infrastructure + surveillance</span></div>
+  <div class="fact"><span class="q">PM-JAY care level</span><span class="a">Secondary/tertiary hospitalization</span></div>
+  <div class="fact"><span class="q">eSanjeevani AB-HWC</span><span class="a">Doctor-to-doctor hub and spoke</span></div>
+  <div class="fact"><span class="q">NHM general-State ratio</span><span class="a">60:40</span></div>
+  <div class="fact"><span class="q">U-PHC norm</span><span class="a">1 per 50,000</span></div>
+  <div class="fact"><span class="q">ASHA facilitator</span><span class="a">About 20 ASHAs</span></div>
+  <div class="fact"><span class="q">PMSMA fixed day</span><span class="a">9th of every month</span></div>
+  <div class="fact"><span class="q">HBNC institutional delivery</span><span class="a">6 visits</span></div>
+  <div class="fact"><span class="q">RBSK</span><span class="a">Four Ds</span></div>
+  <div class="fact"><span class="q">SAM + complication</span><span class="a">NRC inpatient care</span></div>
+  <div class="fact"><span class="q">Antara</span><span class="a">DMPA 150 mg IM, 3-monthly</span></div>
+  <div class="fact"><span class="q">Anaemia Mukt Bharat</span><span class="a">6×6×6</span></div>
+  <div class="fact"><span class="q">Ni-kshay</span><span class="a">Case-based TB platform</span></div>
+  <div class="fact"><span class="q">Leprosy elimination</span><span class="a">&lt;1 per 10,000</span></div>
+  <div class="fact"><span class="q"><em>P. vivax</em> radical cure</span><span class="a">Primaquine</span></div>
+  <div class="fact"><span class="q">CBAC high risk</span><span class="a">Score &gt;4</span></div>
+  <div class="fact"><span class="q">IMR denominator</span><span class="a">Live births; ×1,000</span></div>
+  <div class="fact"><span class="q">MMR denominator/unit</span><span class="a">Live births; ×100,000</span></div>
+  <div class="fact"><span class="q">Sensitivity</span><span class="a">TP/(TP+FN)</span></div>
+  <div class="fact"><span class="q">Specificity</span><span class="a">TN/(TN+FP)</span></div>
+  <div class="fact"><span class="q">Rare-disease design</span><span class="a">Case-control</span></div>
+  <div class="fact"><span class="q">Odds ratio</span><span class="a">ad/bc</span></div>
+  <div class="fact"><span class="q">Attributable risk</span><span class="a">I<sub>E</sub> − I<sub>U</sub></span></div>
+  <div class="fact"><span class="q">NNT</span><span class="a">1/ARR</span></div>
+  <div class="fact"><span class="q">Measles R₀</span><span class="a">About 12–18</span></div>
+  <div class="fact"><span class="q"><em>Aedes aegypti</em></span><span class="a">Dengue; day-biter</span></div>
+  <div class="fact"><span class="q">Organophosphates</span><span class="a">AChE inhibition</span></div>
+  <div class="fact"><span class="q">Sharps container</span><span class="a">White translucent puncture-proof</span></div>
+  <div class="fact"><span class="q">Z-value</span><span class="a">Temperature shift for 10× D change</span></div>
+  <div class="fact"><span class="q">Kartar Singh</span><span class="a">Multipurpose workers</span></div>
+  <div class="fact"><span class="q">Bajaj Committee</span><span class="a">ECHS on UGC lines</span></div>
+  <div class="fact"><span class="q">EPI global launch</span><span class="a">1974</span></div>
+  <div class="fact"><span class="q">NRHM / NHM</span><span class="a">2005 / 2013</span></div>
+</div>
+
+<p class="footer-note">— End of Revision Notes —</p>
+
+</body>
+</html>
